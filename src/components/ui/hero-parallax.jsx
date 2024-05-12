@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import youmanCard from "@/images/black_card.png"
+import tween_card from "@/images/tween_card.png"
 import { MovingBorderDemo } from "../MovingBorderDemo";
 
 export const HeroParallax = ({
@@ -99,26 +99,38 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className=" max-w-7xl relative mx-auto  md:py-40 px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center z-[2000]  left-0 top-0">
+    <div className=" max-w-7xl relative mx-auto  md:pt-0 md:py-40 px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="text-3xl md:text-7xl font-bold dark:text-white">
-      Elevate lifestyle! <br /> with <span className="text-[#079133]">Youman</span>
+      <h1 className="text-5xl md:text-7xl font-bold dark:text-white">
+      <span className=" font-thin tracking-widest font-serif ">Elevate lifestyle! with</span> <br />  <span className="text-[#079133] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]  font-semibold">Youman</span>
+      
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <Image
+          src={tween_card}
+          height="600"
+          width="600"
+          className="object-cover md:hidden block  w-full inset-0 card_animation"
+          alt={''}
+        />
+        
+        
+      <div className="flex md:flex-col flex-col-reverse">
+      <p className="max-w-2xl text-justify text-base md:text-xl mt-8 dark:text-neutral-200">
       Elevate your lifestyle with Youman Catalyst, the innovative NFC-powered privilege membership card designed to redefine your networking experience while unlocking unparalleled privileges in partner network.
       </p>
      
-      <div className="w-full flex justify-center">
-      <MovingBorderDemo/>
+      <div className="w-full md:mt-16 flex justify-center  ">
+      <MovingBorderDemo  />
+      </div>
       </div>
      
       </div>
       <Image
-          src={youmanCard}
+          src={tween_card}
           height="600"
           width="600"
-          className="object-cover  w-full inset-0 card_animation"
+          className="object-cover md:block hidden  w-full inset-0 card_animation"
           alt={''}
         />
     </div>
