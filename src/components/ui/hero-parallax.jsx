@@ -102,7 +102,7 @@ export const Header = () => {
     <div className=" max-w-7xl relative mx-auto  md:pt-0 md:py-40 px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold ">
+      <h1 className="relative z-10 text-6xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold ">
       <span className=" font-semibold tracking-tight font-sans ">Wonder awaits! <br /> with</span>  <br />
       
         <span className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center font-sans font-bold">Youman</span>
