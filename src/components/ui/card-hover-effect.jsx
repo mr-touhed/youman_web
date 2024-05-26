@@ -2,7 +2,7 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import dhakaLogo from "@/images/hello_dhaka_logo.png"
 // import dhakaLogo from "@/images/a.jpg"
@@ -12,15 +12,42 @@ export const HoverEffect = ({
   className,
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
+  const [offerItems,setOfferItems] = useState(items.filter(i => i.catagory === "hotel"));
+
+  const catagorys =[];
+   items.map(item => {
+    const i = item.catagory 
+    if(catagorys.includes(i)){
+      return 
+    }else{
+      catagorys.push(i)
+    }
+  });
+
+  const handel_tabs = (e) =>{
+    
+    const catagory = (e.target.innerText).toLowerCase();
+    const show = items.filter(item => (item.catagory).toLowerCase() ===catagory) ;
+    setOfferItems(show)
+  }
 
   return (
+    <>
+    <div className="flex gap-2 justify-center py-6 text-white">
+        {
+          catagorys.map(item => <span  onClick={(e)=>handel_tabs(e)} key={item} className="block cursor-pointer px-4 py-2 border border-slate-700 hover:bg-slate-700 rounded-md bg-[rgb(64 66 68) ] uppercase">{item}</span>)
+        }
+            
+
+        </div>
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
         className
       )}
     >
-      {items.map((item, idx) => (
+        
+      {offerItems.map((item, idx) => (
         <Link
           href={item?.link}
           key={item?.link}
@@ -57,6 +84,7 @@ export const HoverEffect = ({
         </Link>
       ))}
     </div>
+    </>
   );
 };
 
