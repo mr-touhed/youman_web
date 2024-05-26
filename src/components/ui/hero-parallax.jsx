@@ -47,13 +47,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-900, 100]),
+    useTransform(scrollYProgress, [0, 0.2], [-750, 100]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="md:h-[300vh]  md:py-16 py-8 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[300vh]  md:py-12 py-8 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -65,7 +65,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-4">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 mb-4">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -74,7 +74,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-4 space-x-20 ">
+        <motion.div className="flex flex-row  mb-4 space-x-4 ">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -83,7 +83,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-12">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 mb-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -99,11 +99,13 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className=" max-w-7xl relative mx-auto  md:pt-0 md:py-40 px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center z-[2000]  left-0 top-0">
+    <div className=" max-w-7xl relative mx-auto  md:pt-0 md:py-40 px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="text-6xl md:text-7xl font-bold dark:text-white ">
-      <span className=" font-thin tracking-widest font-serif ">Elevate lifestyle! with</span> <br />  <span className="text-[#079133] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]  font-semibold">Youman</span>
+      <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold ">
+      <span className=" font-semibold tracking-tight font-sans ">Wonder awaits! <br /> with</span>  <br />
+      
+        <span className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center font-sans font-bold">Youman</span>
       
       </h1>
       <Image
@@ -116,7 +118,7 @@ export const Header = () => {
         
         
       <div className="flex md:flex-col flex-col-reverse">
-      <p className="max-w-2xl text-justify text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-justify font-light text-base md:text-xl mt-8 dark:text-neutral-200">
       Elevate your lifestyle with Youman Catalyst, the innovative NFC-powered privilege membership card designed to redefine your networking experience while unlocking unparalleled privileges in partner network.
       </p>
      
@@ -150,7 +152,7 @@ export const ProductCard = ({
         y: -30,
       }}
       key={product.title}
-      className="group/product h-92 md:w-[40rem] w-[20rem] mx-auto relative flex-shrink-0"
+      className="group/product h-92 md:w-[35rem] w-[10rem] mx-auto relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
     >
       <Link
         href={product.link}

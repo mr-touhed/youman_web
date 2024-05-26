@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .card_animation{
-    animation: bounce 5s linear infinite;
+    animation: bounce 3s linear infinite;
 }
 
 @keyframes bounce {
@@ -15,4 +15,10 @@
       transform: translateY(1%);
       /* animation-timing-function: cubic-bezier(0, 0, 0.2, 1); */
     }
+  }
+
+
+  .icon_shadow:hover{
+    box-shadow: 1px 0px 9px 1px #45ff458f, 0px 0px 12px 5px #146714cf;
+    transition: all 0.3s ease;
   }

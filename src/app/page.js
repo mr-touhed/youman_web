@@ -1,8 +1,10 @@
-import { Background } from "@/components/Background";
-import { CustomerReview } from "@/components/CustomerReview";
 
-import { HeroParallaxDemo } from "@/components/HeroParallax";
-import { PartnersSection } from "@/components/PartnersSection";
+import { CustomerReview } from "@/components/Home/CustomerReview";
+
+import { HeroParallaxDemo } from "@/components/Home/HeroParallax";
+import LifeStyle from "@/components/Home/LifeStyle";
+import NfcSection from "@/components/Home/NfcSection";
+import { PartnersSection } from "@/components/Home/PartnersSection";
 
 
 export default function Home() {
@@ -10,7 +12,8 @@ export default function Home() {
    <main className="">
      
       <HeroParallaxDemo/>
-       <Background/>
+       <NfcSection  />
+       <LifeStyle />
        <PartnersSection/>
        <CustomerReview/>
    </main>

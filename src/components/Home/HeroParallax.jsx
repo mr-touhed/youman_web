@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HeroParallax } from "./ui/hero-parallax";
+import { HeroParallax } from "../ui/hero-parallax";
 import cardImg1 from "@/images/Youman-Website-banner.jpg"
 import cardImg2 from "@/images/Youman-2.jpg"
 import cardImg3 from "@/images/Youman-3.jpg"
