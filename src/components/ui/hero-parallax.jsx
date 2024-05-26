@@ -103,9 +103,9 @@ export const Header = () => {
       
       <div>
       <h1 className="relative z-10 text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold ">
-      <span className=" font-bold tracking-tight font-sans ">Wonder awaits! <br /> with</span>  <br />
+      <span className=" font-bold tracking-tight font-sans text-nowrap">Wonder awaits! <br /> with</span>  <br />
       
-        <span className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center font-sans font-bold">Youman</span>
+        <span className="relative z-10  text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center font-sans font-bold">Youman</span>
       
       </h1>
       <Image
