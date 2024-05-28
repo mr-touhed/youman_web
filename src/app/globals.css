@@ -1,4 +1,4 @@
-@tailwind base;
+ @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -33,3 +33,14 @@
     box-shadow: 1px 0px 9px 1px #45ff458f, 0px 0px 12px 5px #146714cf;
     transition: all 0.3s ease;
   }
+
+  .card_animation{
+    animation: bounce 3s linear infinite;
+
+    
+}
+
+
+
+
+

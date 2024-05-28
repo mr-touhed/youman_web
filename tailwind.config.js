@@ -13,7 +13,8 @@ module.exports = {
   theme: {
       fontFamily:{
         chirsman:['var(--font-crisman)'],
-        galada:['var(--font-galada)']
+        galada:['var(--font-galada)'],
+        assistant:['var(--font-assistant)']
       },
     extend: {
       animation: {

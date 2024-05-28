@@ -103,8 +103,8 @@ export const Header = () => {
     <div className="px-4 max-w-7xl relative mx-auto  md:pt-0 md:py-40 md:px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="relative  z-10 md:text-7xl text-5xl drop-shadow-2xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center  font-bold ">
-      <span className={`heading font-extrabold  font-chirsman tracking-tighter  text-nowrap`}>Wonder Awaits! <br /> with</span>  <br />
+      <h1 className="relative  z-10 md:text-7xl text-[12vw] drop-shadow-2xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center  font-bold ">
+      <span className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder Awaits! <br /> with</span>  <br />
       
         <span className="relative z-10 font-galada  text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span>
       
@@ -120,12 +120,12 @@ export const Header = () => {
         
         
       <div className="flex md:flex-col flex-col-reverse">
-      <p className="max-w-2xl text-justify font-light text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-justify font-light font-crisman text-base md:text-xl mt-8 dark:text-neutral-200">
       Elevate your lifestyle with Youman Catalyst, the innovative NFC-powered privilege membership card designed to redefine your networking experience while unlocking unparalleled privileges in partner network.
       </p>
      
       <div className="w-full md:mt-16 flex justify-center  ">
-      <MovingBorderDemo  />
+      <MovingBorderDemo className='font-crisman' />
       </div>
       </div>
      

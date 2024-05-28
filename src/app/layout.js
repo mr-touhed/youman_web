@@ -1,12 +1,18 @@
 import localFont from 'next/font/local';
-import {Galada} from "next/font/google"
+import {Galada,Assistant, Manrope} from "next/font/google"
 import "./globals.css";
 
-const crisman = localFont({
-  src:'../../public/font/Ballerick.ttf',
-  display: 'swap',
+const crisman = Manrope({
+  subsets:['latin'],
+    weight:['400','700','600'],
   variable:'--font-crisman'
 })
+
+  const assistant = Assistant({
+    subsets:['latin'],
+    weight:'400',
+    variable:'--font-assistant'
+  })
 
 const galada = Galada({
   subsets:['latin'],
@@ -22,8 +28,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`dark ${crisman.variable} ${galada.variable}`}>
-      <body className="dark:bg-black">{children}</body>
+    <html lang="en" className={`dark ${crisman.variable} ${galada.variable} ${assistant.variable}`}>
+      <body className="dark:bg-black font-assistant">{children}</body>
     </html>
   );
 }

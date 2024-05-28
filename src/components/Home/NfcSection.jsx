@@ -18,10 +18,10 @@ const serviceList = [
 const NfcSection = () => {
     return (
         <Background >
-            <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+            <h1 style={{lineHeight:"1.2"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
             Limitless sharing
         </h1>
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
+        <p className="text-neutral-500 max-w-lg mx-auto my-2  text-sm text-center relative z-10">
         NFC Enabled Business card – Tap or Scan to share your contact information
           
         </p>
@@ -49,7 +49,7 @@ const NfcSection = () => {
           alt={''}
         />
                 <div className='flex justify-center'>
-                <MovingBorderDemo />
+                <MovingBorderDemo  />
                 </div>
                 </div>
 
@@ -73,7 +73,7 @@ function Service({service}){
     <div className='rounded-full p-4 icon_shadow bg-[#5C5555]'>
             <Icon className='w-6 h-6'/>
     </div>
-    <div>
+    <div >
         <h4 className='text-xl text-neutral-400'>{title}</h4>
         <p className='font-thin text-neutral-500'>{dec}</p>
     </div>
