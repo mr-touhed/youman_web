@@ -11,6 +11,10 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+      fontFamily:{
+        chirsman:['var(--font-crisman)'],
+        galada:['var(--font-galada)']
+      },
     extend: {
       animation: {
         scroll:

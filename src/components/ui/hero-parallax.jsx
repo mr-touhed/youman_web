@@ -12,6 +12,7 @@ import Link from "next/link";
 import tween_card from "@/images/tween_card.png"
 import { MovingBorderDemo } from "../MovingBorderDemo";
 
+
 export const HeroParallax = ({
   products,
 }) => {
@@ -53,7 +54,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="md:h-[300vh]  md:py-12 py-8 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[300vh]  md:py-12 py-8 overflow-hidden   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -65,7 +66,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 mb-4">
+        <motion.div className="flex flex-row-reverse pb-2 overflow-x-auto no-scrollbar space-x-reverse space-x-4 mb-4">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -74,7 +75,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-4 space-x-4 ">
+        <motion.div className="flex flex-row overflow-x-auto pb-2 no-scrollbar  mb-4 space-x-4 ">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -83,7 +84,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 mb-20">
+        <motion.div className="flex flex-row-reverse pb-2 overflow-x-auto no-scrollbar space-x-reverse space-x-4 mb-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -102,12 +103,13 @@ export const Header = () => {
     <div className="px-4 max-w-7xl relative mx-auto  md:pt-0 md:py-40 md:px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="relative z-10 md:text-7xl text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold ">
-      <span className=" font-bold tracking-tight font-sans text-nowrap">Wonder awaits! <br /> with</span>  <br />
+      <h1 className="relative  z-10 md:text-7xl text-5xl drop-shadow-2xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center  font-bold ">
+      <span className={`heading font-extrabold  font-chirsman tracking-tighter  text-nowrap`}>Wonder Awaits! <br /> with</span>  <br />
       
-        <span className="relative z-10  text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center font-sans font-bold">Youman</span>
+        <span className="relative z-10 font-galada  text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span>
       
       </h1>
+       
       <Image
           src={tween_card}
           height="600"
@@ -152,14 +154,14 @@ export const ProductCard = ({
         y: -30,
       }}
       key={product.title}
-      className="group/product h-92 md:w-[35rem] w-[10rem] mx-auto relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
+      className="group/product h-92 md:w-[35rem] w-[15rem] mx-auto relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
     >
       <Link
         href={product.link}
         className="block group-hover/product:shadow-2xl "
       >
         <Image
-          src={product.thumbnail}
+          src={product.thumbnail} 
           height="400"
           width="400"
           className="object-cover  w-full inset-0"

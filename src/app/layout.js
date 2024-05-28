@@ -1,7 +1,19 @@
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local';
+import {Galada} from "next/font/google"
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const crisman = localFont({
+  src:'../../public/font/Ballerick.ttf',
+  display: 'swap',
+  variable:'--font-crisman'
+})
+
+const galada = Galada({
+  subsets:['latin'],
+  weight:'400',
+  display: 'swap',
+  variable:'--font-galada'
+})
 
 export const metadata = {
   title: "Youman",
@@ -10,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={`dark ${crisman.variable} ${galada.variable}`}>
       <body className="dark:bg-black">{children}</body>
     </html>
   );
