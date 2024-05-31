@@ -23,35 +23,35 @@ const HeroSlider = () => {
         className="mySwiper"
       >
         <SwiperSlide >
-          <div className='h-[50vh]'>
+          <div className='max-h-[50vh]'>
                   <Image
                   src={test}
                   alt="image"
                   width="300px"
                   height="300px"
-                  className='w-full h-[50vh] object-cover'
+                  className='block w-full max-h-[50vh] object-cover'
                   />
           </div>
         </SwiperSlide>
         <SwiperSlide >
-          <div className='h-[50vh]'>
+          <div className='max-h-[50vh]'>
                   <Image
                   src={test}
                   alt="image"
                   width="300px"
                   height="300px"
-                  className='w-full h-[50vh] object-cover'
+                  className='block w-full max-h-[50vh] object-cover'
                   />
           </div>
         </SwiperSlide>
         <SwiperSlide >
-          <div className='h-[50vh]'>
+          <div className='max-h-[50vh]'>
                   <Image
                   src={test}
                   alt="image"
                   width="300px"
                   height="300px"
-                  className='w-full h-[50vh] object-cover'
+                  className='block w-full max-h-[50vh] object-cover'
                   />
           </div>
         </SwiperSlide>

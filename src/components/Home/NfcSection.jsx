@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Background } from '../Background';
 import { MovingBorderDemo } from '../MovingBorderDemo';
@@ -6,6 +7,7 @@ import youmanCard from "@/images/tween_card.png";
 // icons
 import { FcNfcSign,FcSynchronize,FcInspection,FcMultipleDevices    } from "react-icons/fc";
 import { FaBarcode } from "react-icons/fa";
+import { motion, } from 'framer-motion';
 
 
 const serviceList = [
@@ -16,6 +18,7 @@ const serviceList = [
 ]
 
 const NfcSection = () => {
+   
     return (
         <section className='dot-mask my-10  '>
             <div className='max-w-7xl mx-auto '>
@@ -41,7 +44,13 @@ const NfcSection = () => {
 
                 </div>
 
-                <div className='flex flex-col '>
+                <div className='flex flex-col overflow-x-hidden'>
+                   <motion.div
+                   initial={{ translateX: "100%" }}
+                   whileInView={{ translateX: 0 }}
+                   transition={{ delay: 0.5,duration: 0.3 }}
+                   
+                   >
                 <Image
           src={youmanCard}
           height="400"
@@ -49,6 +58,7 @@ const NfcSection = () => {
           className="object-cover  w-full inset-0 card_animation"
           alt={''}
         />
+        </motion.div> 
                 <div className='flex justify-center'>
                 <MovingBorderDemo  className="text-neutral-200 bg-black "/>
                 </div>

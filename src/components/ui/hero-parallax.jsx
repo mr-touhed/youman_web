@@ -12,6 +12,7 @@ import Link from "next/link";
 import tween_card from "@/images/tween_card.png"
 import { MovingBorderDemo } from "../MovingBorderDemo";
 import { TypewriterEffectSmooth } from "../Privilege/typewriter-effect";
+import { useRouter } from 'next/navigation'
 
 
 
@@ -19,6 +20,7 @@ import { TypewriterEffectSmooth } from "../Privilege/typewriter-effect";
 export const HeroParallax = ({
   products,
 }) => {
+  const router = useRouter()
   const firstRow = products.slice(0, 2);
   const secondRow = products.slice(2, 4);
   const thirdRow = products.slice(4, 6);
@@ -27,7 +29,9 @@ export const HeroParallax = ({
     target: ref,
     offset: ["start start", "end start"],
   });
-
+  const changeRoute = (link) =>{
+      router.push(link)
+  }
   const springConfig = { stiffness: 300, damping: 50, bounce: 100 };
 
   const translateX = useSpring(
@@ -75,6 +79,7 @@ export const HeroParallax = ({
               product={product}
               translate={translateX}
               key={product.title}
+              changeRoute={changeRoute}
             />
           ))}
         </motion.div>
@@ -84,6 +89,7 @@ export const HeroParallax = ({
               product={product}
               translate={translateXReverse}
               key={product.title}
+              changeRoute={changeRoute}
             />
           ))}
         </motion.div>
@@ -93,6 +99,7 @@ export const HeroParallax = ({
               product={product}
               translate={translateX}
               key={product.title}
+              changeRoute={changeRoute}
             />
           ))}
         </motion.div>
@@ -152,6 +159,7 @@ export const Header = () => {
 export const ProductCard = ({
   product,
   translate,
+  changeRoute
 }) => {
   return (
     <motion.div
@@ -164,8 +172,8 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-92 md:w-[35rem] w-[15rem] mx-auto relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
     >
-      <Link
-        href={product.link}
+      <button
+       onClick={()=>changeRoute(product.link)} 
         className="block group-hover/product:shadow-2xl "
       >
         <Image
@@ -175,7 +183,7 @@ export const ProductCard = ({
           className="object-cover  w-full inset-0"
           alt={product.title}
         />
-      </Link>
+      </button>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
