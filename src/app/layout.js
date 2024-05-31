@@ -4,7 +4,7 @@ import "./globals.css";
 
 const crisman = Manrope({
   subsets:['latin'],
-    weight:['400','700','600'],
+    weight:['400','700','600','800'],
   variable:'--font-crisman'
 })
 
@@ -28,8 +28,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`dark ${crisman.variable} ${galada.variable} ${assistant.variable}`}>
-      <body className="dark:bg-black font-assistant">{children}</body>
+    <html lang="en" className={`light ${crisman.variable}  `}>
+      <body className="dark:bg-black bg-[rgb(248 248 248)] font-crisman ">{children}</body>
     </html>
   );
 }

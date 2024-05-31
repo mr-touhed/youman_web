@@ -11,6 +11,9 @@ import Image from "next/image";
 import Link from "next/link";
 import tween_card from "@/images/tween_card.png"
 import { MovingBorderDemo } from "../MovingBorderDemo";
+import { TypewriterEffectSmooth } from "../Privilege/typewriter-effect";
+
+
 
 
 export const HeroParallax = ({
@@ -103,12 +106,17 @@ export const Header = () => {
     <div className="px-4 max-w-7xl relative mx-auto  md:pt-0 md:py-40 md:px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="relative  z-10 md:text-7xl text-[15vw] drop-shadow-2xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center  font-bold ">
+      <h1 className="relative  z-10 md:text-7xl text-[13vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
       <span className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder Awaits! <br /> with</span>  <br />
       
-        <span className="relative z-10 font-galada  text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span>
-      
+        {/* <span className="relative z-10 font-galada  text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span> */}
+        
       </h1>
+        <div className="flex justify-center">
+        <TypewriterEffectSmooth className="text-6xl" words={[{
+      text: "Youman",
+    }]} />
+        </div>
        
       <Image
           src={tween_card}
@@ -125,7 +133,7 @@ export const Header = () => {
       </p>
      
       <div className="w-full md:mt-16 flex justify-center  ">
-      <MovingBorderDemo className='font-crisman' />
+      <MovingBorderDemo className='font-crisman bg-black from-neutral-200' />
       </div>
       </div>
      

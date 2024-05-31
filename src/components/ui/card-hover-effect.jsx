@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import dhakaLogo from "@/images/hello_dhaka_logo.png"
 // import dhakaLogo from "@/images/a.jpg"
-import { Background } from "../Background";
+
 export const HoverEffect = ({
   items,
   className,
@@ -33,9 +33,9 @@ export const HoverEffect = ({
 
   return (
     <>
-    <div className="flex gap-2 justify-center py-6 text-white">
+    <div className="flex gap-2 md:justify-center  py-6 overflow-x-auto no-scrollbar">
         {
-          catagorys.map(item => <span  onClick={(e)=>handel_tabs(e)} key={item} className="block cursor-pointer px-4 py-2 border border-slate-700 hover:bg-slate-700 rounded-md bg-[rgb(64 66 68) ] uppercase">{item}</span>)
+          catagorys.map(item => <span  onClick={(e)=>handel_tabs(e)} key={item} className=" cursor-pointer flex justify-center   min-w-[140px] px-4 py-1 border border-slate-700 hover:bg-slate-700 hover:text-neutral-100 rounded-md bg-[rgb(64 66 68) ] ">{item}</span>)
         }
             
 
@@ -97,7 +97,7 @@ export const Card = ({
     <div
         
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[#f4f2f2] border  dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -112,7 +112,7 @@ export const CardTitle = ({
   children,
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-[#3F3F46]font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );

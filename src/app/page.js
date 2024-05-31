@@ -1,5 +1,5 @@
 
-import { CustomerReview } from "@/components/Home/CustomerReview";
+import { CardStackDemo } from "@/components/Home/CustomerReview";
 
 import { HeroParallaxDemo } from "@/components/Home/HeroParallax";
 import LifeStyle from "@/components/Home/LifeStyle";
@@ -15,7 +15,7 @@ export default function Home() {
        <NfcSection  />
        <LifeStyle />
        <PartnersSection/>
-       <CustomerReview/>
+       <CardStackDemo/>
    </main>
   );
 }

@@ -14,38 +14,38 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "automobile",
+    link: "/privilege?catagory=automobile",
     thumbnail:
     cardImg1,
   },
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Wellbeing",
+    link: "/privilege?catagory=Wellbeing",
     thumbnail:
     cardImg2,
   },
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Wellbeing",
+    link: "/privilege?catagory=Wellbeing",
     thumbnail:
     cardImg3,
   },
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Food & Dining",
+    link: "/privilege?catagory=Food & Dining",
     thumbnail:
     cardImg4,
   },
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Travel",
+    link: "/privilege?catagory=Travel",
     thumbnail:
     cardImg5,
   },
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Hotel & Resturant",
+    link: "/privilege?catagory=Hotel & Resturant",
     thumbnail:
     cardImg6,
   },
