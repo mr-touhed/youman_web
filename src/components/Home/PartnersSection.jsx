@@ -3,6 +3,9 @@ import { HoverEffect } from "../ui/card-hover-effect";
 export function PartnersSection() {
   return (
     <div className="max-w-5xl  mx-auto px-8">
+       <h1 style={{lineHeight:"1.2"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-700  text-center font-sans font-bold">
+                        Privilege
+                    </h1>
       <HoverEffect items={projects} />
     </div>
   );

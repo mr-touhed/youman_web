@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import tween_card from "@/images/tween_card.png"
 import { MovingBorderDemo } from "../MovingBorderDemo";
-import { TypewriterEffectSmooth } from "../Privilege/typewriter-effect";
+import { TypewriterEffectSmooth } from "./typewriter-effect";
 import { useRouter } from 'next/navigation'
 
 

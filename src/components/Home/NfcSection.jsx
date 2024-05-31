@@ -20,8 +20,8 @@ const serviceList = [
 const NfcSection = () => {
    
     return (
-        <section className='dot-mask my-10  '>
-            <div className='max-w-7xl mx-auto '>
+        <section className='dot-mask   '>
+            <div className='max-w-7xl mx-auto py-12'>
             <h1 style={{lineHeight:"1.2"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-700  text-center font-sans font-bold">
             Limitless sharing
         </h1>

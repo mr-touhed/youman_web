@@ -9,7 +9,7 @@ import { MovingBorderDemo } from "../MovingBorderDemo";
 const LifeStyle = () => {
     return (
         <section className="dot-mask">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto py-12">
             <div>
                         <h1 style={{lineHeight:"1.2"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-700  text-center font-sans font-bold">
                         Elevate lifestyle
@@ -21,7 +21,7 @@ const LifeStyle = () => {
             </div>
 
             <div className="w-full px-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-8 relative z-10">
-            <div className='flex flex-col '>
+            <div className='flex flex-col md:order-1 order-2'>
                 <Image
           src={youmanCard}
           height="400"
@@ -33,11 +33,11 @@ const LifeStyle = () => {
                 <MovingBorderDemo className="bg-black dark:text-slate-200"/>
                 </div>
                 </div>
-                <div className='flex flex-col gap-16'>
+                <div className='flex flex-col gap-16 md:order-2 order-1'>
                     <p className="text-[#3F3F46] text-justify ">Be a part of Youman, to meet the ultimate privileges and embark on a thrilling adventure of self-discovery, style, and unparalleled excitement. Your journey towards an empowered and fulfilled lifestyle begins here!</p>
                         
                     <div className="grid grid-cols-3 md:gap-16 gap-2">
-                            <div className="flex flex-col gap-2 border border-green-300 p-3 rounded-md items-center">
+                            <div className="flex flex-col gap-2 border  p-3 rounded-md items-center">
                             <Image
                         src={event}
                         height="400"
@@ -47,7 +47,7 @@ const LifeStyle = () => {
                         />
                             <h2 className="relative z-10   bg-clip-text text-transparent bg-gradient-to-b from-green-100 to-green-700  text-center font-sans font-bold">Events</h2>
                             </div>
-                            <div className="flex flex-col gap-2 border border-green-300 p-3 rounded-md items-center">
+                            <div className="flex flex-col gap-2 border  p-3 rounded-md items-center">
                             <Image
                         src={concert}
                         height="400"
@@ -57,7 +57,7 @@ const LifeStyle = () => {
                         />
                         <h2 className="relative z-10   bg-clip-text text-transparent bg-gradient-to-b from-green-100 to-green-700  text-center font-sans font-bold">Concert</h2>
                             </div>
-                        <div className="flex flex-col gap-2 backdrop-blur-sm  border border-green-300 p-3 rounded-md items-center">
+                        <div className="flex flex-col gap-2 backdrop-blur-sm  border  p-3 rounded-md items-center">
                         <Image
                         src={invite}
                         height="400"
