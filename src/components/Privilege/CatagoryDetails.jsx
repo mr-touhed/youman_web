@@ -38,7 +38,7 @@ const CatagoryDetails = async  ({searchParams}) => {
         <div className="grid grid-cols-4 gap-4">
                     
                     {
-                        data.map(data => <PartnerCard key={data} data={data}/>)
+                       data && data.map(data => <PartnerCard key={data} data={data}/>)
                     }
                      
            

@@ -1,10 +1,10 @@
 import { partners } from "../../../../public/data/data"
-
+export const dynamic = 'force-dynamic';
 
 
 export  async function GET(request){
     try {
-        const searchParams = request.nextUrl.searchParams;
+        const searchParams = await  request.nextUrl.searchParams;
         const catagory = searchParams.get('catagory');
         const city = searchParams.get('city');
         if(catagory && city){
