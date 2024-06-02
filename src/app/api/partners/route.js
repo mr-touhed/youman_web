@@ -1,4 +1,4 @@
-import { partners } from "../../../../public/data/data"
+import { partners } from "../_data/data"
 export const dynamic = 'force-dynamic';
 
 

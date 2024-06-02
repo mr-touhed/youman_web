@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 
 
 const useDataFetching = (route) => {
-   
+    
     const [loading,setLoading] = useState(false);
     const [catagorys,setCatagorys] = useState([]);
     const [error,setError] = useState('');
     useEffect(()=>{
         const fetchCatagory = async () =>{
-    
+            
             
             try {
                 setLoading(true)
-                const response = await fetch(`http://localhost:3000/api/${route}`);
-                console.log(`http://localhost:3000/api/${route}`);
+                const response = await fetch(`/api/${route}`);
+                
                 const data = await response.json();
                 setCatagorys(data)
                 setLoading(false)

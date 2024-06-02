@@ -8,6 +8,7 @@ import test from "@/images/Youman-2.jpg"
 // import required modules
 import { Pagination,Autoplay } from 'swiper/modules';
 const HeroSlider = () => {
+  
   return (
     <div>
       <Swiper

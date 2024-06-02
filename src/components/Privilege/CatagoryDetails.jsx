@@ -14,20 +14,20 @@ const CatagoryDetails = async  ({searchParams}) => {
          const {catagory,city} = searchParams;
                           let response;
                     if(catagory && city){
-                         response = await fetch(`http://localhost:3000/api/partners?catagory=${catagory}&city=${city}`);
+                         response = await fetch(`${process.env.HOST}/api/partners?catagory=${catagory}&city=${city}`);
                     }else if(catagory){
-                        response = await fetch(`http://localhost:3000/api/partners?catagory=${catagory}`);
+                        response = await fetch(`${process.env.HOST}/api/partners?catagory=${catagory}`);
                     }else if(city){
-                        response = await fetch(`http://localhost:3000/api/partners?city=${city}`);
+                        response = await fetch(`${process.env.HOST}/api/partners?city=${city}`);
                     }else{
-                        response = await fetch(`http://localhost:3000/api/partners`);
+                        response = await fetch(`${process.env.HOST}/api/partners`);
                     }
                     
                     return  await response.json();
                    
 
        } catch (error) {
-            console.log("error from fetchingData",error.massage )
+            console.log("error from fetchingData",error )
        }
         
     },[searchParams])
