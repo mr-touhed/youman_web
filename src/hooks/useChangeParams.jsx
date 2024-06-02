@@ -1,9 +1,8 @@
 'use client'
-import { usePathname, useSearchParams,useRouter } from "next/navigation";
+import {  useSearchParams,useRouter } from "next/navigation";
 import { useCallback } from "react";
 const useChangeParams = () => {
     const router = useRouter()
-const pathname = usePathname()
 const searchParams = useSearchParams()
 
 const createQueryString = useCallback(
@@ -17,7 +16,8 @@ const createQueryString = useCallback(
   )
 
 const changeCatagory = (catagory,item)=>{
-    router.push(pathname + '?' + createQueryString(catagory, item))
+    console.log(catagory,item)
+    router.push('?' + createQueryString(catagory, item),{ scroll: false })
 }
 
     return (
