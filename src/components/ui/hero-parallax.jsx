@@ -113,14 +113,14 @@ export const Header = () => {
     <div className="px-4 max-w-7xl relative mx-auto  md:pt-0 md:py-40 md:px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
       
       <div>
-      <h1 className="relative  z-10 md:text-7xl text-[13vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
-      <span className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder Awaits! <br /> with</span>  <br />
+      <h1 className="relative  z-10 md:text-5xl text-[10vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
+      <span style={{lineHeight:1.5}} className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder Awaits with</span>  <br />
       
         {/* <span className="relative z-10 font-galada  text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span> */}
         
       </h1>
         <div className="flex justify-center">
-        <TypewriterEffectSmooth className="text-6xl" words={[{
+        <TypewriterEffectSmooth className="text-7xl" words={[{
       text: "Youman",
     }]} />
         </div>
@@ -140,7 +140,7 @@ export const Header = () => {
       </p>
      
       <div className="w-full md:mt-16 flex justify-center  ">
-      <MovingBorderDemo className='font-crisman bg-black from-neutral-200' />
+      <MovingBorderDemo className='font-crisman bg-green-600 from-neutral-200 ' />
       </div>
       </div>
      

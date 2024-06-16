@@ -33,13 +33,14 @@ export const HoverEffect = ({
 
   return (
     <>
-    <div className="flex gap-2 md:justify-center  py-6 overflow-x-auto no-scrollbar">
+    <div className="flex md:flex-row flex-col gap-2 hover:h-auto  md:justify-center h-[60px]   py-6 overflow-x-auto no-scrollbar">
         {
-          catagorys.map(item => <span  onClick={(e)=>handel_tabs(e)} key={item} className=" cursor-pointer flex justify-center   min-w-[140px] px-4 py-1 border border-slate-700 hover:bg-slate-700 hover:text-neutral-100 rounded-md bg-[rgb(64 66 68) ] ">{item}</span>)
+          catagorys.map(item => <span  onClick={(e)=>handel_tabs(e)} key={item} className=" cursor-pointer flex justify-center   min-w-[140px] px-4 py-1 border border-green-900 hover:bg-green-700 hover:text-neutral-100 rounded-md bg-[rgb(64 66 68) ] ">{item} </span>)
         }
             
 
         </div>
+          <span></span>
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
