@@ -1,48 +1,46 @@
-import {  useCallback } from "react";
+"use client"
+
+import { useEffect, useState } from "react";
 import PartnerCard from "./PartnerCard";
+import { get_query_partners } from "@/utils/fetchData";
 
 
 
 
 
 
-const CatagoryDetails = async  ({searchParams}) => {
+
+const CatagoryDetails =   ({searchParams,partners}) => {
+        const [partnerList,setPartnerList] = useState(partners)
     
-
-    const fetchingData = useCallback(async()=>{
-       try {
-         const {catagory,city} = searchParams;
-                          let response;
-                    if(catagory && city){
-                         response = await fetch(`${process.env.HOST}/api/partners?catagory=${catagory}&city=${city}`);
-                    }else if(catagory){
-                        response = await fetch(`${process.env.HOST}/api/partners?catagory=${catagory}`);
-                    }else if(city){
-                        response = await fetch(`${process.env.HOST}/api/partners?city=${city}`);
-                    }else{
-                        response = await fetch(`${process.env.HOST}/api/partners`);
-                    }
-                    
-                    return  await response.json();
-                   
-
-       } catch (error) {
-            console.log("error from fetchingData",error )
-       }
+    useEffect(()=>{
+        const get_partner =async () =>{
+            try {
+                const result = await get_query_partners(searchParams.catagory,searchParams.state);
+                setPartnerList(result.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        if(searchParams.catagory || searchParams.state){
+            get_partner()
+        }
         
-    },[searchParams])
-
-    const data = await fetchingData();
+    }, [searchParams])
     
     return (
-        <div className="grid md:grid-cols-4 grid-cols-1 p-4 gap-4">
-                    
+        <>
+        
+        <div className="grid md:grid-cols-4 grid-cols-1 p-4 gap-8">
+        {partnerList.length < 1 && "No data found yet"}
                     {
-                       data && data.map(data => <PartnerCard key={data} data={data}/>)
+                        partnerList.map(data => <PartnerCard key={data._id} data={data}/>)
+                        
                     }
                      
            
         </div>
+    </>
     );
 };
 

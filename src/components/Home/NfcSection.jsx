@@ -1,14 +1,12 @@
 "use client"
 import React from 'react';
-import { Background } from '../Background';
 import { MovingBorderDemo } from '../MovingBorderDemo';
-import Image from 'next/image';
-import youmanCard from "@/images/tween_card.png";
 // icons
 import { FcNfcSign,FcSynchronize,FcMultipleDevices    } from "react-icons/fc";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { motion, } from 'framer-motion';
 import AnimatedImage from '../AnimatedImage';
+import Link from 'next/link';
 
 
 const serviceList = [
@@ -22,11 +20,11 @@ const NfcSection = () => {
    
     return (
         <section className='dot-mask   '>
-            <div className='max-w-7xl mx-auto py-12'>
+            <div className='max-w-7xl mx-auto pt-12'>
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
             Limitless sharing
         </h1>
-        <p className="text-neutral-800 max-w-lg mx-auto my-2  text-xl text-center relative z-10">
+        <p className="text-neutral-800 max-w-lg mx-auto my-2 px-2  text-xl text-center relative z-10">
         NFC Enabled Business card – Tap or Scan to share your contact information
           
         </p>
@@ -35,7 +33,7 @@ const NfcSection = () => {
        
        
         
-        <div className="w-full px-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-8 relative z-10">
+        <div className="w-full px-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-16 relative z-10 ">
                 <div className='flex flex-col gap-8'>
 
                         {
@@ -45,7 +43,7 @@ const NfcSection = () => {
 
                 </div>
 
-                <div className='grid grid-cols-1 gap-16 items-center justify-center overflow-x-hidden'>
+                <div className='grid grid-cols-1 gap-4 px-8 items-center justify-center overflow-x-hidden'>
                     
                    <motion.div
                    initial={{ translateX: "100%" }}
@@ -55,9 +53,11 @@ const NfcSection = () => {
                    >
                 <AnimatedImage/>
         </motion.div> 
-                <div className='flex  justify-center'>
+                
+                <Link className='flex  justify-center' href="/checkout">
                 <MovingBorderDemo  className="text-neutral-200 bg-green-700 "/>
-                </div>
+                </Link>
+                
                 </div>
 
            </div>

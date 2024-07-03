@@ -1,17 +1,16 @@
 'use client'
 
 import useChangeParams from "@/hooks/useChangeParams";
-import useDataFetching from "@/hooks/useDataFetching";
 
 
 
-const Catagory = () => {
-   const [catagorys,loading,error] = useDataFetching('catagories')
+
+const Catagory = ({catagorys}) => {
+
 
 const [changeCatagory] = useChangeParams()
-
-    if(loading) return 
-    if(error) return 
+    
+   
     return (
         <div className="flex gap-4 md:justify-center no-scrollbar  overflow-x-auto mx-4 ">
              {

@@ -1,22 +1,22 @@
 import Image from "next/image";
-import img from "@/images/a.jpg"
+import Link from "next/link";
 const PartnerCard = ({data}) => {
-  const {name,description,logo,location,webURL,phone,disclaimer,offer,catagory} = data;
-  
+  const {name,image,offers,catagory,location} = data;
+
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg relative">
+        <Link href={`/privilege/details/${name}`} className="w-[250px] mx-auto rounded overflow-hidden shadow-lg relative ">
           <div className="flex gap-2 absolute top-3 right-3">
-    <span className="bg-green-300 h-6  px-2 text-green-700 text-sm  rounded-xl">{offer.discount}% Discount </span>
-    {offer.flat && <span className="bg-yellow-400 h-6  px-2 text-yellow-700 text-sm  rounded-xl">Cash voucher {offer.flat}</span>}
+    {offers.discount && <span className="bg-green-300 h-6  px-2 text-green-700 text-sm  rounded-xl">{offers.discount}% Discount </span>}
+    {offers.flat && <span className="bg-yellow-400 h-6  px-2 text-yellow-700 text-sm  rounded-xl">Cash voucher {offers.flat} TK</span>}
     </div>
-  <Image className="w-full" src={img} alt="Sunset in the mountains" />
+  <Image className="w-full" src={image?.display_url} width={250} height={200} alt={name} />
   <div className="px-6 py-4">
    
     <div className="font-bold text-xl mb-2">{name}</div>
     
     
-    <p className="text-gray-700 text-base">
-    {catagory}
+    <p className="text-gray-700 text-base flex justify-between">
+    <span>{catagory}</span> <span className="text-green-800 bg-green-100 rounded-xl text-xs flex items-center justify-center px-3">{location.state}</span>
     </p>
   </div>
   {/* <div className="px-6 pt-4 pb-2">
@@ -24,7 +24,8 @@ const PartnerCard = ({data}) => {
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
   </div> */}
-</div>
+</Link>
+
     );
 };
 

@@ -22,7 +22,7 @@ const AnimatedImage = () => {
        
         centeredSlides={false}
         autoplay={{
-          delay: 2000,
+          delay: 1500,
           disableOnInteraction: false,
         }}
         loop={true}

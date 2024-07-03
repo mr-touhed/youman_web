@@ -1,5 +1,5 @@
-import localFont from 'next/font/local';
-import {Galada,Assistant, Manrope} from "next/font/google"
+
+import { Manrope} from "next/font/google"
 import "./globals.css";
 import Footer from '@/components/Footer';
 
@@ -9,18 +9,7 @@ const crisman = Manrope({
   variable:'--font-crisman'
 })
 
-  const assistant = Assistant({
-    subsets:['latin'],
-    weight:'400',
-    variable:'--font-assistant'
-  })
 
-const galada = Galada({
-  subsets:['latin'],
-  weight:'400',
-  display: 'swap',
-  variable:'--font-galada'
-})
 
 export const metadata = {
   title: "Youman",
@@ -30,7 +19,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`light ${crisman.variable}  `}>
-      <body className="dark:bg-black bg-[rgb(248 248 248)] font-crisman ">{children}
+      <body className="dark:bg-black bg-[rgb(248 248 248)] font-crisman ">
+        <section className="min-h-[100vh]">
+        {children}
+        </section>
       
       
       <Footer/>

@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { Background } from "../Background";
 import youmanCard from "@/images/tween_card.png"
 import concert from "@/images/icon_img/ticket.jpg"
 import event from "@/images/icon_img/event.jpg"
 import invite from "@/images/icon_img/pass.jpg"
 import { MovingBorderDemo } from "../MovingBorderDemo";
+import Link from "next/link";
 
 const LifeStyle = () => {
     return (
-        <section className="dot-mask">
-            <div className="max-w-7xl mx-auto py-12">
+        <section className="dot-mask px-4">
+            <div className="max-w-7xl mx-auto ">
             <div>
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
                         Elevate lifestyle
@@ -20,18 +20,18 @@ const LifeStyle = () => {
                     </p>
             </div>
 
-            <div className="w-full px-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-8 relative z-10">
+            <div className="w-full  my-16 grid md:grid-cols-2 grid-cols-1 gap-8 items-center  relative z-10">
             <div className='flex flex-col md:order-1 order-2'>
                 <Image
           src={youmanCard}
-          height="400"
-          width="300"
-          className="object-cover  w-full inset-0 card_animation"
+          height={300}
+          width={400}
+          className="object-cover  w-[90%] mx-auto inset-0 card_animation"
           alt={''}
         />
-                <div className='flex justify-center'>
+                <Link href="/checkout" className='flex justify-center'>
                 <MovingBorderDemo className="bg-green-700 dark:text-slate-200"/>
-                </div>
+                </Link>
                 </div>
                 <div className='flex flex-col gap-16 md:order-2 order-1'>
                     <p className="text-[#3F3F46] text-justify ">Be a part of Youman, to meet the ultimate privileges and embark on a thrilling adventure of self-discovery, style, and unparalleled excitement. Your journey towards an empowered and fulfilled lifestyle begins here!</p>

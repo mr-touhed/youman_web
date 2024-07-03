@@ -17,13 +17,13 @@ export const products = [
     title: "automobile",
     link: "/privilege?catagory=automobile",
     thumbnail:
-    cardImg1,
+    cardImg2,
   },
   {
     title: "Wellbeing",
     link: "/privilege?catagory=Wellbeing",
     thumbnail:
-    cardImg2,
+    cardImg1,
   },
   {
     title: "Wellbeing",

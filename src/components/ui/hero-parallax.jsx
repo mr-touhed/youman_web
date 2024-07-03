@@ -61,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="md:h-[300vh]  md:py-12 py-8 overflow-hidden   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[250vh]  md:py-12  overflow-hidden   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -110,48 +110,55 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="px-4 max-w-7xl relative mx-auto  md:pt-0 md:py-40 md:px-4 w-full grid md:grid-cols-[1fr_1fr] grid-cols-1  gap-4 justify-center items-center z-[2000]  left-0 top-0">
+    <div className="px-4 max-w-7xl relative mx-auto  md:pt-0 md:py-40 md:px-4 w-full h-[100vh]  z-[2000]  left-0 top-0">
       
-      <div>
-      <h1 className="relative  z-10 md:text-5xl text-[10vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
-      <span style={{lineHeight:1.5}} className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder Awaits with</span>  <br />
-      
-        {/* <span className="relative z-10 font-galada  text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span> */}
-        
-      </h1>
-        <div className="flex justify-center">
-        <TypewriterEffectSmooth className="text-7xl" words={[{
-      text: "Youman",
-    }]} />
+      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 justify-center items-end">
+      <div className="flex flex-col gap-8">
+        <div>
+                    <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
+                  <span style={{lineHeight:1.5}} className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder awaits with</span>  <br />
+                  
+                    {/* <span className="relative z-10 font-galada  text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span> */}
+                    
+                  </h1>
+                    <div className="flex justify-center">
+                    <TypewriterEffectSmooth className="text-7xl" words={[{
+                  text: "Youman",
+                }]} />
+        </div>
         </div>
        
       <Image
           src={tween_card}
-          height="600"
-          width="600"
-          className="object-cover md:hidden block  w-full inset-0 card_animation"
+          height="100"
+          width="200"
+          className="object-cover md:hidden block  w-[80%] mx-auto inset-0 card_animation"
           alt={''}
         />
         
         
-      <div className="flex md:flex-col flex-col-reverse">
+      <div className="flex md:flex-col flex-col-reverse md:gap-16">
       <p className="max-w-2xl text-justify font-light font-crisman text-base md:text-xl mt-8 dark:text-neutral-200">
       Elevate your lifestyle with Youman Catalyst, the innovative NFC-powered privilege membership card designed to redefine your networking experience while unlocking unparalleled privileges in partner network.
       </p>
      
-      <div className="w-full md:mt-16 flex justify-center  ">
+      <div className="w-full  flex justify-center  ">
+      <Link href="/checkout">
       <MovingBorderDemo className='font-crisman bg-green-600 from-neutral-200 ' />
+      </Link>
       </div>
       </div>
      
       </div>
       <Image
           src={tween_card}
-          height="600"
-          width="600"
+          width={500}
+          height={300}
+          
           className="object-cover md:block hidden  w-full inset-0 card_animation"
           alt={''}
         />
+      </section>
     </div>
   );
 };
