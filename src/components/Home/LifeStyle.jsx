@@ -12,7 +12,7 @@ const LifeStyle = () => {
             <div className="max-w-7xl mx-auto ">
             <div>
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
-                        Elevate lifestyle
+                        Infinite Possibilities
                     </h1>
                     <p className="text-neutral-500 max-w-lg mx-auto my-2 text-xl text-center relative z-10">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
@@ -34,7 +34,7 @@ const LifeStyle = () => {
                 </Link>
                 </div>
                 <div className='flex flex-col gap-16 md:order-2 order-1'>
-                    <p className="text-[#3F3F46] text-justify ">Be a part of Youman, to meet the ultimate privileges and embark on a thrilling adventure of self-discovery, style, and unparalleled excitement. Your journey towards an empowered and fulfilled lifestyle begins here!</p>
+                    <p className="text-[#3F3F46] text-justify ">Your journey begins with a tap. Limitless contact sharing, seamless access to premium brands and opportunities, all in one place.</p>
                         
                     <div className="grid grid-cols-3 md:gap-16 gap-2">
                             <div className="flex flex-col gap-2  life_style_card border p-3 rounded-md  items-center">

@@ -31,7 +31,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
     return (
         <>
         
-        <div className="grid md:grid-cols-4 grid-cols-1 p-4 gap-8">
+        <div className="grid md:grid-cols-4 grid-cols-2 md:p-4 p-2 md:gap-8 gap-2 place-items-center">
         {partnerList.length < 1 && "No data found yet"}
                     {
                         partnerList.map(data => <PartnerCard key={data._id} data={data}/>)

@@ -1,42 +1,77 @@
 "use client"
+import BkashModal from "@/components/BkashModal";
 import black from "@/images/card_black.png"
 import white from "@/images/card_white.png"
+import { baseURL } from "@/utils/baseURL";
 import Image from "next/image";
 import { useState } from "react";
 import { TiWarning } from "react-icons/ti";
 const CheckOutForm = () => {
     const [cardColor,setCardColor] = useState("black");
-
+  
+    const [order,setOrder] = useState({fullname:"",email:"",mobile:"",address:"",reffer:"",cardColor});
+    const [loading,setLoading] = useState(false)
+    const handel_change_input = (e) =>{
+        setOrder(prev => ({...prev, [e.target.name]:e.target.value}))
+    }
     const change_card_color = (e) =>{
             const value = e.target.value;
             setCardColor(value)
             
     }
 
+    const handel_order = async (e) =>{
+        e.preventDefault()
+        try {
+            const order_card_data = {...order,cardColor};
+            setLoading(true)
+            const response = await fetch(`${baseURL}/create-payment`,{
+                method:"POST",
+                headers:{
+                    "content-type":"application/json"
+                },
+                body:JSON.stringify(order_card_data)
+            })
+            const result = await response.json();
+            if(!result.status.type){
+                alert(result.status.message)
+            }else{
+                const url = result.bkashUrl; // Replace with the URL you want to open
+
+                return  window.location.href = url
+            }
+            
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return (
+        <>
         <div className="grid md:grid-cols-2  grid-cols-1 gap-4 items-center  pt-2">
-            <form action="" className="flex flex-col gap-4 order-2 md:order-1 ">
+            <form onSubmit={handel_order} className="flex flex-col gap-4 order-2 md:order-1 ">
                     <div className="flex flex-col gap-1">
                         <label className="text-sm" htmlFor="name">Full Name</label>
-                        <input type="text" name="name" id="name"  className="border rounded-md p-2" required/>
+                        <input onChange={(e)=>handel_change_input(e)} value={order.fullname} type="text" name="fullname" id="name"  className="border rounded-md p-2" required/>
                     </div>
                     <div className="flex flex-col gap-1">
                         <label className="text-sm" htmlFor="email">Email Address</label>
-                        <input type="email" name="email" id="email"  className="border rounded-md p-2" required/>
+                        <input onChange={(e)=>handel_change_input(e)} value={order.email} type="email" name="email" id="email"  className="border rounded-md p-2" required/>
                     </div>
                     <div className="flex flex-col gap-1">
                         <label className="text-sm" htmlFor="phone">Mobile Number</label>
-                        <input type="tel" name="phone" id="phone"  className="border rounded-md p-2" required/>
+                        <input onChange={(e)=>handel_change_input(e)} value={order.mobile} type="tel" name="mobile" id="phone"  className="border rounded-md p-2" required/>
                     </div>
                     <div className="flex flex-col gap-1">
                         <label className="text-sm" htmlFor="address">Address Details</label>
-                        <textarea name="address" id="address" className="h-20 border rounded-md p-2" required></textarea>
+                        <textarea onChange={(e)=>handel_change_input(e)} value={order.address} name="address" id="address" className="h-20 border rounded-md p-2" required></textarea>
                     </div>
                     <div className="flex flex-col gap-1">
                         <label className="text-sm" htmlFor="reffer">Referral Code (if any)</label>
-                        <input type="text" name="reffer" id="reffer"  className="border rounded-md p-2"/>
+                        <input onChange={(e)=>handel_change_input(e)} value={order.reffer} type="text" name="reffer" id="reffer"  className="border rounded-md p-2"/>
                     </div>
-                    <button className="bg-green-700 p-2 rounded-md text-white uppercase">Order now !</button>
+                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 rounded-md text-white uppercase">{loading ? "Loading..":"Order now !"}</button>
                 </form>
 
         <div className="border-l order-1 md:order-2">
@@ -56,6 +91,9 @@ const CheckOutForm = () => {
         </div>
 
         </div>
+
+          
+        </>
     );
 };
 

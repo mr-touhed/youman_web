@@ -23,7 +23,7 @@ export default function App() {
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
                         Customer Reviews
                     </h1>
-                    <p className="text-neutral-500 max-w-lg mx-auto my-2 text-xl text-center relative z-10">
+                    <p className="text-neutral-500 max-w-lg mx-auto my-2 text-base text-center relative z-10">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
                     
                     </p>

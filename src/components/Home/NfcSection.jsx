@@ -22,10 +22,12 @@ const NfcSection = () => {
         <section className='dot-mask   '>
             <div className='max-w-7xl mx-auto pt-12'>
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
-            Limitless sharing
+            Aspire, Connect, Grow
         </h1>
         <p className="text-neutral-800 max-w-lg mx-auto my-2 px-2  text-xl text-center relative z-10">
-        NFC Enabled Business card – Tap or Scan to share your contact information
+        With one tap, your world opens up. Share your profile, connect with others, and unlock experiences in an instant.  
+Youman gives you a platform to explore the best life has to offer—anytime, anywhere
+
           
         </p>
         

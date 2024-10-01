@@ -2,6 +2,8 @@
 import { Manrope} from "next/font/google"
 import "./globals.css";
 import Footer from '@/components/Footer';
+import { NavbarDemo } from "@/components/NavbarDemo";
+
 
 const crisman = Manrope({
   subsets:['latin'],
@@ -20,6 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`light ${crisman.variable}  `}>
       <body className="dark:bg-black bg-[rgb(248 248 248)] font-crisman ">
+        <NavbarDemo/>
         <section className="min-h-[100vh]">
         {children}
         </section>

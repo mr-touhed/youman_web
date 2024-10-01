@@ -6,7 +6,7 @@ const Detailslayout = ({children}) => {
     return (
         <div className='px-4'>
             <div className='h-20 border-b'>
-                <BackButton/>
+                {/* <BackButton/> */}
             </div>
             <div className='mt-6'>
             {children}

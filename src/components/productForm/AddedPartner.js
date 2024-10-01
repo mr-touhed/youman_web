@@ -157,9 +157,12 @@ const AddedPartner = ({privilege}) => {
             <label htmlFor="name" className='text-sm'>Catagory <span className='text-red-400'>*</span></label>
                     <select className=' p-2 ' required name="catagory" id="" value={offer.catagory} onChange={(e) => change_value(e)}>
                             <option disabled value="select">choose</option>
-                            <option value="Food & Dining">Food & Dining</option>
+                            <option value="Travel and Dining">Travel and Dining</option>
                             <option value="Wellbeing">Wellbeing</option>
                             <option value="Grooming">Grooming</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Automobile">Automobile</option>
+                            <option value="Others">Others</option>
                     </select>
         </div>
         <div className='flex  w-full items-center border flex-col'>

@@ -14,7 +14,7 @@ import { MovingBorderDemo } from "../MovingBorderDemo";
 import { TypewriterEffectSmooth } from "./typewriter-effect";
 import { useRouter } from 'next/navigation'
 
-
+import { TypeAnimation } from 'react-type-animation';
 
 
 export const HeroParallax = ({
@@ -115,12 +115,31 @@ export const Header = () => {
       <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 justify-center items-end">
       <div className="flex flex-col gap-8">
         <div>
+
+        
                     <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
-                  <span style={{lineHeight:1.5}} className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Wonder awaits with</span>  <br />
+                  {/* <span style={{lineHeight:1.5}} className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Unlock your world</span>  <br /> */}
                   
-                    {/* <span className="relative z-10 font-galada  text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-green-900  text-center  font-semibold">Youman</span> */}
+                  <TypeAnimation
+      sequence={[
+        'Unlock your world', // Types 'One'
+        1000, // Waits 1s
+        'Live beyond ordinary', // Deletes 'One' and types 'Two'
+        2000,
+        () => {
+          console.log('Sequence completed');
+        },
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      // style={{ fontSize: '2em', display: 'inline-block' }}
+      className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}
+    />
                     
                   </h1>
+                 
+
                     <div className="flex justify-center">
                     <TypewriterEffectSmooth className="text-7xl" words={[{
                   text: "Youman",
@@ -139,7 +158,9 @@ export const Header = () => {
         
       <div className="flex md:flex-col flex-col-reverse md:gap-16">
       <p className="max-w-2xl text-justify font-light font-crisman text-base md:text-xl mt-8 dark:text-neutral-200">
-      Elevate your lifestyle with Youman Catalyst, the innovative NFC-powered privilege membership card designed to redefine your networking experience while unlocking unparalleled privileges in partner network.
+      Youman is more than just access—it’s a lifestyle.  
+Exclusive privileges, premium experiences, and a community that empowers you to reach new heights.
+
       </p>
      
       <div className="w-full  flex justify-center  ">

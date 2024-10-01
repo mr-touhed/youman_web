@@ -25,13 +25,13 @@ const page = async ({searchParams}) => {
 
                     <Catagory catagorys={catagory_list.data}/>
                     </Suspense>
-                        <Options />
+                        {/* <Options /> */}
                     <Suspense fallback="Loading....">
 
                     <CatagoryDetails partners={fetch_partners.data} searchParams={searchParams}/>
                     </Suspense>
                     
-                 <PopUp searchParams={searchParams} list = {get_offer_state_list.data}/>
+                 {/* <PopUp searchParams={searchParams} list = {get_offer_state_list.data}/> */}
         </div>
     );
 };
