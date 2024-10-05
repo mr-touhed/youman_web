@@ -64,7 +64,7 @@ export const Menu = ({
       onMouseLeave={() => setActive(null)}
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-[#ffffffb3] backdrop-blur-sm shadow-input flex justify-between  gap-8 items-center  px-8 py-3  pl-2 md:pl-8">
         <Link href="/">
-              <Image src="/images/youman_logo.png" alt="youman logo" width={100} height={50} className="w-12 "/>
+              <Image src="/images/youman_logo.png" alt="youman logo" width={700} height={350} className="w-16 "/>
           </Link>
         <div className="space-x-4 md:space-x-16">
         {children}

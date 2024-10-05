@@ -44,9 +44,11 @@ function Navbar({
       </Menu> */}
 
 <Menu setActive={setActive}>
-<Link href="/">Home</Link>
-<Link href="/blogs">Blogs</Link>
-<Link href="/about">About</Link>
+<Link href="/catalyst">Youman Catalyst</Link>
+<Link href="/creations">Creations</Link>
+<Link href="/about">Blogs</Link>
+<Link href="/privilege">Partners</Link>
+<Link href="/about">Contact us</Link>
 </Menu>
       
     </div>)

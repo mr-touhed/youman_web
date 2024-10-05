@@ -11,11 +11,11 @@ import Reviews from "@/components/Home/Reviews";
 
 export default function Home() {
   return (
-   <main className="">
+   <main className="space-y-36">
      
       <HeroParallaxDemo/>
-       <NfcSection  />
        <LifeStyle />
+       <NfcSection  />
        <PartnersSection/>
         <MembershipMatter/>
        <Reviews/>

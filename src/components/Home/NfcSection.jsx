@@ -19,8 +19,8 @@ const serviceList = [
 const NfcSection = () => {
    
     return (
-        <section className='dot-mask   '>
-            <div className='max-w-7xl mx-auto pt-12'>
+        <section className='dot-mask my-16  min-h-screen'>
+            <div className='max-w-7xl mx-auto py-12 space-y-8'>
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
             Aspire, Connect, Grow
         </h1>
