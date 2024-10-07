@@ -7,7 +7,8 @@ import { IoQrCodeOutline } from "react-icons/io5";
 import { motion, } from 'framer-motion';
 import AnimatedImage from '../AnimatedImage';
 import Link from 'next/link';
-
+import { LinkPreview } from '../ui/link-preview';
+import Img from "../../../public/images/nfc_tap.png"
 
 const serviceList = [
     {Icon:FcNfcSign ,title:"Integrated NFC", dec:"Tap your card onto a smartphone and instantly share your contact details" },
@@ -19,7 +20,7 @@ const serviceList = [
 const NfcSection = () => {
    
     return (
-        <section className='dot-mask my-16  min-h-screen'>
+        <section className='dot-mask   min-h-screen'>
             <div className='max-w-7xl mx-auto py-12 space-y-8'>
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
             Aspire, Connect, Grow
@@ -39,7 +40,7 @@ Youman gives you a platform to explore the best life has to offer—anytime, any
                 <div className='flex flex-col gap-8'>
 
                         {
-                            serviceList.map(service => <Service key={service.title} service={service}/>)
+                            serviceList.map(service => <LinkPreview  key={service.title} imageSrc='/images/nfc_tap.png' ><Service  service={service}/></LinkPreview> )
                         }
                         
 

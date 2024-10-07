@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
+import { RiMenu2Fill } from "react-icons/ri";
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -24,7 +24,7 @@ export const MenuItem = ({
       <motion.div
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white">
-        {item}
+        <RiMenu2Fill className="w-8 h-8 font-bold"/>
       </motion.div>
       {active !== null && (
         <motion.div
@@ -33,7 +33,7 @@ export const MenuItem = ({
           transition={transition}>
           {active === item && (
             <div
-              className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+              className="absolute top-[calc(100%_+_0.5rem)] left-0 transform  pt-4">
               <motion.div
                 transition={transition}
                 // layoutId ensures smooth animation
@@ -63,12 +63,14 @@ export const Menu = ({
       // resets the state
       onMouseLeave={() => setActive(null)}
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-[#ffffffb3] backdrop-blur-sm shadow-input flex justify-between  gap-8 items-center  px-8 py-3  pl-2 md:pl-8">
-        <Link href="/">
-              <Image src="/images/youman_logo.png" alt="youman logo" width={700} height={350} className="w-16 "/>
-          </Link>
+        
         <div className="space-x-4 md:space-x-16">
         {children}
         </div>
+        <Link href="/">
+              <Image src="/images/youman_logo.png" alt="youman logo" width={700} height={350} className="w-16 "/>
+          </Link>
+        
     </nav>)
   );
 };

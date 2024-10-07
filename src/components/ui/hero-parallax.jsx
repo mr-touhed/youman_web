@@ -55,13 +55,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-750, 100]),
+    useTransform(scrollYProgress, [0, 0.2], [-750, 10]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="md:h-[200vh] border border-red-500 md:pt-12  overflow-hidden   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[200vh]  md:pt-12  overflow-hidden   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -93,7 +93,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse pb-2 overflow-x-auto no-scrollbar space-x-reverse space-x-4 mb-20">
+        <motion.div className="flex flex-row-reverse pb-2 overflow-x-auto no-scrollbar space-x-reverse space-x-4 mb-5">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -112,13 +112,13 @@ export const Header = () => {
   return (
     <div className="px-4 max-w-7xl relative mx-auto  md:pt-0  md:px-4 w-full h-[100vh]  z-[2000]  left-0 top-0">
       
-      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 justify-center items-end">
-      <div className="flex flex-col gap-8">
-        <div>
+      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 mt-24">
+      <div className="flex flex-col gap-8 items-center">
+        <div className="space-y-8">
 
         
                     <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
-                  {/* <span style={{lineHeight:1.5}} className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}>Unlock your world</span>  <br /> */}
+                 
                   
                   <TypeAnimation
       sequence={[
@@ -148,10 +148,10 @@ export const Header = () => {
         </div>
        
       <Image
-          src={tween_card}
-          height="100"
-          width="200"
-          className="object-cover md:hidden block  w-[80%] mx-auto inset-0 card_animation"
+          src="/images/banner_img.png"
+          height={800}
+          width={1200}
+          className="object-cover w-full h-auto md:hidden block  "
           alt={''}
         />
         
@@ -172,11 +172,10 @@ Exclusive privileges, premium experiences, and a community that empowers you to 
      
       </div>
       <Image
-          src={tween_card}
-          width={500}
-          height={300}
-          
-          className="object-cover md:block hidden  w-full inset-0 card_animation"
+          src="/images/banner_img.png"
+          height={1200}
+          width={800}
+          className="object-cover w-full h-auto hidden md:block  "
           alt={''}
         />
       </section>

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const LifeStyle = () => {
     return (
-        <section className="dot-mask px-4 border mb-16 border-red-500">
+        <section className="dot-mask px-4  ">
             <div className="max-w-7xl mx-auto ">
             <div>
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">

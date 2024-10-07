@@ -17,7 +17,7 @@ Join a community where ambition meets support. It’s about growth, connection, 
                 </p>
         </div>
 
-        <div className="grid grid-cols-3 place-items-center gap-8 mt-10 md:mt-24 pb-24">
+        <div className="grid grid-cols-3 place-items-center gap-8 mt-10 md:mt-24 pb-8">
                     <div className="cursor-pointer">
                         <Image src="/images/icons/blogging.png" alt="blog" width={300} height={300} className="md:w-32"/>
                     </div>

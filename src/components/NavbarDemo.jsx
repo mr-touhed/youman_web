@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import { HoveredLink, Menu, MenuItem, } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import { Menu, MenuItem } from "./ui/navbar-menu";
+import { HoveredLink, Menu, MenuItem } from "./ui/navbar-menu";
 
 
 
@@ -23,33 +23,32 @@ function Navbar({
   return (
     (<div
       className={cn("fixed top-10 inset-x-0 max-w-7xl mx-auto z-50", className)}>
-      {/* <Menu setActive={setActive}>
+      
+        <div className="md:hidden block">
+        <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="/web-dev">Youman Catalyst</HoveredLink>
+            <HoveredLink href="/interface-design">Creations</HoveredLink>
+            <HoveredLink href="/seo">Blogs</HoveredLink>
+            <HoveredLink href="/branding">Partners</HoveredLink>
+            <HoveredLink href="/branding">Contact us</HoveredLink>
           </div>
         </MenuItem>
        
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-      </Menu> */}
+       
+      </Menu>
+        </div>
 
-<Menu setActive={setActive}>
+          <div className="md:block hidden">
+          <Menu setActive={setActive}>
 <Link href="/catalyst">Youman Catalyst</Link>
 <Link href="/creations">Creations</Link>
 <Link href="/about">Blogs</Link>
 <Link href="/privilege">Partners</Link>
 <Link href="/about">Contact us</Link>
 </Menu>
+          </div>
       
     </div>)
   );

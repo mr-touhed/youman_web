@@ -1,6 +1,34 @@
 import { ThreeDCardDemo } from "./_components/ThreeDCardDemo";
 
 export async function PartnersSection() {
+  const services = [
+    {
+      name:"Travel and Dining",
+      link:"/"
+    },
+    {
+      name:"Wellbeing",
+      link:"/"
+    },
+    {
+      name:"Grooming",
+      link:"/"
+    },
+    {
+      name:"Healthcare",
+      link:"/"
+    },
+    {
+      name:"Automobile",
+      link:"/"
+    },
+    {
+      name:"Others",
+      link:"/"
+    },
+
+  ]
+
   return (
     <div className="max-w-5xl  mx-auto px-8 my-16">
                   <h1
@@ -20,9 +48,11 @@ export async function PartnersSection() {
                     </p>
                   </div>
 
-                  <section>
-                      <ThreeDCardDemo/>
-
+                  <section className="grid md:grid-cols-3 grid-cols-2 gap-4 mt-16">
+                      
+                      {
+                        services.map(servic => <ThreeDCardDemo key={servic.name} link={servic.link} name={servic.name}/>)
+                      }
                   </section>
     </div>
   );
