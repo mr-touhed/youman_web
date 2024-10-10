@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 
+p{
+  @apply text-justify text-base mt-2
+}
+
+.sub-heading{
+  @apply text-neutral-600 max-w-lg mx-auto my-2 text-[1.05rem]  text-justify leading-[23px]
+}
+
+
+
 
 /* // add the code bellow */
 @layer utilities {

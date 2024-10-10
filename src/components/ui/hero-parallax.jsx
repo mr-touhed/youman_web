@@ -61,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="md:h-[200vh]  md:pt-12  overflow-hidden   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[200vh]  md:pt-12  overflow-hidden   antialiased relative flex flex-col  [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -110,14 +110,14 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="px-4 max-w-7xl relative mx-auto  md:pt-0  md:px-4 w-full h-[100vh]  z-[2000]  left-0 top-0">
+    <div className="px-4 max-w-7xl relative mx-auto  pt-16  md:px-4 w-full h-[100vh]  z-[2000]  left-0 top-0">
       
       <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 mt-24">
       <div className="flex flex-col gap-8 items-center">
-        <div className="space-y-8">
+        <div className="space-y-6">
 
         
-                    <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center  font-extrabold ">
+                    <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center min-h-[40px]  font-extrabold ">
                  
                   
                   <TypeAnimation
@@ -131,16 +131,16 @@ export const Header = () => {
         },
       ]}
       wrapper="span"
-      cursor={true}
+      cursor={false}
       repeat={Infinity}
       // style={{ fontSize: '2em', display: 'inline-block' }}
-      className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap`}
+      className={`heading font-extrabold  font-crisman tracking-tight  text-nowrap `}
     />
                     
                   </h1>
                  
 
-                    <div className="flex justify-center">
+                    <div className="flex justify-center ">
                     <TypewriterEffectSmooth className="text-7xl" words={[{
                   text: "Youman",
                 }]} />

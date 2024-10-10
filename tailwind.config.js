@@ -16,6 +16,11 @@ module.exports = {
        
       },
     extend: {
+      spacing: {
+        'word-spacing': '0.10em', // Adjust as needed
+        // Add more spacing values if required
+      },
+
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

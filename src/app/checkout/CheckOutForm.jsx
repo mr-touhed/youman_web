@@ -1,11 +1,11 @@
 "use client"
 import BkashModal from "@/components/BkashModal";
-import black from "@/images/card_black.png"
-import white from "@/images/card_white.png"
+import black from "@/images/order_card/card_black.png"
+import white from "@/images/order_card/card_white.png"
 import { baseURL } from "@/utils/baseURL";
 import Image from "next/image";
 import { useState } from "react";
-import { TiWarning } from "react-icons/ti";
+
 const CheckOutForm = () => {
     const [cardColor,setCardColor] = useState("black");
   
@@ -49,33 +49,60 @@ const CheckOutForm = () => {
 
     return (
         <>
-        <div className="grid md:grid-cols-2  grid-cols-1 gap-4 items-center  pt-2">
-            <form onSubmit={handel_order} className="flex flex-col gap-4 order-2 md:order-1 ">
+        <div className="grid md:grid-cols-2  grid-cols-1 gap-4 items-center  pt-8">
+            <section className="order-2 md:order-1">
+            <form onSubmit={handel_order} className="flex flex-col gap-4  ">
                     <div className="flex flex-col gap-1">
-                        <label className="text-sm" htmlFor="name">Full Name</label>
+                        <label className="text-sm" htmlFor="name">Name</label>
                         <input onChange={(e)=>handel_change_input(e)} value={order.fullname} type="text" name="fullname" id="name"  className="border rounded-md p-2" required/>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="text-sm" htmlFor="email">Email Address</label>
+                        <label className="text-sm" htmlFor="email">Email </label>
                         <input onChange={(e)=>handel_change_input(e)} value={order.email} type="email" name="email" id="email"  className="border rounded-md p-2" required/>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="text-sm" htmlFor="phone">Mobile Number</label>
+                        <label className="text-sm" htmlFor="phone">Mobile </label>
                         <input onChange={(e)=>handel_change_input(e)} value={order.mobile} type="tel" name="mobile" id="phone"  className="border rounded-md p-2" required/>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="text-sm" htmlFor="address">Address Details</label>
+                        <label className="text-sm" htmlFor="address">Address </label>
                         <textarea onChange={(e)=>handel_change_input(e)} value={order.address} name="address" id="address" className="h-20 border rounded-md p-2" required></textarea>
                     </div>
                     <div className="flex flex-col gap-1">
                         <label className="text-sm" htmlFor="reffer">Referral Code (if any)</label>
                         <input onChange={(e)=>handel_change_input(e)} value={order.reffer} type="text" name="reffer" id="reffer"  className="border rounded-md p-2"/>
                     </div>
-                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 rounded-md text-white uppercase">{loading ? "Loading..":"Order now !"}</button>
+                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-0 left-0 w-full z-50">{loading ? "Loading..":"GET IT !"}</button>
                 </form>
 
-        <div className="border-l order-1 md:order-2">
+                <div className="mt-4 space-y-3">
+                    <h4 className="font-bold">Description</h4>
+                    <p>Youman Catalyst - NFC enabled premium membership card  </p>
+                    <div>
+                        <h4>Key Features:</h4>
+                        <ol className="list-inside list-decimal">
+                            <li>NFC Enabled Business card – Tap or Scan to share your contact information</li>
+                            <li>Upto 80% discount at Youman Partner outlets </li>
+                            <li>BDT 10,000+ worth of Vouchers  </li>
+                            <li>Round the year exclusive events access </li>
+                        </ol>
+                    </div>
+                    <p>Embrace luxury, convenience, and savings at a time with Youman Catalyst. Get Youman Catalyst membership card and enjoy valuable vouchers worth of BDT 10,000+ and also take advantage of up to 80% discounts at partner outlets. Access benefits from Healthcare, Restaurants, Travel, Dining, Automotive, Lifestyle and what not! Order now and receive the custom made physical card, vouchers, starter kit and lot more!</p>
+                </div>
+            </section>
+
+        <div className=" order-1 md:order-2 self-start flex flex-col items-center w-full ">
                     <Image className="mx-auto md:w-auto w-[70%]"  src={cardColor === "black" ? black : white} alt="youman card" width={300} height={200}/>
+
+                    <div className="uppercase  mt-4">
+                        
+                        <p className="uppercase text-sm text-center"> Select Your Shade own your vibe</p>
+                       
+                        <div className="grid grid-cols-2 font-bold place-content-center ">
+                            <p className="text-sm" >NEW BDT 1,111</p>
+                            <p className="text-sm">validity: 365 days</p>
+                        </div>
+                    </div>
 
                    <div className="flex justify-center my-6 gap-4">
                    <p className="flex px-6 py-2 items-center rounded-full bg-black text-white shadow-lg cursor-pointer">
@@ -87,7 +114,7 @@ const CheckOutForm = () => {
                         <input className="hidden" onChange={(e)=>change_card_color(e)} type="radio" name="color" id="white" value="white" />
                     </p>
                    </div>
-                <p className="text-center uppercase text-yellow-500 md:text-sm text-xs flex items-center md:gap-4 justify-center"> <TiWarning className="inline-block md:w-6 md:h-6"/>Choose your Card What color you went</p>
+                
         </div>
 
         </div>

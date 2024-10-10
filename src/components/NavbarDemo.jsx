@@ -27,11 +27,12 @@ function Navbar({
         <div className="md:hidden block">
         <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
+          <div className="flex flex-col space-y-4 text-sm font-semibold uppercase">
             <HoveredLink href="/web-dev">Youman Catalyst</HoveredLink>
-            <HoveredLink href="/interface-design">Creations</HoveredLink>
-            <HoveredLink href="/seo">Blogs</HoveredLink>
-            <HoveredLink href="/branding">Partners</HoveredLink>
+            <HoveredLink href="/youman-story">Our Story</HoveredLink>
+            <HoveredLink href="/creations">Creations</HoveredLink>
+            <HoveredLink href="/blogs">Blogs</HoveredLink>
+            <HoveredLink href="/privilege">Partners</HoveredLink>
             <HoveredLink href="/branding">Contact us</HoveredLink>
           </div>
         </MenuItem>
@@ -40,13 +41,14 @@ function Navbar({
       </Menu>
         </div>
 
-          <div className="md:block hidden">
+          <div className="md:block hidden font-semibold uppercase">
           <Menu setActive={setActive}>
-<Link href="/catalyst">Youman Catalyst</Link>
+<Link href="/web-dev">Youman Catalyst</Link>
+<Link href="/youman-story">Our Story</Link>
 <Link href="/creations">Creations</Link>
-<Link href="/about">Blogs</Link>
+<Link href="/blogs">Blogs</Link>
 <Link href="/privilege">Partners</Link>
-<Link href="/about">Contact us</Link>
+<Link href="/branding">Contact us</Link>
 </Menu>
           </div>
       

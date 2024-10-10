@@ -17,18 +17,25 @@ import Image from 'next/image';
 
 export default function App() {
   return (
-    <div className='max-w-7xl mx-auto px-4'>
+    <div className='max-w-7xl mx-auto px-3 text-center'>
 
-<div>
+            <div >
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
-                        Customer Reviews
+                        Youman Exprience
                     </h1>
-                    <p className="text-neutral-500 max-w-lg mx-auto my-2 text-base text-center relative z-10">
+                    <h4 className="sub-title  mt-3">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
                     
-                    </p>
+                    </h4>
             </div>
       <Swiper
+      style={{
+        "--swiper-pagination-color": "#15803D",
+        "--swiper-pagination-bullet-inactive-color": "#999999",
+        "--swiper-pagination-bullet-inactive-opacity": "1",
+        "--swiper-pagination-bullet-size": "14px",
+        "--swiper-pagination-bullet-horizontal-gap": "6px"
+      }}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -40,50 +47,51 @@ export default function App() {
         }}
         
         modules={[Autoplay, Pagination, ]}
-        className="mySwiper"
+        className=""
       >
-        <SwiperSlide>
+        <SwiperSlide >
             <div className='bg-transparent text-black h-30vh md:p-16 m-4'>
                     <div className='max-w-[600px] mx-auto bg-[#26212116] p-4 backdrop-blur-sm'>
                                <div className='flex md:flex-row flex-col mb-6 items-center gap-2'>
                                <Image className='rounded-full border p-2' width={100} height={100} src={img} alt="ldld" />
                                <div>
-                               <h2 className='text-xl'>John doe</h2>
+                               <h2 className='text-xl font-bold'>John doe</h2>
                                <h2 className='text-sm'>job holder</h2>
                                </div>
                                </div>
-                                <h1 className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem corporis at, aliquid consequuntur voluptate distinctio, modi exercitationem ab nihil quas delectus architecto doloremque repellendus, voluptatum asperiores. Veritatis, distinctio asperiores.</h1>
+                                <h1 className='text-justify italic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem corporis at, aliquid consequuntur voluptate distinctio, modi exercitationem ab nihil quas delectus architecto doloremque repellendus, voluptatum asperiores. Veritatis, distinctio asperiores.</h1>
                     </div>
             </div>
         </SwiperSlide>
-        <SwiperSlide>
-            <div className='bg-transparent text-black h-30vh md:p-16 m-4'>
-                    <div className='max-w-[600px] mx-auto bg-[#26212116] p-4 backdrop-blur-sm'>
-                               <div className='flex md:flex-row flex-col  mb-6 items-center gap-2'>
-                               <Image className='rounded-full border p-2' width={100} height={100} src={img} alt="ldld" />
-                               <div>
-                               <h2 className='text-xl'>John doe</h2>
-                               <h2 className='text-sm'>job holder</h2>
-                               </div>
-                               </div>
-                                <h1 className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem corporis at, aliquid consequuntur voluptate distinctio, modi exercitationem ab nihil quas delectus architecto doloremque repellendus, voluptatum asperiores. Veritatis, distinctio asperiores.</h1>
-                    </div>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="mb-8">
             <div className='bg-transparent text-black h-30vh md:p-16 m-4'>
                     <div className='max-w-[600px] mx-auto bg-[#26212116] p-4 backdrop-blur-sm'>
                                <div className='flex md:flex-row flex-col mb-6 items-center gap-2'>
                                <Image className='rounded-full border p-2' width={100} height={100} src={img} alt="ldld" />
                                <div>
-                               <h2 className='text-xl'>John doe</h2>
+                               <h2 className='text-xl font-bold'>John doe</h2>
                                <h2 className='text-sm'>job holder</h2>
                                </div>
                                </div>
-                                <h1 className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem corporis at, aliquid consequuntur voluptate distinctio, modi exercitationem ab nihil quas delectus architecto doloremque repellendus, voluptatum asperiores. Veritatis, distinctio asperiores.</h1>
+                                <h1 className='text-justify italic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem corporis at, aliquid consequuntur voluptate distinctio, modi exercitationem ab nihil quas delectus architecto doloremque repellendus, voluptatum asperiores. Veritatis, distinctio asperiores.</h1>
                     </div>
             </div>
         </SwiperSlide>
+        <SwiperSlide className="mb-8">
+            <div className='bg-transparent text-black h-30vh md:p-16 m-4'>
+                    <div className='max-w-[600px] mx-auto bg-[#26212116] p-4 backdrop-blur-sm'>
+                               <div className='flex md:flex-row flex-col mb-6 items-center gap-2'>
+                               <Image className='rounded-full border p-2' width={100} height={100} src={img} alt="ldld" />
+                               <div>
+                               <h2 className='text-xl font-bold'>John doe</h2>
+                               <h2 className='text-sm'>job holder</h2>
+                               </div>
+                               </div>
+                                <h1 className='text-justify italic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem corporis at, aliquid consequuntur voluptate distinctio, modi exercitationem ab nihil quas delectus architecto doloremque repellendus, voluptatum asperiores. Veritatis, distinctio asperiores.</h1>
+                    </div>
+            </div>
+        </SwiperSlide>
+        
        
         
         

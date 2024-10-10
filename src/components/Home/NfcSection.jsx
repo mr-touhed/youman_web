@@ -1,42 +1,47 @@
 "use client"
 import React from 'react';
 import { MovingBorderDemo } from '../MovingBorderDemo';
-// icons
-import { FcNfcSign,FcSynchronize,FcMultipleDevices    } from "react-icons/fc";
-import { IoQrCodeOutline } from "react-icons/io5";
+
+
 import { motion, } from 'framer-motion';
 import AnimatedImage from '../AnimatedImage';
 import Link from 'next/link';
 import { LinkPreview } from '../ui/link-preview';
-import Img from "../../../public/images/nfc_tap.png"
+
+// icons
+import QRicon from "../../images/icon_img/qr.png"
+import no_app from "../../images/icon_img/no_app.png"
+import NFC from "../../images/icon_img/NFC.png"
+import convenient from "../../images/icon_img/convenient.png"
+import Image from 'next/image';
 
 const serviceList = [
-    {Icon:FcNfcSign ,title:"Integrated NFC", dec:"Tap your card onto a smartphone and instantly share your contact details" },
-    {Icon:IoQrCodeOutline ,title:"QR tecnology", dec:"No NFC ? No Problem! Scan the QR code using the device camera" , c:true },
-    {Icon:FcSynchronize ,title:"Convenient", dec:"All the traditional contact information is included" },
-    {Icon:FcMultipleDevices ,title:"No App required", dec:"All you need is an active internet connection to the recipient's device" },
+    {Icon:QRicon ,title:"Integrated NFC", dec:"Tap your card onto a smartphone and instantly share your contact details" },
+    {Icon:NFC ,title:"QR tecnology", dec:"No NFC ? No Problem! Scan the QR code using the device camera" , c:true },
+    {Icon:convenient ,title:"Convenient", dec:"All the traditional contact information is included" },
+    {Icon:no_app ,title:"No App required", dec:"All you need is an active internet connection to the recipient's device" },
 ]
 
 const NfcSection = () => {
    
     return (
-        <section className='dot-mask   min-h-screen'>
+        <section className='dot-mask px-4  min-h-screen'>
             <div className='max-w-7xl mx-auto py-12 space-y-8'>
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
             Aspire, Connect, Grow
         </h1>
-        <p className="text-neutral-800 max-w-lg mx-auto my-2 px-2  text-xl text-center relative z-10">
+        <h4 className="sub-heading">
         With one tap, your world opens up. Share your profile, connect with others, and unlock experiences in an instant.  
 Youman gives you a platform to explore the best life has to offer—anytime, anywhere
 
           
-        </p>
+        </h4>
         
         
        
        
         
-        <div className="w-full px-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-16 relative z-10 ">
+        <div className="w-full  grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-16 relative z-10 ">
                 <div className='flex flex-col gap-8'>
 
                         {
@@ -78,11 +83,11 @@ export default NfcSection;
 
 
 function Service({service}){
-    const {Icon,title,dec,c} = service
+    const {Icon,title,dec,} = service
     return (
     <article className='text-[#09090c] flex items-center gap-4'>
-    <div className='rounded-full p-4 icon_shadow bg-[#5C5555]'>
-            <Icon className={`text-white w-6 h-6`} />
+    <div className=' md:p-3 p-2 icon_shadow bg-green-700 rounded-md'>
+            <Image src={Icon} alt="Icon" width={1000} height={700} className="md:w-9 md:h-8 w-8 h-5"/>
     </div>
     <div >
         <h4 className='text-xl '>{title}</h4>

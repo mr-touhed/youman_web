@@ -68,7 +68,7 @@ export const Menu = ({
         {children}
         </div>
         <Link href="/">
-              <Image src="/images/youman_logo.png" alt="youman logo" width={700} height={350} className="w-16 "/>
+              <Image src="/images/youman_logo.png" alt="youman logo" width={1000} height={500} className="w-20 "/>
           </Link>
         
     </nav>)

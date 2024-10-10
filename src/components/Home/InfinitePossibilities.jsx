@@ -1,26 +1,26 @@
 import Image from "next/image";
 import youmanCard from "@/images/tween_card.png"
-import concert from "@/images/icon_img/ticket.jpg"
+import concert from "@/images/icon_img/Concert_Icon.png"
 import event from "@/images/icon_img/event.jpg"
-import invite from "@/images/icon_img/pass.jpg"
+import invite from "@/images/icon_img/Invitation_Icon.png"
 import { MovingBorderDemo } from "../MovingBorderDemo";
 import Link from "next/link";
 
-const LifeStyle = () => {
+const InfinitePossibilities = () => {
     return (
         <section className="dot-mask px-4  ">
-            <div className="max-w-7xl mx-auto ">
+            <div className="max-w-7xl mx-auto mt-16 pt-8">
             <div>
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
                         Infinite Possibilities
                     </h1>
-                    <p className="text-neutral-500 max-w-lg mx-auto my-2 text-xl text-center relative z-10">
+                    <h4 className="sub-heading">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
                     
-                    </p>
+                    </h4>
             </div>
 
-            <div className="w-full  my-16 grid md:grid-cols-2 grid-cols-1 gap-8 items-center  relative z-10">
+            <div className="w-full   grid md:grid-cols-2 grid-cols-1 gap-8 items-center  relative z-10">
             <div className='flex flex-col md:order-1 order-2'>
                 <Image
           src={youmanCard}
@@ -34,7 +34,7 @@ const LifeStyle = () => {
                 </Link>
                 </div>
                 <div className='flex flex-col gap-16 md:order-2 order-1'>
-                    <p className="text-[#3F3F46] text-justify ">Your journey begins with a tap. Limitless contact sharing, seamless access to premium brands and opportunities, all in one place.</p>
+                    <p className="text-[#3F3F46] text-justify ">Your journey begins with a tap. Limitless contact sharing, seamless access to Exclusive, Events, Concerts, and many more. all in one place.</p>
                         
                     <div className="grid grid-cols-3 md:gap-16 gap-2">
                             <div className="flex flex-col gap-2  life_style_card border p-3 rounded-md  items-center">
@@ -78,4 +78,4 @@ const LifeStyle = () => {
     );
 };
 
-export default LifeStyle;
+export default InfinitePossibilities;
