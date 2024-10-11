@@ -14,15 +14,19 @@ import img from "@/images/icon_img/USER.png"
 // import required modules
 import { Autoplay, Pagination,  } from 'swiper/modules';
 import Image from 'next/image';
+import HeadingAnimation from '../HeadingAnimation';
 
 export default function App() {
   return (
     <div className='max-w-7xl mx-auto px-3 text-center'>
 
             <div >
+              <HeadingAnimation>
+
                         <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
                         Youman Exprience
                     </h1>
+              </HeadingAnimation>
                     <h4 className="sub-title  mt-3">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
                     

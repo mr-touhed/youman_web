@@ -27,7 +27,7 @@ function Navbar({
         <div className="md:hidden block">
         <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm font-semibold uppercase">
+          <div className="flex flex-col space-y-4 text-sm font-semibold ">
             <HoveredLink href="/web-dev">Youman Catalyst</HoveredLink>
             <HoveredLink href="/youman-story">Our Story</HoveredLink>
             <HoveredLink href="/creations">Creations</HoveredLink>
@@ -41,7 +41,7 @@ function Navbar({
       </Menu>
         </div>
 
-          <div className="md:block hidden font-semibold uppercase">
+          <div className="md:block hidden text-lg font-semibold ">
           <Menu setActive={setActive}>
 <Link href="/web-dev">Youman Catalyst</Link>
 <Link href="/youman-story">Our Story</Link>

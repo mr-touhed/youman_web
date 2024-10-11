@@ -3,6 +3,7 @@ import Link from "next/link";
 
 // Social Icons 
 import { FaFacebookF,FaYoutube,FaSquareXTwitter,FaLinkedinIn,FaInstagram,FaBloggerB      } from "react-icons/fa6";
+import HeadingAnimation from "../HeadingAnimation";
 
 const SocialMediaArray = [
     {
@@ -49,9 +50,12 @@ const MembershipMatter = () => {
         <section className="dot-mask px-3 pt-6">
         <div className="max-w-7xl mx-auto ">
         <div>
+                    <HeadingAnimation>
+
                     <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
                     Membership That Matters
                 </h1>
+                    </HeadingAnimation>
                 <h4 className="sub-heading">
                 Youman is for those who aim higher.  
 Join a community where ambition meets support. It’s about growth, connection, and reaching for what’s next—always with the support of a like-minded community.
@@ -60,7 +64,7 @@ Join a community where ambition meets support. It’s about growth, connection, 
                 </h4>
         </div>
 
-        <section className="grid grid-cols-3 place-items-center gap-3 mt-10 md:mt-24 pb-8 ">
+        <section className="grid grid-cols-3 place-items-center  md:max-w-xl  md:mx-auto gap-3 mt-10 md:mt-20 pb-8 ">
                    
                    {
                     SocialMediaArray.map(media => <SocialCard key={media.id} media={media}/>)
@@ -84,10 +88,12 @@ export default MembershipMatter;
 function SocialCard({media}){
     const {Icon,link} = media
     return(
-        <Link href={`/`} className="p-2 md:p-4 w-full h-20 bg-black rounded-md shadow-md grid place-content-center">
+        <div className="group">
+        <Link href={`/`} className="p-2 md:mb-8 md:p-4 md:w-36 md:h-36 w-20 h-20  bg-black group-hover:bg-transparent rounded-md shadow-md grid place-content-center life_style_card">
 
-                <Icon className="text-white w-8 h-8"/>
+                <Icon className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16"/>
 
         </Link>
+        </div>
     )
 }

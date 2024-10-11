@@ -14,6 +14,7 @@ import no_app from "../../images/icon_img/no_app.png"
 import NFC from "../../images/icon_img/NFC.png"
 import convenient from "../../images/icon_img/convenient.png"
 import Image from 'next/image';
+import HeadingAnimation from '../HeadingAnimation';
 
 const serviceList = [
     {Icon:QRicon ,title:"Integrated NFC", dec:"Tap your card onto a smartphone and instantly share your contact details" },
@@ -27,9 +28,12 @@ const NfcSection = () => {
     return (
         <section className='dot-mask px-4  min-h-screen'>
             <div className='max-w-7xl mx-auto py-12 space-y-8'>
+                <HeadingAnimation>
+
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
             Aspire, Connect, Grow
-        </h1>
+            </h1>
+            </HeadingAnimation>
         <h4 className="sub-heading">
         With one tap, your world opens up. Share your profile, connect with others, and unlock experiences in an instant.  
 Youman gives you a platform to explore the best life has to offer—anytime, anywhere
@@ -45,7 +49,7 @@ Youman gives you a platform to explore the best life has to offer—anytime, any
                 <div className='flex flex-col gap-8'>
 
                         {
-                            serviceList.map(service => <LinkPreview  key={service.title} imageSrc='/images/nfc_tap.png' ><Service  service={service}/></LinkPreview> )
+                            serviceList.map((service,i) => <LinkPreview  key={i} imageSrc='/images/nfc_tap.png' ><Service index={i}  service={service}/></LinkPreview> )
                         }
                         
 
@@ -82,14 +86,14 @@ export default NfcSection;
 
 
 
-function Service({service}){
+function Service({service,index}){
     const {Icon,title,dec,} = service
     return (
-    <article className='text-[#09090c] flex items-center gap-4'>
+    <article className='text-[#09090c] flex items-center gap-4 nfc-card'>
     <div className=' md:p-3 p-2 icon_shadow bg-green-700 rounded-md'>
-            <Image src={Icon} alt="Icon" width={1000} height={700} className="md:w-9 md:h-8 w-8 h-5"/>
+            <Image src={Icon} alt="Icon" width={1000} height={700} className={`md:w-9 md:h-8 ${index === 2 ? "w-6" : "w-8"} h-5`}/>
     </div>
-    <div >
+    <div className='nfc-text'>
         <h4 className='text-xl '>{title}</h4>
         <p className='font-thin '>{dec}</p>
     </div>

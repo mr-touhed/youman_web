@@ -92,13 +92,13 @@ const CheckOutForm = () => {
             </section>
 
         <div className=" order-1 md:order-2 self-start flex flex-col items-center w-full ">
-                    <Image className="mx-auto md:w-auto w-[70%]"  src={cardColor === "black" ? black : white} alt="youman card" width={300} height={200}/>
+                    <Image className="mx-auto md:w-auto w-[70%] card_animation"  src={cardColor === "black" ? black : white} alt="youman card" width={300} height={200}/>
 
-                    <div className="uppercase  mt-4">
+                    <div className="  mt-4">
                         
-                        <p className="uppercase text-sm text-center"> Select Your Shade own your vibe</p>
+                        <p className=" text-sm text-center"> Select Your Shade, Own Your Vibe !</p>
                        
-                        <div className="grid grid-cols-2 font-bold place-content-center ">
+                        <div className="grid grid-cols-2 font-bold text-base place-content-center uppercase">
                             <p className="text-sm" >NEW BDT 1,111</p>
                             <p className="text-sm">validity: 365 days</p>
                         </div>
