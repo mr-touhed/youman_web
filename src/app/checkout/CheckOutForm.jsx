@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const CheckOutForm = () => {
-    const [cardColor,setCardColor] = useState("black");
+    const [cardColor,setCardColor] = useState("white");
   
     const [order,setOrder] = useState({fullname:"",email:"",mobile:"",address:"",reffer:"",cardColor});
     const [loading,setLoading] = useState(false)
@@ -69,13 +69,13 @@ const CheckOutForm = () => {
                         <textarea onChange={(e)=>handel_change_input(e)} value={order.address} name="address" id="address" className="h-20 border rounded-md p-2" required></textarea>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="text-sm" htmlFor="reffer">Referral Code (if any)</label>
-                        <input onChange={(e)=>handel_change_input(e)} value={order.reffer} type="text" name="reffer" id="reffer"  className="border rounded-md p-2"/>
+                        <label className="text-sm" htmlFor="reffer">Referral code (if any)</label>
+                        <input onChange={(e)=>handel_change_input(e)} value={order.reffer} type="text" name="reffer" id="reffer"  className="border border-green-700 rounded-md p-2"/>
                     </div>
                     <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-0 left-0 w-full z-50">{loading ? "Loading..":"GET IT !"}</button>
                 </form>
 
-                <div className="mt-4 space-y-3">
+                <div className="mt-4 space-y-3 font-thin">
                     <h4 className="font-bold">Description</h4>
                     <p>Youman Catalyst - NFC enabled premium membership card  </p>
                     <div>
@@ -92,28 +92,35 @@ const CheckOutForm = () => {
             </section>
 
         <div className=" order-1 md:order-2 self-start flex flex-col items-center w-full ">
-                    <Image className="mx-auto md:w-auto w-[70%] card_animation"  src={cardColor === "black" ? black : white} alt="youman card" width={300} height={200}/>
+                    <Image className="mx-auto md:w-auto w-[70%] card_animation "  src={cardColor === "black" ? black : white} alt="youman card" width={300} height={200}/>
 
-                    <div className="  mt-4">
-                        
-                        <p className=" text-sm text-center"> Select Your Shade, Own Your Vibe !</p>
-                       
-                        <div className="grid grid-cols-2 font-bold text-base place-content-center uppercase">
-                            <p className="text-sm" >NEW BDT 1,111</p>
-                            <p className="text-sm">validity: 365 days</p>
+                    <div className="space-y-4  mt-4">
+                         {/* TODO: add logic for discount  */}
+                        <div className=" font-semibold   ">
+                            <p className="text-2xl text-center font-bold uppercase text-green-700 " >Price BDT <span className="line-through text-red-400">1,111</span> <span className="ml-2">9,000</span></p>
+                            <p className="text-sm text-center">Validity: 365 days</p>
                         </div>
-                    </div>
 
-                   <div className="flex justify-center my-6 gap-4">
-                   <p className="flex px-6 py-2 items-center rounded-full bg-black text-white shadow-lg cursor-pointer">
-                        <label htmlFor="black" className="cursor-pointer">Black</label>
-                        <input className="hidden" onChange={(e)=>change_card_color(e)} type="radio" name="color" id="black"  value="black" />
-                    </p>
-                    <p className="flex px-6 py-2 items-center rounded-full bg-[hsl(0,50%,99%)]  shadow-lg text-black cursor-pointer">
+                        
+                    </div>
+                    <div className="mt-8">
+
+                    <p className=" text-base text-center"> Select Your Shade, Own Your Vibe !</p>
+                    <div className="flex justify-center my-6 gap-4">
+                   
+                    <div className="flex px-6 py-1 items-center rounded-lg bg-[hsl(0,50%,99%)]  shadow-lg text-black cursor-pointer icon_shadow">
                         <label htmlFor="white" className="cursor-pointer">White</label>
                         <input className="hidden" onChange={(e)=>change_card_color(e)} type="radio" name="color" id="white" value="white" />
-                    </p>
+                    </div>
+                   
+                   <div className="flex px-6 py-1 items-center rounded-lg bg-black text-white shadow-lg cursor-pointer icon_shadow">
+                        <label htmlFor="black" className="cursor-pointer">Black</label>
+                        <input className="hidden" onChange={(e)=>change_card_color(e)} type="radio" name="color" id="black"  value="black" />
+                    </div>
+                    
                    </div>
+                    </div>
+                   
                 
         </div>
 

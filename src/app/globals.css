@@ -43,7 +43,8 @@ p{
   }
 
 
-  .life_style_card:hover,.icon_shadow:hover{
+  .life_style_card:hover,.icon_shadow:hover,.service_card:hover{
+    border-radius: 8px;
     box-shadow: 1px 0px 9px 1px #45ff458f, 0px 0px 12px 5px #146714cf;
     transition: all 0.3s ease;
   }

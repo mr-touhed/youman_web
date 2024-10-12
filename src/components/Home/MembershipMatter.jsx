@@ -15,31 +15,31 @@ const SocialMediaArray = [
     {
         id:"2",
         Icon: FaYoutube,
-        link: "/",
+        link: "https://youtube.com/@youmanbd",
 
     },
     {
         id:"3",
         Icon: FaFacebookF,
-        link: "/",
+        link: "https://www.facebook.com/youmanbd",
 
     },
     {
         id:"4",
         Icon:FaInstagram ,
-        link: "/",
+        link: "https://www.instagram.com/youman.bd",
 
     },
     {
         id:"5",
         Icon: FaLinkedinIn,
-        link: "/",
+        link: "https://www.linkedin.com/company/youmanbd/",
 
     },
     {
         id:"6",
         Icon:FaSquareXTwitter ,
-        link: "/",
+        link: "https://x.com/youmanbd",
 
     },
 ]
@@ -49,11 +49,11 @@ const MembershipMatter = () => {
     return (
         <section className="dot-mask px-3 pt-6">
         <div className="max-w-7xl mx-auto ">
-        <div>
+        <div className="space-y-8">
                     <HeadingAnimation>
 
-                    <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
-                    Membership That Matters
+                    <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl  md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
+                    Membership that matters
                 </h1>
                     </HeadingAnimation>
                 <h4 className="sub-heading">
@@ -86,10 +86,10 @@ export default MembershipMatter;
 
 
 function SocialCard({media}){
-    const {Icon,link} = media
+    const {Icon,link,id} = media
     return(
         <div className="group">
-        <Link href={`/`} className="p-2 md:mb-8 md:p-4 md:w-36 md:h-36 w-20 h-20  bg-black group-hover:bg-transparent rounded-md shadow-md grid place-content-center life_style_card">
+        <Link href={link} target={id === "1" ? "_blank" : "_parent" } className="p-2 md:mb-8 md:p-4 md:w-36 md:h-36 w-20 h-20 mb-3 bg-black group-hover:bg-transparent rounded-md shadow-md grid place-content-center life_style_card">
 
                 <Icon className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16"/>
 

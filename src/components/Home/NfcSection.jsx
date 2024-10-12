@@ -31,7 +31,7 @@ const NfcSection = () => {
                 <HeadingAnimation>
 
             <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
-            Aspire, Connect, Grow
+            Aspire, connect, grow
             </h1>
             </HeadingAnimation>
         <h4 className="sub-heading">

@@ -10,13 +10,13 @@ export function ThreeDCardDemo({servic}) {
 
   const {name,link,img} = servic
   return (
-    (<Link href={link}>
+    (<Link href={link} className="service_card">
     <CardContainer className="inter-var w-full ">
       <CardBody
         className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl md:p-6 p-2 border  ">
         <CardItem
           translateZ="50"
-          className="md:text-xl md:h-auto  h-[45px] text-neutral-600 dark:text-white uppercase font-bold text-center w-full">
+          className="md:text-xl md:h-auto   text-neutral-600 dark:text-white  font-bold text-center w-full">
           {name}
         </CardItem>
         

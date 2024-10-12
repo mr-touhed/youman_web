@@ -28,7 +28,7 @@ const HeadingAnimation = ({ children }) => {
       ref={ref}
       initial={{ scale: 0.1 }}
       animate={{ scale: isVisible ? 1 : 0.1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.8 }}
     >
       {children}
     </motion.div>

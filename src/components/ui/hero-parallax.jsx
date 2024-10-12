@@ -61,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="md:h-[200vh]  md:pt-12  overflow-hidden   antialiased relative flex flex-col  [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[200vh]  pt-12  overflow-hidden   antialiased relative flex flex-col  [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -112,7 +112,7 @@ export const Header = () => {
   return (
     <div className="px-4 max-w-7xl relative mx-auto  pt-16  md:px-4 w-full h-[100vh]  z-[2000]  left-0 top-0">
       
-      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 mt-24">
+      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 mt-12">
       <div className="flex flex-col gap-8 items-center">
         <div className="space-y-6">
 
@@ -165,7 +165,7 @@ Exclusive privileges, premium experiences, and a community that empowers you to 
      
       <div className="w-full  flex justify-center  ">
       <Link href="/checkout">
-      <MovingBorderDemo className='font-crisman bg-green-600 from-neutral-200 ' />
+      <MovingBorderDemo className='font-crisman bg-green-700 from-neutral-200 ' />
       </Link>
       </div>
       </div>

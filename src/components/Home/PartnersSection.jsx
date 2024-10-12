@@ -12,7 +12,7 @@ import HeadingAnimation from "../HeadingAnimation";
 export async function PartnersSection() {
   const services = [
     {
-      name:"Travel and Dining",
+      name:"Travel & Dining",
       link:"/privilege?catagory=Travel+and+Dining",
       img:travel,
     },
@@ -45,20 +45,20 @@ export async function PartnersSection() {
   ]
 
   return (
-    <div className="max-w-5xl  mx-auto px-3 my-16">
+    <div className="max-w-5xl space-y-9 mx-auto px-3 my-16">
           <HeadingAnimation>
                   <h1
                     style={{ lineHeight: "1.3" }}
-                    className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold"
+                    className="relative z-10 text-4xl md:text-7xl line-clamp-3 pb-6  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold"
                   >
-                    Boundless Privilege
+                    Boundless privilege
                   </h1>
                   </HeadingAnimation>
                   <div className="text-justify text-base space-y-4">
                     <h4 className="sub-heading">
                       More than a card—it’s your key to exclusive opportunities.
                     </h4>
-                    <p>
+                    <p className="font-thin">
                       Youman is your key to unlocking exclusive opportunities. From
                       restaurant, travel, healthcare to premium lifestyle perks, it’s
                       designed for those who expect more.
@@ -68,7 +68,7 @@ export async function PartnersSection() {
                   <section className="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-3  mt-8">
                       
                       {
-                        services.map(servic => <ThreeDCardDemo  key={servic.name} servic={servic}/>)
+                        services.map(servic => <ThreeDCardDemo key={servic.name} servic={servic}/>)
                       }
                   </section>
     </div>

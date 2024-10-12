@@ -28,9 +28,9 @@ function Navbar({
         <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm font-semibold ">
-            <HoveredLink href="/web-dev">Youman Catalyst</HoveredLink>
-            <HoveredLink href="/youman-story">Our Story</HoveredLink>
-            <HoveredLink href="/creations">Creations</HoveredLink>
+            <HoveredLink href="/web-dev">Youman catalyst</HoveredLink>
+            <HoveredLink href="/youman-story">Our story</HoveredLink>
+            <HoveredLink href="/trending-now">Trending now</HoveredLink>
             <HoveredLink href="/blogs">Blogs</HoveredLink>
             <HoveredLink href="/privilege">Partners</HoveredLink>
             <HoveredLink href="/branding">Contact us</HoveredLink>
@@ -43,9 +43,9 @@ function Navbar({
 
           <div className="md:block hidden text-lg font-semibold ">
           <Menu setActive={setActive}>
-<Link href="/web-dev">Youman Catalyst</Link>
-<Link href="/youman-story">Our Story</Link>
-<Link href="/creations">Creations</Link>
+<Link href="/web-dev">Youman catalyst</Link>
+<Link href="/youman-story">Our story</Link>
+<Link href="/trending-now">Trending now</Link>
 <Link href="/blogs">Blogs</Link>
 <Link href="/privilege">Partners</Link>
 <Link href="/branding">Contact us</Link>

@@ -2,54 +2,52 @@ import Link from "next/link";
 import React from "react";
 
 // Social Icons 
-import { FaFacebookF,FaYoutube,FaSquareXTwitter,FaLinkedinIn,FaInstagram,FaBloggerB      } from "react-icons/fa6";
+import { FaFacebookF,FaYoutube,FaSquareXTwitter,FaLinkedinIn,FaInstagram,} from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="relative bg-[#050607] pt-8 mt-6 pb-6 text-[#c7c6c6]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap text-left lg:text-left pb-6">
-          <div className="w-full lg:w-6/12 px-4">
-            <h4 className="text-3xl fonat-semibold text-blueGray-700 ">
-              Stay Connected!
+        <div className="flex flex-wrap text-left lg:text-left ">
+          <div className="w-full lg:w-6/12 px-3">
+            <h4 className="text-3xl fonat-semibold md:text-left text-center  mr-[15px] text-blueGray-700 ">
+              Stay connected!
             </h4>
            
-            <div className="mt-6 lg:mb-0 mb-6 grid md:grid-cols-6 grid-cols-3 gap-2 justify-items-start ">
-              <button
+            <div className="mt-6 lg:mb-0 mb-6 grid grid-cols-5  gap-2 md:justify-items-start justify-center">
+              <Link href="https://www.facebook.com/youmanbd" target="_blank"
                 className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
-                type="button"
+                
               >
-                <FaFacebookF className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16" />
-              </button>
-              <button
+                <FaFacebookF className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
+              </Link>
+              <Link href="https://www.instagram.com/youman.bd" target="_blank"
                 className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
-                type="button"
+                
               >
-                <FaYoutube className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16" />
-              </button>
-              <button
+                <FaInstagram className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/youmanbd/" target="_blank"
                 className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
-                type="button"
+                
               >
-                <FaSquareXTwitter className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16" />
-              </button>
-              <button
+                <FaLinkedinIn className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
+              </Link>
+              <Link href="https://x.com/youmanbd" target="_blank"
                 className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
-                type="button"
+                
               >
-                <FaLinkedinIn className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16" />
-              </button>
-              <button
+                <FaSquareXTwitter className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
+              </Link>
+              <Link href="https://youtube.com/@youmanbd" target="_blank"
                 className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
-                type="button"
+                
               >
-                <FaInstagram className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16" />
-              </button>
-              <button
-                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <FaBloggerB className="text-white group-hover:text-black w-8 h-8 md:w-16 md:h-16" />
-              </button>
+                <FaYoutube className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
+              </Link>
+              
+              
+              
+              
              
             </div>
           </div>
@@ -57,14 +55,14 @@ const Footer = () => {
             <div className="flex flex-wrap items-top mb-6">
               <div className="w-full lg:w-4/12 px-4 ml-auto">
                 
-                <ul className="list-unstyled">
+                <ul className="list-unstyled space-y-2">
                   
                   <li>
                     <Link
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="/our-story"
                     >
-                      Our Story
+                      Our story
                     </Link>
                   </li>
                   <li>
@@ -72,29 +70,29 @@ const Footer = () => {
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="/contact-us"
                     >
-                     Be A Partners
+                     Be a partners
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
                       href="/contact-us"
                     >
-                     Contact Us
+                     Contact us
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="w-full lg:w-4/12 px-4">
                 
-                <ul className="list-unstyled">
+                <ul className="list-unstyled space-y-2">
                   
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-1 text-sm"
                       href="#"
                     >
-                      Terms &amp; Conditions
+                      Terms &amp; conditions
                     </a>
                   </li>
                   <li>
@@ -102,7 +100,7 @@ const Footer = () => {
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="#"
                     >
-                      Privacy Policy
+                      Privacy policy
                     </a>
                   </li>
                   
@@ -111,7 +109,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-blueGray-300" />
+        <hr className="my-4 border-blueGray-300" />
         <div className="flex flex-wrap items-center md:justify-between justify-center">
           <div className="w-full md:w-4/12 px-4 mx-auto text-center">
             <div className="text-sm text-blueGray-500 font-semibold py-1">

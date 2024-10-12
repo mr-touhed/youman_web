@@ -14,8 +14,8 @@ const InfinitePossibilities = () => {
             <div>
                     <HeadingAnimation>
 
-                        <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
-                        Infinite Possibilities
+                        <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl line-clamp-3 pb-6  bg-clip-text text-transparent bg-green-700  text-center font-sans font-bold">
+                        Infinite possibilities
                     </h1>
                     </HeadingAnimation>
                     <h4 className="sub-heading">
@@ -38,7 +38,7 @@ const InfinitePossibilities = () => {
                 </Link>
                 </div>
                 <div className='flex flex-col gap-16 md:order-2 order-1'>
-                    <p className="text-[#3F3F46] text-justify ">Your journey begins with a tap. Limitless contact sharing, seamless access to Exclusive, Events, Concerts, and many more. all in one place.</p>
+                    <p className="text-[#3F3F46] text-justify font-thin  leading-normal">Your journey begins with a tap. Limitless contact sharing, seamless access to exclusive events, concerts, and many more - all in one place.</p>
                         
                     <div className="grid grid-cols-3 md:gap-16 gap-2">
                             <div className="flex flex-col gap-2  life_style_card border p-3 rounded-md  items-center">
