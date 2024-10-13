@@ -8,7 +8,7 @@ import { RiMenu2Fill } from "react-icons/ri";
 
 const Menubar = () => {
 
-    const [showMenu,setShowMenu] = useState(true)
+    const [showMenu,setShowMenu] = useState(false)
 
     return (
         <nav className="fixed z-50  top-2 inset-x-0 max-w-7xl mx-auto  shadow-sm  w-full border  rounded-lg  border-transparent dark:bg-black dark:border-white/[0.2] bg-[#ffffff7b] backdrop-blur-sm shadow-input flex justify-between   items-center  px-8 py-3  pl-2 md:pl-8 ">
