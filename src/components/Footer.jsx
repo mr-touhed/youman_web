@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-wrap text-left lg:text-left ">
           <div className="w-full lg:w-6/12 px-3">
             <h4 className="text-3xl fonat-semibold md:text-left text-center  mr-[15px] text-blueGray-700 ">
-              Stay connected!
+              Stay connected
             </h4>
            
             <div className="mt-6 lg:mb-0 mb-6 grid grid-cols-5  gap-2 md:justify-items-start justify-center">
