@@ -7,6 +7,9 @@ p{
   @apply text-justify text-base mt-2
 }
 
+img{
+  pointer-events: none;
+}
 .sub-heading{
   @apply text-neutral-600 max-w-lg mx-auto my-2 text-[1.05rem]  text-justify leading-[23px]
 }
@@ -93,3 +96,26 @@ p{
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
  }
+
+
+
+
+
+
+
+
+/* Timeline.css */
+.chrono .chrono-timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the title and content */
+}
+
+.chrono .chrono-timeline-item-title {
+  margin-top: 8px; /* Space between number and title */
+}
+
+.chrono .chrono-timeline-item-content {
+  margin-top: 4px; /* Space between title and content */
+  text-align: center; /* Center align content */
+}
