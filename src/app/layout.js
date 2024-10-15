@@ -2,7 +2,6 @@
 import { Manrope} from "next/font/google"
 import "./globals.css";
 import Footer from '@/components/Footer';
-import { NavbarDemo } from "@/components/NavbarDemo";
 import Menubar from "@/components/Menubar";
 
 

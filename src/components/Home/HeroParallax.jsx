@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
-import cardImg1 from "@/images/Youman-Website-banner.jpg"
-import cardImg2 from "@/images/Youman-2.jpg"
-import cardImg3 from "@/images/Youman-3.jpg"
-import cardImg4 from "@/images/Youman-4.jpg"
-import cardImg5 from "@/images/Youman-6.jpg"
-import cardImg6 from "@/images/Youman-7.jpg"
+import youman from "@/images/Pages_img/photo-output.png"
+import story from "@/images/Pages_img/Our_story.png"
+import Trending from "@/images/Pages_img/Trending_now.png"
+import Blogs from "@/images/Pages_img/Blogs.png"
+import Partners from "@/images/Pages_img/Partners.png"
+import Contact from "@/images/Pages_img/Contact_us.png"
 export function HeroParallaxDemo() {
   return <div data-scroll data-scroll-speed="-5">
     <HeroParallax products={products} />
@@ -14,40 +14,40 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "automobile",
+    title: "Youman catalyst",
     link: "/privilege?catagory=automobile",
     thumbnail:
-    cardImg2,
+    youman,
   },
   {
-    title: "Wellbeing",
+    title: "Our story",
     link: "/privilege?catagory=Wellbeing",
     thumbnail:
-    cardImg1,
+    story,
   },
   {
-    title: "Wellbeing",
+    title: "Trending now",
     link: "/privilege?catagory=Wellbeing",
     thumbnail:
-    cardImg3,
+    Trending,
   },
   {
-    title: "Food & Dining",
+    title: "Blogs",
     link: "/privilege?catagory=Food & Dining",
     thumbnail:
-    cardImg4,
+    Blogs,
   },
   {
-    title: "Travel",
+    title: "Partners",
     link: "/privilege?catagory=Travel",
     thumbnail:
-    cardImg5,
+    Partners,
   },
   {
-    title: "Hotel & Resturant",
+    title: "Contact us",
     link: "/privilege?catagory=Hotel & Resturant",
     thumbnail:
-    cardImg6,
+    Contact,
   },
   
 
