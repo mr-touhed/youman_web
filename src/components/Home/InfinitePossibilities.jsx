@@ -41,7 +41,7 @@ const InfinitePossibilities = () => {
                     <p className="text-[#3F3F46] text-justify font-thin  leading-normal">Your journey begins with a tap. Limitless contact sharing, seamless access to exclusive events, concerts, and many more - all in one place.</p>
                         
                     <div className="grid grid-cols-3 md:gap-16 gap-2">
-                            <div className="flex flex-col gap-2  life_style_card border p-3 rounded-md  items-center">
+                            <Link href="/trending-now" className="flex flex-col gap-2  life_style_card border p-3 rounded-md  items-center">
                             <Image
                         src={event}
                         height="400"
@@ -50,8 +50,8 @@ const InfinitePossibilities = () => {
                         alt={''}
                         />
                             <h2 className="relative z-10   bg-clip-text text-transparent bg-black  text-center font-sans font-bold">Events</h2>
-                            </div>
-                            <div className="flex flex-col gap-2 border life_style_card  p-3 rounded-md items-center">
+                            </Link>
+                            <Link href="/trending-now" className="flex flex-col gap-2 border life_style_card  p-3 rounded-md items-center">
                             <Image
                         src={concert}
                         height="400"
@@ -60,8 +60,8 @@ const InfinitePossibilities = () => {
                         alt={''}
                         />
                         <h2 className="relative z-10   bg-clip-text text-transparent bg-black  text-center font-sans font-bold">Concert</h2>
-                            </div>
-                        <div className="flex flex-col gap-2 backdrop-blur-sm life_style_card border  p-3 rounded-md items-center">
+                            </Link>
+                        <Link href="/trending-now" className="flex flex-col gap-2 backdrop-blur-sm life_style_card border  p-3 rounded-md items-center">
                         <Image
                         src={invite}
                         height="400"
@@ -70,7 +70,7 @@ const InfinitePossibilities = () => {
                         alt={''}
                         />
                         <h2 className="relative z-10   bg-clip-text text-transparent bg-black  text-center font-sans font-bold">Invitation</h2>
-                        </div>
+                        </Link>
                     </div>
                 </div>
 

@@ -13,42 +13,38 @@ const Footer = () => {
               Stay connected
             </h4>
            
-            <div className="mt-6 lg:mb-0 mb-6 grid grid-cols-5  gap-2 md:justify-items-start justify-center">
+            <div className="mt-6 lg:mb-0 mb-6 flex justify-center gap-4 items-center md:justify-start ">
               <Link href="https://www.facebook.com/youmanbd" target="_blank"
-                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-400 shadow-lg font-normal  items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
                 
               >
                 <FaFacebookF className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
               </Link>
               <Link href="https://www.instagram.com/youman.bd" target="_blank"
-                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-400 shadow-lg font-normal  items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
                 
               >
                 <FaInstagram className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
               </Link>
               <Link href="https://www.linkedin.com/company/youmanbd/" target="_blank"
-                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-400 shadow-lg font-normal  items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
                 
               >
                 <FaLinkedinIn className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
               </Link>
               <Link href="https://x.com/youmanbd" target="_blank"
-                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-400 shadow-lg font-normal  items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
                 
               >
                 <FaSquareXTwitter className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
               </Link>
               <Link href="https://youtube.com/@youmanbd" target="_blank"
-                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-400 shadow-lg font-normal  items-center justify-center align-center rounded-sm outline-none focus:outline-none mr-2"
                 
               >
                 <FaYoutube className="text-white group-hover:text-black w-6 h-6 md:w-16 md:h-16" />
               </Link>
-              
-              
-              
-              
-             
+               
             </div>
           </div>
           <div className="w-full lg:w-6/12 px-4">

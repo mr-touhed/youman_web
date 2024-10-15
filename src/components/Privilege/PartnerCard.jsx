@@ -6,7 +6,7 @@ const PartnerCard = ({data}) => {
     return (
         <Link href={`/privilege/details/${name}`} className="md:w-[250px] w-[150px] h-[300px] md:h-[420px] mx-auto rounded overflow-hidden shadow-lg relative ">
           <div className="flex gap-2 absolute top-3 right-3">
-    {offers.discount && <span className="bg-green-300 h-6  px-2 text-green-700 text-xs flex justify-center items-center rounded-xl">{offers.discount}% Discount </span>}
+    {offers.discount && <span className="border border-green-300 bg-[#ffffffb0] backdrop-blur-sm h-6  px-2 text-green-700 text-xs flex justify-center items-center rounded-xl">{offers.discount}% Discount </span>}
     {offers.flat && <span className="bg-yellow-400 h-6  px-2 text-yellow-700 text-xs flex justify-center items-center rounded-xl">Cash voucher {offers.flat} TK</span>}
     </div>
   <Image className="w-full" src={image?.display_url} width={250} height={200} alt={name} />

@@ -1,14 +1,46 @@
 
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useId } from "react";
-
+import { IoIosSearch } from "react-icons/io";
 export function BlogSection() {
+
+
+  const [search,setSearch] = useState('')
+  const [blogItems,setBlogItems] = useState(grid)
+  useEffect(()=>{
+      if(search){
+        setTimeout(()=>{
+          const showItem =  function searchBlogItems(search) {
+             const lowerCaseTerm = search.toLowerCase();
+             return blogItems.filter(item => {
+                 return (
+                     item.description.toLowerCase().includes(lowerCaseTerm) 
+
+                    //  ||item.tag.contain(lowerCaseTerm)
+                     
+                 );
+             });
+         }
+         setBlogItems(showItem(search))
+         },2000)
+      }
+  },[search])
+
+
+
   return (
-    (<div className="py-20 lg:py-40">
+    (<div >
+      
+      <div className="py-10 md:w-[500px] px-6 mx-auto relative">
+      <input onChange={(e)=>setSearch(e.target.value)} type="search" placeholder="search" className="w-full pl-10 outline-0 placeholder:text-center py-2 rounded-md   border border-green-300 mx-auto " />
+        <IoIosSearch className="text-green-400 w-6 h-6 absolute md:left-2 left-9 top-[50%] -translate-y-[10px]"/>
+      </div>
+
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-4 max-w-7xl mx-auto">
-        {grid.map((feature) => (
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-4 max-w-7xl mx-auto relative">
+        {blogItems.map((feature) => (
           <div
             key={feature.title}
             className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden">
@@ -22,6 +54,10 @@ export function BlogSection() {
               className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
               {feature.description}
             </p>
+
+            <div className="flex justify-end absolute bottom-0 w-full left-0">
+                <span className="inline-block  mr-7 px-2 text-sm rounded-sm border border-green-300 bg-[#ffffffb0] backdrop-blur-sm  text-green-700 ">{feature.tag}</span>
+            </div>
           </div>
         ))}
       </div>
@@ -34,41 +70,49 @@ const grid = [
     title: "HIPAA and SOC2 Compliant",
     description:
       "Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.",
+      tag:'health'
   },
   {
     title: "Automated Social Media Posting",
     description:
       "Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.",
+      tag:'health'
   },
   {
     title: "Advanced Analytics",
     description:
       "Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.",
+      tag:'health'
   },
   {
     title: "Content Calendar",
     description:
       "Plan and organize your social media content with an intuitive calendar view, ensuring you never miss a post.",
+      tag:'health'
   },
   {
     title: "Audience Targeting",
     description:
       "Reach the right audience with advanced targeting options, including demographics, interests, and behaviors.",
+      tag:'health'
   },
   {
     title: "Social Listening",
     description:
       "Monitor social media conversations and trends to stay informed about what your audience is saying and respond in real-time.",
+      tag:'health'
   },
   {
     title: "Customizable Templates",
     description:
       "Create stunning social media posts with our customizable templates, designed to fit your brand's unique style and voice.",
+      tag:'health'
   },
   {
     title: "Collaboration Tools",
     description:
       "Work seamlessly with your team using our collaboration tools, allowing you to assign tasks, share drafts, and provide feedback in real-time.",
+      tag:'health'
   },
 ];
 
@@ -95,6 +139,8 @@ export const Grid = ({
           y="4"
           squares={p}
           className="absolute inset-0 h-full w-full  mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10" />
+
+          
       </div>
     </div>)
   );
