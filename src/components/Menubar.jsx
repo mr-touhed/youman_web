@@ -37,7 +37,7 @@ const Menubar = () => {
         <RiMenu2Fill onTouchStart={toggleMenu} className="w-8 h-8 font-bold  md:hidden block"/>
             <ul className={`text-lg md:font-semibold font-chirsman md:flex  gap-10 flex-row  hidden`}>
                 <li >
-                <Link href="/web-dev">Youman catalyst</Link>
+                <Link href="/checkout">Youman catalyst</Link>
                 </li>
                 <li>
                 <Link href="/youman-story">Our story</Link>
@@ -82,7 +82,7 @@ function MobileMenu({showMenu,setShowMenu}){
 
     return (<ul className={`text-lg md:hidden   font-chirsman flex  gap-4   flex-col  bg-[#ffffffed] backdrop-blur-lg border border-transparent  shadow-input p-4 rounded-md   ${showMenu ? "opacity-1" : "opacity-0"} transition-opacity ease-in-out duration-100    fixed z-50`}>
         <li onClick={clickTohiddenMEnu}>
-        <Link href="/web-dev">Youman catalyst</Link>
+        <Link href="/checkout">Youman catalyst</Link>
         </li>
         <li onClick={clickTohiddenMEnu}>
         <Link href="/youman-story">Our story</Link>

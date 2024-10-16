@@ -110,14 +110,14 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="px-4 max-w-7xl relative mx-auto  pt-16  md:px-4 w-full h-[100vh]  z-[2000]  left-0 top-0">
+    <div className="px-4 max-w-7xl relative mx-auto  pt-16  md:px-4 w-full  h-[100vh]  z-[2000]  left-0 top-0">
       
-      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%] gap-4 mt-12">
+      <section className="grid md:grid-cols-[1fr_1fr] grid-cols-1 h-[100%]  gap-4 mt-12">
       <div className="flex flex-col gap-8 items-center">
         <div className="space-y-6">
 
         
-                    <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center min-h-[40px]  font-extrabold ">
+                    <h1 className="relative  z-10 md:text-5xl text-[8vw]  font-chirsman text-[#3F3F46]  text-center min-h-[48px]  font-extrabold ">
                  
                   
                   <TypeAnimation
@@ -194,10 +194,10 @@ export const ProductCard = ({
         x: translate,
       }}
       whileHover={{
-        y: -30,
+        y: -1,
       }}
       key={product.title}
-      className="group/product h-92 md:w-[35rem] w-[15rem] mx-auto relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
+      className="group/product md:h-[300px] md:w-[35rem] w-[15rem] mx-auto flex flex-col items-center relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
     >
       <button
        onClick={()=>changeRoute(product.link)} 
@@ -205,9 +205,9 @@ export const ProductCard = ({
       >
         <Image
           src={product.thumbnail} 
-          height="400"
-          width="400"
-          className="object-cover  w-full inset-0"
+          height={1200}
+          width={400}
+          className="mx-auto inset-0 "
           alt={product.title}
         />
       </button>

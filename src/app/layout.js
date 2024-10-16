@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`light ${crisman.variable}  `}>
       <body className="dark:bg-black bg-[rgb(248 248 248)] font-crisman ">
         <Menubar/>
-        <section className="min-h-[100vh]">
+        <section className="min-h-[100vh] mt-20">
         {children}
         </section>
       
