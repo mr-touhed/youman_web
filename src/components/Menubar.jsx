@@ -80,7 +80,7 @@ function MobileMenu({showMenu,setShowMenu}){
         },1500)
     }
 
-    return (<ul className={`text-lg md:hidden   font-chirsman flex  gap-4   flex-col  bg-[#ffffffed] backdrop-blur-lg border border-transparent  shadow-input p-4 rounded-md   ${showMenu ? "opacity-1" : "opacity-0"} transition-opacity ease-in-out duration-100    fixed z-50`}>
+    return (<ul className={`text-lg md:hidden   font-chirsman flex  gap-4   flex-col  bg-[#ffffffed] backdrop-blur-lg border border-transparent  shadow-input p-4 rounded-md   ${showMenu ? "opacity-1 " : "opacity-0 scale-0"} transition-all origin-top-left ease-in-out duration-200 overflow-hidden  z-10  fixed `}>
         <li onClick={clickTohiddenMEnu}>
         <Link href="/checkout">Youman catalyst</Link>
         </li>

@@ -12,28 +12,28 @@ const ContactForm = () => {
                         <span><FaRegUserCircle className='w-5 h-5'/></span>
                         <span>Name</span>
                         </label>
-                    <input type="text" name="" id=""  className='w-full border-2 p-2 border-black '/>
+                    <input type="text" name="" id=""  className='w-full border p-2 border-black '/>
                 </div>
                 <div className='w-full space-y-1'>
                     <label htmlFor="email" className='flex font-bold items-center gap-1'>
                         <span><MdOutlineMailLock className='w-5 h-5'/></span>
                         <span>Email</span>
                         </label>
-                    <input type="email" name="" id=""  className='w-full border-2 p-2 border-black '/>
+                    <input type="email" name="" id=""  className='w-full border p-2 border-black '/>
                 </div>
                 <div className='w-full space-y-1'>
                     <label htmlFor="Phone" className='flex font-bold items-center gap-1'>
                         <span><MdPhone className='w-5 h-5'/></span>
                         <span>Phone</span>
                         </label>
-                    <input type="tel" name="" id=""  className='w-full border-2 p-2 border-black '/>
+                    <input type="tel" name="" id=""  className='w-full border p-2 border-black '/>
                 </div>
                 <div className='w-full space-y-1'>
                     <label htmlFor="message" className='flex font-bold items-center gap-1'>
                         <span><LuMessageSquarePlus className='w-5 h-5'/></span>
                         <span>Message</span>
                         </label>
-                    <textarea type="tel" name="" id=""  className='w-full h-44 border-2 p-2 border-black '/>
+                    <textarea type="tel" name="" id=""  className='w-full h-44 border p-2 border-black '/>
                 </div>
 
                 <button type='submit' className='bg-black p-2 text-white shadow-black'>Send Message</button>

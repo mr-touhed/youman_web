@@ -35,7 +35,7 @@ export function BlogSection() {
       
       <div className="py-10 md:w-[500px] px-6 mx-auto relative">
       <input onChange={(e)=>setSearch(e.target.value)} type="search" placeholder="search" className="w-full pl-10 outline-0 placeholder:text-center py-2 rounded-md   border border-green-300 mx-auto " />
-        <IoIosSearch className="text-green-400 w-6 h-6 absolute md:left-2 left-9 top-[50%] -translate-y-[10px]"/>
+        <IoIosSearch className="text-green-400 w-6 h-6 absolute md:left-8 left-9 top-[50%] -translate-y-[10px]"/>
       </div>
 
       <div
@@ -44,6 +44,7 @@ export function BlogSection() {
           <div
             key={feature.title}
             className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden">
+              
             <Grid size={20} />
             <Image src="/images/banner_img.png" alt="" width={600} height={400} className=""/>
             <p
@@ -55,8 +56,8 @@ export function BlogSection() {
               {feature.description}
             </p>
 
-            <div className="flex justify-end absolute bottom-0 w-full left-0">
-                <span className="inline-block  mr-7 px-2 text-sm rounded-sm border border-green-300 bg-[#ffffffb0] backdrop-blur-sm  text-green-700 ">{feature.tag}</span>
+            <div className="flex justify-end absolute top-2 w-full left-0">
+                <span className="inline-block  mr-7 px-6 text-sm rounded-sm border border-green-300 bg-[#ffffffb0] backdrop-blur-sm  text-green-700 ">{feature.tag}</span>
             </div>
           </div>
         ))}

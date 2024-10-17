@@ -1,6 +1,6 @@
 import React from 'react';
 import EventCard from './_components/EventCard';
-import { useId } from 'react';
+
 const TrendingNowPage = () => {
 
     const events = [
@@ -50,7 +50,7 @@ const TrendingNowPage = () => {
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>Active Events</h2>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
-                    events.slice(0,3).map(event => <EventCard key={useId} event={event} soon={false}/>)
+                    events.slice(0,3).map((event,i) => <EventCard key={i} event={event} soon={false}/>)
                 }
             </section>
                 </div>
@@ -58,7 +58,7 @@ const TrendingNowPage = () => {
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>Comming Soon Events</h2>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
-                    events.slice(3,5).map(event => <EventCard key={useId} event={event} soon={true}/>)
+                    events.slice(3,5).map((event,i) => <EventCard key={i} event={event} soon={true}/>)
                 }
             </section>
                 </div>

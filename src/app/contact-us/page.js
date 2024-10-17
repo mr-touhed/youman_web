@@ -5,12 +5,12 @@ import { FaFacebookF,FaYoutube,FaSquareXTwitter,FaLinkedinIn,FaInstagram,} from 
 import Link from 'next/link';
 const page = () => {
     return (
-        <div className='max-w-7xl mx-auto grid md:grid-cols-2  items-center gap-8 px-4'>
+        <div className='max-w-7xl mx-auto md:grid md:grid-cols-2  md:items-center gap-8 px-4 flex flex-col-reverse'>
             
-                <section className='md:order-1 order-0'>
+                <section className=''>
                         <ContactForm/>
                 </section>
-                <section className='flex flex-col items-center gap-4 md:order-0 order-1'>
+                <section className='flex flex-col items-center gap-4 '>
                     <Image src="/images/contact_banner.png" alt="contact banner image" width={1000} height={600} className='w-full '/>
 
                     <div className='text-2xl font-bold mx-auto p-3 '>
