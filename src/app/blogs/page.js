@@ -5,7 +5,7 @@ import banner from "@/images/Pages_img/Blogs.png"
 const BlogPage = () => {
     return (
         <>
-        <section className='w-full md:h-[400px] overflow-hidden bg-[#EFF3FF]'>
+        <section className='w-full md:h-[400px] overflow-hidden '>
                 <Image src={banner} alt="" width={1200} height={700} className='w-full object-contain md:h-[400px] '/>
         </section>
         <section>

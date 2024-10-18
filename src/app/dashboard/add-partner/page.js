@@ -6,7 +6,7 @@ const addproductPage =  () => {
     
     
 
-    const privilege_data = {name:"",location:{division:"select",state:"select",address:""}, offers:{discount:"",flat:"",Upto:"false"},catagory:"select",exclusive:"false"}
+    const privilege_data = {name:"",location:{address:""}, offers:{discount:"",flat:"",Upto:"false"},catagory:"select",exclusive:"false"}
 
  const handel_submit_offer = async (e) => {
         e.preventDefault();
@@ -31,7 +31,7 @@ const addproductPage =  () => {
                             setLoading(false)
                             e.target.reset()
                             setImage(null)
-                            setOffer({name:"",details:"",location:{division:"select",state:"select",address:""}, offers:{discount:"",flat:"",Upto:"false"},catagory:"select",exclusive:"false"})
+                            setOffer({name:"",details:"",location:{address:""}, offers:{discount:"",flat:"",Upto:"false"},catagory:"select",exclusive:"false"})
                             return toast(result.status.message)
                         }
                 }

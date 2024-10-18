@@ -114,29 +114,7 @@ const EditPartner = ({privilege}) => {
         
         <div className='flex flex-col w-full gap-1  my-4'>
         <label htmlFor="location" className='text-sm'>Location details <span className='text-red-400'>*</span></label>
-                <div className='flex gap-4 justify-center'>
-                    <div >
-                    <label htmlFor="name" className='text-sm'>Division </label>
-                        <select name="division" value={offer.location.division} required onChange={(e)=> {change_address(e),setSelectDivision(e.target.value)}}>
-                                <option disabled value="select">select</option>
-                               {
-                                division.map(divis => <option key={divis}  value={divis}>{divis}</option>)
-                               }
-                        </select>
-                    </div>
-                    <div>
-                    <label htmlFor="state" className='text-sm'>state</label>
-                        <select name="state" value={offer.location.state} required onChange={(e)=> {change_address(e)}}>
-                                <option disabled value="select">select</option>
-                                {
-                                   stateList.length > 0 && stateList.map( state => <option key={state} value={state}>{state}</option>)
-                                }
-                                
-                                
-                        </select>
-                    </div>
-                    
-                </div>
+                
                 <input type="text" name="address" required value={offer.location.address} onChange={(e)=> change_address(e)} className='border p-2 ' placeholder='adderss' />
         </div>
         <div className='w-full'>
@@ -161,13 +139,16 @@ const EditPartner = ({privilege}) => {
         <div className='flex flex-col w-full  gap-1'>
             <label htmlFor="name" className='text-sm'>Catagory <span className='text-red-400'>*</span></label>
                     <select className=' p-2 ' required name="catagory" id="" value={offer.catagory} onChange={(e) => change_value(e)}>
-                            <option disabled value="select">Select Catagory</option>
-                            <option value="Food & Dining">Food & Dining</option>
+                    <option disabled value="select">choose</option>
+                            <option value="Travel & dining">Travel & dining</option>
                             <option value="Wellbeing">Wellbeing</option>
                             <option value="Grooming">Grooming</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Automobile">Automobile</option>
+                            <option value="Others">Others</option>
                     </select>
         </div>
-        <div className='flex  w-full items-center border flex-col'>
+        <div className='flex  w-full items-center  flex-col'>
                             <label className='text-sm' htmlFor="exclusive">Exclusive</label>
                             <div className='flex justify-center gap-4 w-full'>
                                     <div>

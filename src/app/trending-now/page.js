@@ -47,7 +47,7 @@ const TrendingNowPage = () => {
         <div className='max-w-7xl mx-auto px-4 space-y-8'>
             
                 <div className='space-y-8'>
-                            <h2 className='text-4xl font-semibold text-green-700 text-center'>Active Events</h2>
+                            <h2 className='text-4xl font-semibold text-green-700 text-center'>Ongoing</h2>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
                     events.slice(0,3).map((event,i) => <EventCard key={i} event={event} soon={false}/>)
@@ -55,10 +55,20 @@ const TrendingNowPage = () => {
             </section>
                 </div>
                 <div className='space-y-8'>
-                            <h2 className='text-4xl font-semibold text-green-700 text-center'>Comming Soon Events</h2>
+                            <h2 className='text-4xl font-semibold text-green-700 text-center'>Upcoming</h2>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
                     events.slice(3,5).map((event,i) => <EventCard key={i} event={event} soon={true}/>)
+                }
+            </section>
+                </div>
+
+
+                <div className='space-y-8'>
+                            <h2 className='text-4xl font-semibold text-green-700 text-center'>Preceding</h2>
+                <section className='grid md:grid-cols-3 gap-4'>
+                {
+                    events.slice(3,5).map((event,i) => <EventCard key={i} event={event} />)
                 }
             </section>
                 </div>

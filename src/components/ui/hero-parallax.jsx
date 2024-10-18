@@ -190,31 +190,34 @@ export const ProductCard = ({
 }) => {
   return (
     <motion.div
+      
+      key={product.title}
+      className="group/product md:h-[300px] md:w-[35rem] w-[15rem] mx-auto flex flex-col items-center relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
+    >
+      <motion.button
       style={{
         x: translate,
       }}
       whileHover={{
-        y: -1,
+        scale:1.1,
       }}
-      key={product.title}
-      className="group/product md:h-[300px] md:w-[35rem] w-[15rem] mx-auto flex flex-col items-center relative flex-shrink-0 shadow-md rounded-md overflow-hidden shadow-slate-200"
-    >
-      <button
        onClick={()=>changeRoute(product.link)} 
-        className="block group-hover/product:shadow-2xl "
+        className="  relative flex-shrink-0"
       >
         <Image
           src={product.thumbnail} 
           height={1200}
           width={400}
-          className="mx-auto inset-0 "
+          className="mx-auto  "
           alt={product.title}
         />
-      </button>
+      </motion.button>
+
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>
+      
     </motion.div>
   );
 };

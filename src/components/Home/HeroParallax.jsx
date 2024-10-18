@@ -15,7 +15,7 @@ export function HeroParallaxDemo() {
 export const products = [
   {
     title: "Youman catalyst",
-    link: "/privilege?catagory=automobile",
+    link: "/checkout",
     thumbnail:
     youman,
   },

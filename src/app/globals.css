@@ -51,10 +51,18 @@ img{
     box-shadow: 1px 0px 9px 1px #45ff458f, 0px 0px 12px 5px #146714cf;
     transition: all 0.3s ease;
   }
- /* {
+ 
+  .shadow:hover{
+    border-radius: 8px;
     box-shadow: 1px 0px 9px 1px #45ff458f, 0px 0px 12px 5px #146714cf;
     transition: all 0.3s ease;
-  } */
+  }
+  .checkout{
+    box-shadow: 1px 0px 9px 1px #45ff458f, 0px 0px 12px 5px #146714cf;
+    transition: all 0.3s ease;
+  }
+
+
   .card_animation{
     animation: bounce 3s linear infinite;
 

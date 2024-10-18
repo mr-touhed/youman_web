@@ -66,7 +66,7 @@ const Footer = () => {
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="/contact-us"
                     >
-                     Be a partners
+                     Be a partner
                     </Link>
                   </li>
                   <li>

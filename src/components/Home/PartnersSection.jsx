@@ -13,7 +13,7 @@ export async function PartnersSection() {
   const services = [
     {
       name:"Travel & Dining",
-      link:"/privilege?catagory=Travel+and+Dining",
+      link:"/privilege?catagory=Travel & dining",
       img:travel,
     },
     {

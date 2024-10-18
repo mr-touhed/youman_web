@@ -17,8 +17,8 @@ import Image from 'next/image';
 import HeadingAnimation from '../HeadingAnimation';
 
 const serviceList = [
-    {Icon:QRicon ,title:"Integrated NFC", dec:"Tap your card onto a smartphone and instantly share your contact details" },
-    {Icon:NFC ,title:"QR tecnology", dec:"No NFC ? No Problem! Scan the QR code using the device camera" , c:true },
+    {Icon:NFC ,title:"Integrated NFC", dec:"Tap your card onto a smartphone and instantly share your contact details" },
+    {Icon:QRicon ,title:"QR tecnology", dec:"No NFC ? No Problem! Scan the QR code using the device camera" , c:true },
     {Icon:convenient ,title:"Convenient", dec:"All the traditional contact information is included" },
     {Icon:no_app ,title:"No App required", dec:"All you need is an active internet connection to the recipient's device" },
 ]
