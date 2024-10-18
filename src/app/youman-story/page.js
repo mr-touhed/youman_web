@@ -9,7 +9,7 @@ const OurStoryPage = () => {
                     <h1 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
                     The beginning
             </h1>
-            <Image src="/images/icons/banner-01.png" alt="" width={1200} height={600} className='md:w-[700px] w-[300px] md:hidden block'/>
+            <Image src="/images/icons/banner-01.png" alt="" width={1200} height={600} className=' md:hidden block'/>
                         <p className='text-justify text-base font-thin md:-ml-3'>Youman began with a vision—an idea that connections, when meaningful, can redefine how we live, grow, and thrive. We saw a world where people seek more than just networking; they yearn for experiences, a sense of belonging, and opportunities to unlock their potential. We imagined a community built on ambition, where every member finds value beyond expectations.</p>
 
 
@@ -17,7 +17,7 @@ const OurStoryPage = () => {
                     <Image src="/images/icons/banner-01.png" alt="" width={1200} height={600} className='md:w-[700px] w-[300px] md:block hidden'/>
 
             </section>
-            <section className=' dot-mask mb-16'>
+            <section className=' mb-16'>
                                 
                        <div className='max-w-7xl mx-auto space-y-8'>
                         

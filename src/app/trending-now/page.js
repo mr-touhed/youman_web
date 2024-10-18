@@ -1,6 +1,7 @@
 import React from 'react';
 import EventCard from './_components/EventCard';
-
+import Image from 'next/image';
+import bannerImg from "@/images/Pages_img/Trendingnow.png"
 const TrendingNowPage = () => {
 
     const events = [
@@ -45,6 +46,9 @@ const TrendingNowPage = () => {
 
     return (
         <div className='max-w-7xl mx-auto px-4 space-y-8'>
+                <div>
+                    <Image src={bannerImg} alt="" width={1200} height={600} className='w-full'/>
+                </div>
             
                 <div className='space-y-8'>
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>Ongoing</h2>
