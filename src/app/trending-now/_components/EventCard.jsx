@@ -45,7 +45,7 @@ const EventCard = ({ event, soon }) => {
       <section
         onClick={handleFlip}
         onTouchEnd={handleFlip}
-      className='relative h-[200px] bg-[url("/images/event-card-bg.png")] bg-no-repeat bg-cover overflow-hidden rounded-md p-4 flex flex-col gap-4 text-white'>
+      className='relative h-[200px] bg-black overflow-hidden rounded-md p-4 flex flex-col gap-4 text-white'>
         <div>
               <div>
                   <h3 className='text-xl font-semibold'>Event</h3>
