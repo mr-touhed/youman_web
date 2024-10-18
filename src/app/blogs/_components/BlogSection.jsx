@@ -47,10 +47,10 @@ export function BlogSection() {
               
             <Grid size={20} />
             <Image src="/images/banner_img.png" alt="" width={600} height={400} className=""/>
-            <p
-              className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
+            <h3
+              className="text-base font-bold text-green-700  dark:text-white relative z-20">
               {feature.title}
-            </p>
+            </h3>
             <p
               className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
               {feature.description}

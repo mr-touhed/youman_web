@@ -27,19 +27,6 @@ const EventCard = ({ event, soon }) => {
         <h2 className='md:text-3xl text-xl font-semibold text-white'>{event.name}</h2>
 
         
-        
-        {/* <button 
-          type='button'  
-          className='w-28 absolute bottom-[200px] text-white text-sm bg-green-700 backdrop-blur-sm border rounded-t-xl border-green-700 px-1 py-1.5' 
-          onClick={handleFlip}
-          onTouchEnd={handleFlip} // Handle touch events
-        >
-          Know more
-        </button>
-        
-        <div className='absolute bottom-0 left-0 right-0 w-full h-[200px] rounded-md overflow-hidden bg-green-700 p-1'>
-          <Image src="/images/event_img.jpg" alt="event" width={400} height={400} className='w-full h-[192px] rounded-md object-fill object-top' />
-        </div> */}
       </section>
 
       <section
