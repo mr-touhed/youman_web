@@ -2,7 +2,7 @@
 import Catagory from '@/components/Privilege/Catagory';
 import CatagoryDetails from '@/components/Privilege/CatagoryDetails';
 import HeroSlider from '@/components/Privilege/HeroSlider';
-import Options from '@/components/Privilege/Options';
+
 
 import { get_catagorys, get_offer_state, get_partners, } from '@/utils/fetchData';
 import { Suspense } from 'react';

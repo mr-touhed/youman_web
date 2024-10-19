@@ -1,10 +1,12 @@
 import { ThreeDCardDemo } from "./_components/ThreeDCardDemo";
 
 import travel from "../../images/privilege_card/Youman_Trave.jpg"
-import Wellbeing from "../../images/privilege_card/youman_fitness.jpg"
+import lifestyle from "../../images/privilege_card/Youman_Lifestyle.jpg"
+import resturent from "../../images/privilege_card/Youman_resturent.jpg"
 import Healthcare from "../../images/privilege_card/youman_healthCare.jpg"
 import Automobile from "../../images/privilege_card/Youman_Automobile.jpg"
 import Grooming from "../../images/privilege_card/youman_fitness.jpg"
+import Arts from "../../images/privilege_card/arts_craft.jpg"
 import Others from "../../images/privilege_card/Youman_ourStore.jpg"
 import HeadingAnimation from "../HeadingAnimation";
 
@@ -12,14 +14,14 @@ import HeadingAnimation from "../HeadingAnimation";
 export async function PartnersSection() {
   const services = [
     {
-      name:"Travel & Dining",
+      name:"Hotel & Dining",
       link:"/privilege?catagory=Travel & dining",
-      img:travel,
+      img:resturent,
     },
     {
-      name:"Wellbeing",
+      name:"Travel",
       link:"/privilege?catagory=Wellbeing",
-      img:Wellbeing
+      img:travel
     },
     {
       name:"Grooming",
@@ -27,13 +29,23 @@ export async function PartnersSection() {
       img:Grooming
     },
     {
-      name:"Healthcare",
+      name:"Wellbeing",
       link:"/privilege?catagory=Healthcare",
       img:Healthcare
     },
     {
-      name:"Automobile",
+      name:"Lifestyle",
       link:"/privilege?catagory=Automobile",
+      img:lifestyle
+    },
+    {
+      name:"Arts & Crafts",
+      link:"/privilege?catagory=Others",
+      img:Arts
+    },
+    {
+      name:"Automobiles",
+      link:"/privilege?catagory=Others",
       img:Automobile
     },
     {

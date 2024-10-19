@@ -49,7 +49,7 @@ const InfinitePossibilities = () => {
                         className="object-cover  w-24 inset-0 "
                         alt={''}
                         />
-                            <h2 className="relative z-10   bg-clip-text text-transparent bg-black  text-center font-sans font-bold">Events</h2>
+                            <h2 className="relative z-10   bg-clip-text text-transparent bg-green-700   text-center font-sans font-bold">Events</h2>
                             </Link>
                             <Link href="/trending-now" className="flex flex-col gap-2 border life_style_card  p-3 rounded-md items-center">
                             <Image
@@ -59,7 +59,7 @@ const InfinitePossibilities = () => {
                         className="object-cover  w-24 inset-0 "
                         alt={''}
                         />
-                        <h2 className="relative z-10   bg-clip-text text-transparent bg-black  text-center font-sans font-bold">Concert</h2>
+                        <h2 className="relative z-10   bg-clip-text text-transparent bg-green-700  text-center  font-sans font-bold">Concert</h2>
                             </Link>
                         <Link href="/trending-now" className="flex flex-col gap-2 backdrop-blur-sm life_style_card border  p-3 rounded-md items-center">
                         <Image
@@ -69,7 +69,7 @@ const InfinitePossibilities = () => {
                         className="object-cover  w-24 inset-0 "
                         alt={''}
                         />
-                        <h2 className="relative z-10   bg-clip-text text-transparent bg-black  text-center font-sans font-bold">Invitation</h2>
+                        <h2 className="relative z-10   bg-clip-text text-transparent bg-green-700  text-center  font-sans font-bold">Invitation</h2>
                         </Link>
                     </div>
                 </div>

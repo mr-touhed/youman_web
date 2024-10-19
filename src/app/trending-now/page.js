@@ -2,6 +2,7 @@ import React from 'react';
 import EventCard from './_components/EventCard';
 import Image from 'next/image';
 import bannerImg from "@/images/Pages_img/Trendingnow.png"
+import HeadingAnimation from '@/components/HeadingAnimation';
 const TrendingNowPage = () => {
 
     const events = [
@@ -51,7 +52,9 @@ const TrendingNowPage = () => {
                 </div>
             
                 <div className='space-y-8'>
+                        <HeadingAnimation>
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>Ongoing</h2>
+                            </HeadingAnimation>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
                     events.slice(0,3).map((event,i) => <EventCard key={i} event={event} soon={false}/>)
@@ -59,7 +62,9 @@ const TrendingNowPage = () => {
             </section>
                 </div>
                 <div className='space-y-8'>
+                            <HeadingAnimation>
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>Upcoming</h2>
+                            </HeadingAnimation>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
                     events.slice(3,5).map((event,i) => <EventCard key={i} event={event} soon={true}/>)
@@ -69,7 +74,9 @@ const TrendingNowPage = () => {
 
 
                 <div className='space-y-8'>
+                            <HeadingAnimation>
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>Preceding</h2>
+                            </HeadingAnimation>
                 <section className='grid md:grid-cols-3 gap-4'>
                 {
                     events.slice(3,5).map((event,i) => <EventCard key={i} event={event} />)

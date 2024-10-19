@@ -62,6 +62,9 @@ export function BlogSection() {
           </div>
         ))}
       </div>
+        <div>
+                  <button className="w-24 h-8 block mx-auto border-black shadow rounded-md border  text-black text-sm">See more</button>  
+        </div>
     </div>)
   );
 }

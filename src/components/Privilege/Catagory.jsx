@@ -11,12 +11,15 @@ const Catagory = () => {
 const [changeCatagory] = useChangeParams()
     
 const catagorys = [
-    'Travel & dining',
-    'Wellbeing',
+    'Hotel & Dining',
+    'Travel',
     'Grooming',
-    'Healthcare',
-    'Automobile',
+    'Wellbeing',
+    'Lifestyle',
+    'Arts & Carafts',
+    'Automobiles',
     'Others'
+
 ]
    
     return (

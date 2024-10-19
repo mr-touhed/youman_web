@@ -4,7 +4,10 @@ import Image from 'next/image'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import test from "@/images/Youman-2.jpg"
+import partner from "@/images/Pages_img/Partners.png"
+import travel from "@/images/Youman-7.jpg"
+import welbing from "@/images/Youman-3.jpg"
+
 // import required modules
 import { Pagination,Autoplay } from 'swiper/modules';
 const HeroSlider = () => {
@@ -26,7 +29,7 @@ const HeroSlider = () => {
         <SwiperSlide >
           <div className='max-h-[50vh]'>
                   <Image
-                  src={test}
+                  src={partner}
                   alt="image"
                   width="300px"
                   height="300px"
@@ -37,7 +40,7 @@ const HeroSlider = () => {
         <SwiperSlide >
           <div className='max-h-[50vh]'>
                   <Image
-                  src={test}
+                  src={travel}
                   alt="image"
                   width="300px"
                   height="300px"
@@ -48,7 +51,7 @@ const HeroSlider = () => {
         <SwiperSlide >
           <div className='max-h-[50vh]'>
                   <Image
-                  src={test}
+                  src={welbing}
                   alt="image"
                   width="300px"
                   height="300px"

@@ -18,10 +18,10 @@ const EventCard = ({ event, soon }) => {
       
           onClick={handleFlip}
           onTouchEnd={handleFlip}
-      className='bg-white text-black border border-green-800 shadow-md relative h-[200px] bg-[url("/images/event_img.jpg")] bg-no-repeat bg-cover  overflow-hidden rounded-md md:p-8 p-3 flex flex-col gap-4 z-10'>
+      className='bg-white text-black border shadow-md relative h-[200px] bg-[url("/images/event_img.jpg")] bg-no-repeat bg-cover  overflow-hidden rounded-md md:p-8 p-3 flex flex-col gap-4 z-10'>
         {soon && (
           <div className='absolute w-full left-0 right-0 top-0 h-full z-20 bg-[#131313bc] grid place-content-center'>
-            <h4 className='text-4xl font-bold text-green-700'>Coming soon...</h4>
+            <h4 className='text-4xl font-bold text-white'>Coming soon...</h4>
           </div>
         )}
         <h2 className='md:text-3xl text-xl font-semibold text-white'>{event.name}</h2>

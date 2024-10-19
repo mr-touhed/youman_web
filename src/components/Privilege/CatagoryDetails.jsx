@@ -58,7 +58,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
            
         </div>
         <div>
-                  <button className="w-24 h-10 block mx-auto shadow rounded-md bg-black text-white text-sm">See more</button>  
+                  <button className="w-24 h-8 block mx-auto border-black shadow rounded-md border  text-black text-sm">See more</button>  
         </div>
     </>
     );
