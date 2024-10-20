@@ -7,18 +7,6 @@ import HeadingAnimation from "../HeadingAnimation";
 
 const SocialMediaArray = [
     {
-        id:"1",
-        Icon:FaBloggerB ,
-        link:"/blogs" ,
-
-    },
-    {
-        id:"2",
-        Icon: FaYoutube,
-        link: "https://youtube.com/@youmanbd",
-
-    },
-    {
         id:"3",
         Icon: FaFacebookF,
         link: "https://www.facebook.com/youmanbd",
@@ -42,6 +30,23 @@ const SocialMediaArray = [
         link: "https://x.com/youmanbd",
 
     },
+    {
+        id:"2",
+        Icon: FaYoutube,
+        link: "https://youtube.com/@youmanbd",
+
+    },
+    {
+        id:"1",
+        Icon:FaBloggerB ,
+        link:"/blogs" ,
+
+    }
+    
+    
+    
+   
+    
 ]
 
 
