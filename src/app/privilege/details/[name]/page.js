@@ -14,7 +14,7 @@ const page = async ({params}) => {
             <div>
                 <Image src={image.display_url} width={600} height={600} alt={partner_name}/>
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 text-base font-thin mt-3">
                    {offers.discount &&  <span className="flex px-2 max-w-[75px] bg-green-400 items-center justify-center rounded-xl text-white">{offers.discount}%</span>}
                    {offers.flat  && <span className="flex px-2 max-w-[170px] bg-yellow-400 items-center justify-center rounded-xl text-white">{offers.flat} TK cash voucher</span>}
                     <h2 className="text-3xl font-bold">{partner_name}</h2>
@@ -25,11 +25,11 @@ const page = async ({params}) => {
                         <p><span className="font-semibold">City:</span> {location.state}</p>
                     </div>
                     <div>
-                        {details}
+                        <p className="text-justify">{details}</p>
                     </div>
 
-                    <div>
-                        <h2 className="font-semibold">Product Information</h2>
+                    <div >
+                        <h4 className="font-semibold">Product Information</h4>
                        <div>
                         <p className="uppercase font-semibold text-gray-600">Brand</p>
                        <div className="flex justify-around gap-16 my-6">
@@ -38,8 +38,9 @@ const page = async ({params}) => {
                        </div>
                        </div>
                     </div>
-                    <div>
-                        <p>For any offer related issues, please contact Youman: WhatsApp +8801844696515 (11:00 AM - 7:00 PM || Working days only)</p>
+                    <div >
+                        <p>For any offer related issues, please contact Phone: <b className="">+880 9611696515</b> <br/> <span className="text-xs">(11:00 AM - 7:00 PM || Sunday-Thursday)</span></p>
+                        <p className="font-semibold">Email: hello@youman.com.bd</p>
                     </div>
             </div>
         </div>

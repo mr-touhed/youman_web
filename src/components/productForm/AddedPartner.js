@@ -6,11 +6,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import revalidateTag from "@/utils/revalided";
+import { catagorys } from "../../../public/data/data";
 const AddedPartner = ({privilege}) => {
     const [offer,setOffer] = useState(privilege);
-    const [division,setdivision] = useState([]);
-    const [selectDivision,setSelectDivision] = useState('');
-    const [stateList,setStateList] = useState([]);
+    // const [division,setdivision] = useState([]);
+    // const [selectDivision,setSelectDivision] = useState('');
+    // const [stateList,setStateList] = useState([]);
     const [image,setImage] = useState(null);
     const [loading,setLoading] = useState(false);
     const change_value = (e) =>{
@@ -70,27 +71,27 @@ const AddedPartner = ({privilege}) => {
     }
 
 
-    useEffect(()=>{
-            const get_division = async () =>{
-                const fetch_division = await fetch(`${baseURL}/divisions`);
-                const division = await fetch_division.json();
-                setdivision(division.data)
-            }
+    // useEffect(()=>{
+    //         const get_division = async () =>{
+    //             const fetch_division = await fetch(`${baseURL}/divisions`);
+    //             const division = await fetch_division.json();
+    //             setdivision(division.data)
+    //         }
 
-            get_division()
-    },[])
+    //         get_division()
+    // },[])
 
 
-    useEffect(()=>{
-        const get_state = async () =>{
-            const fetch_division = await fetch(`${baseURL}/divisions/${selectDivision}`);
-            const stateInfo = await fetch_division.json();
-            setStateList(stateInfo.data)
+    // useEffect(()=>{
+    //     const get_state = async () =>{
+    //         const fetch_division = await fetch(`${baseURL}/divisions/${selectDivision}`);
+    //         const stateInfo = await fetch_division.json();
+    //         setStateList(stateInfo.data)
             
-        }
+    //     }
 
-        get_state()
-    }, [selectDivision])
+    //     get_state()
+    // }, [selectDivision])
        
     return (
         <form onSubmit={handel_submit_offer}>
@@ -135,12 +136,9 @@ const AddedPartner = ({privilege}) => {
             <label htmlFor="name" className='text-sm'>Catagory <span className='text-red-400'>*</span></label>
                     <select className=' p-2 ' required name="catagory" id="" value={offer.catagory} onChange={(e) => change_value(e)}>
                             <option disabled value="select">choose</option>
-                            <option value="Travel & dining">Travel & dining</option>
-                            <option value="Wellbeing">Wellbeing</option>
-                            <option value="Grooming">Grooming</option>
-                            <option value="Healthcare">Healthcare</option>
-                            <option value="Automobile">Automobile</option>
-                            <option value="Others">Others</option>
+                            {
+                                catagorys.map((catagory,i)=> <option key={i} value={catagory}>{catagory}</option>)
+                            }
                     </select>
         </div>
         <div className='flex  w-full items-center  flex-col'>

@@ -72,7 +72,7 @@ const CheckOutForm = () => {
                         <label className="text-sm" htmlFor="reffer">Referral code (if any)</label>
                         <input onChange={(e)=>handel_change_input(e)} value={order.reffer} type="text" name="reffer" id="reffer"  className="border border-green-700 rounded-md p-2"/>
                     </div>
-                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-2  font-bold w-[90.5%] z-50">{loading ? "Loading..":"GET IT !"}</button>
+                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-2 rounded-md  font-bold md:w-full w-[90.5%] z-10">{loading ? "Loading..":"GET IT !"}</button>
                 </form>
 
                 <div className="mt-6 px-3">

@@ -6,6 +6,7 @@ import revalidateTag from "@/utils/revalided";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { catagorys } from "../../../public/data/data";
 
 const EditPartner = ({privilege}) => {
     const [offer,setOffer] = useState(privilege);
@@ -139,13 +140,12 @@ const EditPartner = ({privilege}) => {
         <div className='flex flex-col w-full  gap-1'>
             <label htmlFor="name" className='text-sm'>Catagory <span className='text-red-400'>*</span></label>
                     <select className=' p-2 ' required name="catagory" id="" value={offer.catagory} onChange={(e) => change_value(e)}>
-                    <option disabled value="select">choose</option>
-                            <option value="Travel & dining">Travel & dining</option>
-                            <option value="Wellbeing">Wellbeing</option>
-                            <option value="Grooming">Grooming</option>
-                            <option value="Healthcare">Healthcare</option>
-                            <option value="Automobile">Automobile</option>
-                            <option value="Others">Others</option>
+                                
+                                    {
+                                        catagorys.map((catagory,i)=> <option key={i} value={catagory}>{catagory}</option>)
+                                    }
+                                   
+                                
                     </select>
         </div>
         <div className='flex  w-full items-center  flex-col'>

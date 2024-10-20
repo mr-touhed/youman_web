@@ -13,10 +13,10 @@ const page = () => {
                         <p>Phone: +880 9611696515 </p>
                         <p className='text-xs'>(11:00 AM - 7:00 PM || Sunday-Thursday)</p>
                         <p>Email: hello@youman.com.bd</p>
-                             </div>
+                        </div>
                 </section>
                 <section className='flex flex-col items-center gap-4 '>
-                        <Image src={banner} alt="contact banner image" width={1000} height={600} className='w-full object-cover'/>
+                        <Image src={banner} alt="contact banner image" width={1000} height={600} className='w-full md:w-[75%] object-cover'/>
                            <div className='m-0 p-0 text-base font-thin flex flex-col items-center'>
                             <h3>Have a question for us ?</h3>
                             <h3>Let us know and we&lsquo;ll get back to you</h3>

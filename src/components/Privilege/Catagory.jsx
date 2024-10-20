@@ -1,6 +1,7 @@
 'use client'
 
 import useChangeParams from "@/hooks/useChangeParams";
+import { catagorys } from "../../../public/data/data";
 
 
 
@@ -10,17 +11,7 @@ const Catagory = () => {
 
 const [changeCatagory] = useChangeParams()
     
-const catagorys = [
-    'Hotel & Dining',
-    'Travel',
-    'Grooming',
-    'Wellbeing',
-    'Lifestyle',
-    'Arts & Carafts',
-    'Automobiles',
-    'Others'
 
-]
    
     return (
         <div className="grid md:grid-cols-6 grid-cols-2  md:justify-center no-scrollbar gap-2 overflow-x-auto mx-4 ">

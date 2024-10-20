@@ -15,12 +15,12 @@ export async function PartnersSection() {
   const services = [
     {
       name:"Hotel & Dining",
-      link:"/privilege?catagory=Travel & dining",
+      link:"/privilege?catagory=Hotel & Dining",
       img:resturent,
     },
     {
       name:"Travel",
-      link:"/privilege?catagory=Wellbeing",
+      link:"/privilege?catagory=Travel",
       img:travel
     },
     {
@@ -30,22 +30,22 @@ export async function PartnersSection() {
     },
     {
       name:"Wellbeing",
-      link:"/privilege?catagory=Healthcare",
+      link:"/privilege?catagory=Wellbeing",
       img:Healthcare
     },
     {
       name:"Lifestyle",
-      link:"/privilege?catagory=Automobile",
+      link:"/privilege?catagory=Lifestyle",
       img:lifestyle
     },
     {
       name:"Arts & Crafts",
-      link:"/privilege?catagory=Others",
+      link:"/privilege?catagory=Arts & Carafts",
       img:Arts
     },
     {
       name:"Automobiles",
-      link:"/privilege?catagory=Others",
+      link:"/privilege?catagory=Automobiles",
       img:Automobile
     },
     {
