@@ -34,7 +34,7 @@ export default function App() {
                         Youman exprience
                     </h1>
               </HeadingAnimation>
-                    <h4 className="sub-title  mt-3 px-3">
+                    <h4 className="sub-title md:text-center mt-3 px-3">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
                     
                     </h4>
