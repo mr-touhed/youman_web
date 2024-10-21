@@ -46,9 +46,11 @@ export const get_offer_state = async() =>{
     }
 }
 
-export const get_query_partners = async(catagory,state) =>{
+export const get_query_partners = async(catagory) =>{
+    console.log(catagory);
+   
     try {
-        const response = await fetch(`${baseURL}/query-partners?catagory=${catagory}&state=${state}`);
+        const response = await fetch(`${baseURL}/query-partners?catagory=${catagory}`);
         return await response.json()
     } catch (error) {
         console.log(error);

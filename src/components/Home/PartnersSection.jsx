@@ -66,11 +66,14 @@ export async function PartnersSection() {
                     Boundless privilege
                   </h1>
                   </HeadingAnimation>
-                  <div className="text-justify text-base space-y-4">
-                    <h4 className="sub-heading">
+                  <div className=" text-base space-y-4">
+                    <h4 className="sub-heading md:hidden block">
                       More than a card—it’s your key to exclusive opportunities.
                     </h4>
-                    <p className="font-thin">
+                    <h4 className="text-center text-neutral-600   my-2 text-[1.05rem]   leading-[23px] md:block hidden">
+                      More than a card—it’s your key to exclusive opportunities.
+                    </h4>
+                    <p className="font-thin text-justify">
                       Youman is your key to unlocking exclusive opportunities. From
                       restaurant, travel, healthcare to premium lifestyle perks, it’s
                       designed for those who expect more.

@@ -11,7 +11,7 @@ img{
   pointer-events: none;
 }
 .sub-heading{
-  @apply text-neutral-600 max-w-lg mx-auto my-2 text-[1.05rem]  text-justify leading-[23px]
+  @apply text-neutral-600  max-w-4xl mx-auto my-2 text-[1.05rem]  text-justify leading-[23px]
 }
 
 .sub-heading, .nfc-text{

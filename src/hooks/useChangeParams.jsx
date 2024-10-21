@@ -7,7 +7,8 @@ const searchParams = useSearchParams()
 
 const createQueryString = useCallback(
     (name, value) => {
-      const params = new URLSearchParams(searchParams.toString())
+      const params = new URLSearchParams(searchParams.toString());
+    
       params.set(name, value)
  
       return params.toString()
@@ -16,7 +17,7 @@ const createQueryString = useCallback(
   )
 
 const changeCatagory = (catagory,item)=>{
-    console.log(catagory,item)
+   
     router.push('?' + createQueryString(catagory, item),{ scroll: false })
 }
 

@@ -21,7 +21,7 @@ export const LinkPreview = ({
   height = 125,
   quality = 50,
   layout = "fixed",
-  isStatic = false,
+  isStatic = true,
   imageSrc = ""
 }) => {
   let src;
@@ -37,7 +37,7 @@ export const LinkPreview = ({
       "viewport.width": width * 3,
       "viewport.height": height * 3,
     });
-    src = imageSrc;
+    src = `https://api.microlink.io/?${params}`;
   } else {
     src = imageSrc;
   }
@@ -81,12 +81,12 @@ export const LinkPreview = ({
       onOpenChange={(open) => {
         setOpen(open);
       }}>
-      <HoverCardPrimitive.Trigger
+      <span
         onMouseMove={handleMouseMove}
         className={cn("text-black dark:text-white", className)}
-        href={url}>
+        >
         {children}
-      </HoverCardPrimitive.Trigger>
+      </span>
 
       <HoverCardPrimitive.Content
         className="[transform-origin:var(--radix-hover-card-content-transform-origin)]"
@@ -113,7 +113,7 @@ export const LinkPreview = ({
                 x: translateX,
               }}>
               <span
-                
+               
                 className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                 style={{ fontSize: 0 }}>
                 <Image

@@ -16,22 +16,31 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         const [search,setSearch] = useState('');
         const [showData,setShowData] = useState(partnerList)
     
-    
+        const [visibleCount, setVisibleCount] = useState(4);
+
+        const showMoreProducts = () => {
+          setVisibleCount((prevCount) => prevCount + 4);
+        };
+
+
     useEffect(()=>{
         setTimeout(()=>{
-            if(search){
+            if(!search){
+                setShowData(partnerList)
+             }else{
                 const filterData =  partnerList.filter(partner => partner.name.toLowerCase().includes(search.toLowerCase()));
                 setShowData(filterData)
-             }else{
-                 setShowData(partnerList)
+                 
              }
         },400)
     },[search])
     useEffect(()=>{
+            const {catagory} = searchParams;
         const get_partner =async () =>{
             try {
-                const result = await get_query_partners(searchParams.catagory,searchParams.state);
-                setPartnerList(result.data);
+                const result = await get_query_partners(catagory,searchParams.state);
+                setShowData(result.data);
+                setPartnerList(result.data)
             } catch (error) {
                 console.log(error);
             }
@@ -49,17 +58,19 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         <IoIosSearch className="text-green-400 w-6 h-6 absolute md:left-8 left-9 top-[50%] -translate-y-[10px]"/>
       </div>
         <div className="grid md:grid-cols-4 grid-cols-2 md:p-4 p-2 md:gap-8 gap-2 place-items-center">
-        {partnerList.length < 1 && "No data found yet"}
+        {showData.length < 1 && "No data found yet"}
                     {
-                        showData.slice(0,4).map(data => <PartnerCard key={data._id} data={data}/>)
+                        showData.slice(0,visibleCount).map(data => <PartnerCard key={data._id} data={data}/>)
                         
                     }
                      
            
         </div>
         <div>
-                  <button className="w-24 h-8 block mx-auto border-black shadow rounded-md border  text-black text-sm">See more</button>  
-        </div>
+                 {visibleCount < showData.length && (
+                  <button onClick={showMoreProducts} className="w-24 h-8 block mx-auto border-black shadow rounded-md border  text-black text-sm">See more</button>  
+                )}
+                  </div>
     </>
     );
 };

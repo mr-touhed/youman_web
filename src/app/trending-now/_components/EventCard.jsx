@@ -13,26 +13,31 @@ const EventCard = ({ event, soon }) => {
   };
 
   return (
-    <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
+    <div>
+         <div className='border border-green-700 rounded-md p-2 mb-4 '>
+          <h2 className='text-center text-thin  text-black '> {event.name}</h2>
+      </div>
+      <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
+      
+      
       <section 
       
           onClick={handleFlip}
           onTouchEnd={handleFlip}
-      className='bg-white text-black border shadow-md relative h-[200px] bg-[url("/images/event_img.jpg")] bg-no-repeat bg-cover  overflow-hidden rounded-md md:p-8 p-3 flex flex-col gap-4 z-10'>
+      className='bg-white text-black border shadow-md relative h-[250px] bg-[url("/images/Card_Black_banner.png")] bg-no-repeat bg-cover grid place-content-center  overflow-hidden rounded-xl md:p-8 p-3  gap-4 z-10'>
+        <Image src="/images/event_img.jpg" alt="" width={300} height={250} className='rounded-2xl checkout'/>
         {soon && (
           <div className='absolute w-full left-0 right-0 top-0 h-full z-20 bg-[#131313bc] grid place-content-center'>
             <h4 className='text-4xl font-bold text-white'>Coming soon...</h4>
           </div>
         )}
-        <h2 className='md:text-3xl text-xl font-semibold text-white'>{event.name}</h2>
-
         
       </section>
-
+      
       <section
         onClick={handleFlip}
         onTouchEnd={handleFlip}
-      className='relative h-[200px] bg-black overflow-hidden rounded-md p-4 flex flex-col gap-4 text-white'>
+      className='relative h-[250px] bg-white shadow-lg border bg-[url("/images/Card_White_banner.png")] bg-no-repeat bg-cover overflow-hidden rounded-xl p-4 flex flex-col gap-4 text-black'>
         <div>
               <div>
                   <h3 className='text-xl font-semibold'>Event</h3>
@@ -57,6 +62,15 @@ const EventCard = ({ event, soon }) => {
         </button>
       </section>
     </ReactCardFlip>
+
+    </div>
+  
+    
+   
+    
+    
+
+  
   );
 };
 

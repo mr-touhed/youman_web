@@ -52,7 +52,7 @@ const OurStoryPage = () => {
                                         <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-3xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
                                         Empowering you</h2>
                                         </HeadingAnimation>
-                                        <Image src="/images/icons/3.png" alt="" width={200} height={250} className=''/>
+                                        <Image src="/images/icons/3.png" alt="" width={200} height={250} className='mt-3 md:mt-0'/>
                                         <p className='text-gray text-base font-thin'>At Youman, we believe that your story matters. It’s about more than access; it’s about being part of a movement that celebrates who you are and what you aspire to be. We’re here to amplify your voice, connect you with those who share your vision, and ensure that you never stop exploring what’s next.
                                         </p>    
                                 </div>    

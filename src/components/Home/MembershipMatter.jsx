@@ -7,41 +7,42 @@ import HeadingAnimation from "../HeadingAnimation";
 
 const SocialMediaArray = [
     {
-        id:"3",
+        id:"1",
+        Icon:FaBloggerB ,
+        link:"/blogs" ,
+
+    },
+    {
+        id:"2",
         Icon: FaFacebookF,
         link: "https://www.facebook.com/youmanbd",
 
     },
     {
-        id:"4",
+        id:"3",
         Icon:FaInstagram ,
         link: "https://www.instagram.com/youman.bd",
 
     },
     {
-        id:"5",
+        id:"4",
         Icon: FaLinkedinIn,
         link: "https://www.linkedin.com/company/youmanbd/",
 
     },
     {
-        id:"6",
+        id:"5",
         Icon:FaSquareXTwitter ,
         link: "https://x.com/youmanbd",
 
     },
     {
-        id:"2",
+        id:"6",
         Icon: FaYoutube,
         link: "https://youtube.com/@youmanbd",
 
-    },
-    {
-        id:"1",
-        Icon:FaBloggerB ,
-        link:"/blogs" ,
-
     }
+    
     
     
     

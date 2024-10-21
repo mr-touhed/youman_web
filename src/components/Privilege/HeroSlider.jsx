@@ -33,7 +33,7 @@ const HeroSlider = () => {
                   alt="image"
                   width="300px"
                   height="300px"
-                  className='block w-full max-h-[50vh] object-cover'
+                  className='block w-full max-h-[50vh] object-contain'
                   />
           </div>
         </SwiperSlide>

@@ -18,7 +18,11 @@ const InfinitePossibilities = () => {
                         Infinite possibilities
                     </h1>
                     </HeadingAnimation>
-                    <h4 className="sub-heading">
+                    <h4 className="sub-heading md:hidden block">
+                    To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
+                    
+                    </h4>
+                    <h4 className="text-center text-neutral-600 my-2 text-[1.05rem] leading-[23px] pb-4 md:block hidden">
                     To meet the ultimate privileges and embark on a thrilling adventure of self-discovery
                     
                     </h4>

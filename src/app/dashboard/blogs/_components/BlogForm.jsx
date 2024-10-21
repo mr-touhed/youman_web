@@ -30,6 +30,10 @@ const BlogForm = () => {
                             <option value="Finance">Finance</option>
                     </select>
                 </div>
+                <div className="grid gap-1">
+                    <label htmlFor="url" className="text-sm font-semibold">Blog Link </label>
+                    <input type="url" name="url" id="url" className="border p-1" placeholder="https://"/>
+                </div>
 
                 <button type="submit" className="bg-green-700 w-[300px] py-3 mx-auto block text-white">Post</button>
         </form>

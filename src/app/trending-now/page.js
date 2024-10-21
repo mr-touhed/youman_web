@@ -48,7 +48,7 @@ const TrendingNowPage = () => {
     return (
         <div className='max-w-7xl mx-auto px-4 space-y-8'>
                 <div>
-                    <Image src={bannerImg} alt="" width={1200} height={600} className='w-full md:max-h-[40vh] object-contain'/>
+                    <Image src={bannerImg} alt="" width={1200} height={600} className='w-full md:max-h-[40vh]  object-contain'/>
                 </div>
             
                 <div className='space-y-8'>

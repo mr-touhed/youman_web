@@ -10,7 +10,7 @@ import PopUp from './PopUp';
 
 
 const page = async ({searchParams}) => {
-    const [fetch_partners,catagory_list,get_offer_state_list,] = await Promise.all([
+    const [fetch_partners,catagory_list,] = await Promise.all([
         get_partners(),
         get_catagorys(),
         get_offer_state(),
