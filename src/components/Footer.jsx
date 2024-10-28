@@ -84,20 +84,20 @@ const Footer = () => {
                 <ul className="list-unstyled space-y-2">
                   
                   <li>
-                    <a
+                    <Link
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-1 text-sm"
-                      href="#"
+                      href="/terms-and-conditions"
                     >
                       Terms &amp; conditions
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
+                      href="/privacy-and-policy"
                     >
                       Privacy policy
-                    </a>
+                    </Link>
                   </li>
                   
                 </ul>

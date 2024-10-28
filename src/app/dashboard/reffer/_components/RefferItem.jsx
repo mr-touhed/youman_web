@@ -3,7 +3,7 @@ import { baseURL } from '@/utils/baseURL';
 import revalidateTag from '@/utils/revalided';
 import React from 'react';
 
-const RefferItem = ({name, _id}) => {
+const RefferItem = ({name,amount, _id}) => {
     const handel_remove = async (id) =>{
         try {
             const response = await fetch(`${baseURL}/remove-reffer/${id}`,{method:"DELETE"})
@@ -21,7 +21,8 @@ const RefferItem = ({name, _id}) => {
     return (
         <div  className='flex bg-slate-100 my-4 border border-slate-400 p-1 justify-between items-center max-w-screen-2xl'>
                         <div className='pl-4'>
-                                <p>{name}</p>
+                                <p>Code: {name}</p>
+                                <p>Amount: {amount}</p>
                         </div>
                         <div className='border-l p-1'>
                                 <button onClick={()=>handel_remove(_id)}>remove</button>

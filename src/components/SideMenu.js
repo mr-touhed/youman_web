@@ -35,10 +35,13 @@ const SideMenu = () => {
                     </div>
 
                     <div className='border-t-2 w-full '>
-                                    <h4 className='text-base text-center uppercase font-bold'>Contact </h4>
+                                    <h4 className='text-base text-center uppercase font-bold'>Trending </h4>
                     <ul className="p-3 w-full space-y-4">
                     <li className="w-full  border rounded-md text-center">
-                        <Link href="/dashboard/contact" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/contact" ? "bg-green-700 text-white": ""}`}><MdEmail className='w-6 h-6'/> <span>Contact message</span></Link>
+                        <Link href="/dashboard/trending/trending-post" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/contact" ? "bg-green-700 text-white": ""}`}><IoIosAddCircle className='w-6 h-6'/> <span>Post</span></Link>
+                    </li>
+                    <li className="w-full  border rounded-md text-center">
+                        <Link href="/dashboard/trending" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/contact" ? "bg-green-700 text-white": ""}`}><IoIosListBox className='w-6 h-6'/> <span>List</span></Link>
                     </li>
                    
                     </ul>

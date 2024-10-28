@@ -1,6 +1,13 @@
  @tailwind base;
+ * {
+  scrollbar-width: thin;
+  
+  scrollbar-color: green black;
+}
 @tailwind components;
 @tailwind utilities;
+
+
 
 
 p, h4{
@@ -142,3 +149,29 @@ img{
 
 
 /* ___________ */
+
+
+
+
+ /* Include the scroll bar styles here */
+ html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 35px;
+}
+
+
+.scrollable {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* Hides scrollbar until hovered */
+}

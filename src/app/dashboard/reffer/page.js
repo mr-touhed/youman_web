@@ -21,12 +21,12 @@ const RefferPage = async () => {
         <div className='max-w-lg mx-auto'>
                 <h2 className='text-2xl text-center uppercase'>Referral code List</h2>
 
-            {/* {
+            {
                 refferData?.result.map(reffer => (
-                    <RefferItem key={reffer._id} _id={reffer._id} name={reffer.name}/>
+                    <RefferItem key={reffer._id} _id={reffer._id} name={reffer.name} amount={reffer?.amount}/>
                 ))
-            } */}
-            {/* <AddReffer/> */}
+            }
+            <AddReffer/>
         </div>
     );
 };

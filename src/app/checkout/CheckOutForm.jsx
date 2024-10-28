@@ -4,11 +4,13 @@ import black from "@/images/order_card/card_black.png"
 import white from "@/images/order_card/card_white.png"
 import { baseURL } from "@/utils/baseURL";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CheckOutForm = () => {
     const [cardColor,setCardColor] = useState("white");
-  
+    const [refferCode,setRefferCode] = useState('');
+    const [refferUpdate,setRefferUpdate] = useState(null);
+    const [totalAmount,setTotalAmount] = useState(1111)
     const [order,setOrder] = useState({fullname:"",email:"",mobile:"",address:"",reffer:"",cardColor});
     const [loading,setLoading] = useState(false)
     const handel_change_input = (e) =>{
@@ -47,6 +49,29 @@ const CheckOutForm = () => {
         }
     }
 
+    const handel_check_reffer =async() =>{
+        setTotalAmount(1111)
+        try {
+          const response = await fetch(`${baseURL}/check-reffer`,{
+            method:"POST",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify({code:refferCode})
+          })
+            const data = await response.json();
+          if(data.status){
+            setRefferUpdate(data.result)
+            setTotalAmount(totalAmount - data.result.amount)
+          }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    
+
     return (
         <>
         <div className="grid md:grid-cols-2  grid-cols-1 gap-4 items-center  pt-8">
@@ -68,11 +93,12 @@ const CheckOutForm = () => {
                         <label className="text-sm" htmlFor="address">Address </label>
                         <textarea onChange={(e)=>handel_change_input(e)} value={order.address} name="address" id="address" className="h-20 border rounded-md p-2" required></textarea>
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-1 relative">
                         <label className="text-sm" htmlFor="reffer">Referral code (if any)</label>
-                        <input onChange={(e)=>handel_change_input(e)} value={order.reffer} type="text" name="reffer" id="reffer"  className="border border-green-700 rounded-md p-2"/>
+                        <input onChange={(e)=>setRefferCode(e.target.value)} value={refferCode} type="text" name="reffer" id="reffer"  className="border border-green-700 rounded-md p-2"/>
+                        <button type="button" onClick={handel_check_reffer} className="absolute right-0 top-[30px] font-bold text-xs uppercase p-2">{refferUpdate?.success ? "OK" :  "check"}</button>
                     </div>
-                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-green-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-2 rounded-md  font-bold md:w-full w-[90.5%] z-10">{loading ? "Loading..":"GET IT !"}</button>
+                    <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-gray-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-2 rounded-md  font-bold md:w-full w-[90.5%] z-10">{loading ? "Loading..":"GET IT !"}</button>
                 </form>
 
                 <div className="mt-6 px-3">
@@ -91,7 +117,7 @@ const CheckOutForm = () => {
                                 </tr>
                                 <tr>
                                     <td>Discount / Promo</td>
-                                    <td>200</td>
+                                    <td>{refferUpdate?.amount ? refferUpdate.amount : 0}</td>
                                 </tr>
                                 <tr>
                                     <td>Delivery</td>
@@ -99,7 +125,7 @@ const CheckOutForm = () => {
                                 </tr>
                                 <tr className="font-bold text-green-700">
                                     <td>Total</td>
-                                    <td>1,111</td>
+                                    <td>{totalAmount}</td>
                                 </tr>
                             </tbody>
                         </table>

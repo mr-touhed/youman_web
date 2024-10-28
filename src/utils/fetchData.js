@@ -68,3 +68,24 @@ export const fetch_order = async (status,tag) =>{
         console.log(error);
     }
 }
+
+
+
+export const get_events =async () =>{
+    try {
+        const response =await fetch(`${baseURL}/events`);
+            return  await response.json()
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const get_single_events =async (id) =>{
+    try {
+        const response =await fetch(`${baseURL}/events/${id}`);
+            return  await response.json()
+    } catch (error) {
+        console.log(error);
+    }
+}
+
