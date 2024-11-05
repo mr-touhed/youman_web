@@ -57,20 +57,6 @@ const SideMenu = () => {
                     </div>
 
                     
-
-                    <div className='border-t-2 w-full '>
-                    <h4 className='text-base text-center uppercase font-bold'>Blogs </h4>
-                        <ul className="p-3 w-full space-y-4">
-                        <li className="w-full  border rounded-md text-center">
-                            <Link href="/dashboard/blogs" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/blogs" ? "bg-green-700 text-white": ""}`}><IoIosAddCircle className='w-6 h-6'/> <span>Add Blogs</span></Link>
-                        </li>
-                        <li className="w-full  border rounded-md text-center">
-                            <Link href="/dashboard/blogs/list" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/blogs/list" ? "bg-green-700 text-white": ""}`}><IoIosListBox className='w-6 h-6'/> <span>Blog list</span></Link>
-                        </li>
-                        </ul>
-                    </div>
-                   
-                    
                     <div className='w-full border-t-2'>
                     <h4 className='text-base text-center uppercase font-bold'>UI </h4>
 
