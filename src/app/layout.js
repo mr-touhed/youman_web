@@ -3,6 +3,7 @@ import { Manrope} from "next/font/google"
 import "./globals.css";
 import Footer from '@/components/Footer';
 import Menubar from "@/components/Menubar";
+import { Toaster } from "react-hot-toast";
 
 
 const crisman = Manrope({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       
       
       <Footer/>
+      <Toaster />
       </body>
       
     </html>

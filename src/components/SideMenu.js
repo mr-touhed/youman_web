@@ -6,8 +6,6 @@ import { IoIosListBox } from "react-icons/io";
 import { IoIosAddCircle } from "react-icons/io";
 import { IoTicket } from "react-icons/io5";
 import { ImSpinner3 } from "react-icons/im";
-import { CiSquareCheck } from "react-icons/ci";
-import { MdDeliveryDining, MdEmail } from "react-icons/md";
 import { TfiGallery } from "react-icons/tfi";
 const SideMenu = () => {
     const pathname = usePathname();
@@ -34,6 +32,17 @@ const SideMenu = () => {
                     </ul>
                     </div>
 
+
+                    <div className='border-t-2 w-full '>
+                    <h4 className='text-base text-center uppercase font-bold'>Card order </h4>
+                        <ul className="p-3 w-full space-y-4">
+                        <li className="w-full  border rounded-md text-center">
+                            <Link href="/dashboard/orders" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/orders" ? "bg-green-700 text-white": ""}`}><ImSpinner3  className='w-6 h-6'/> <span>Orders</span></Link>
+                        </li>
+                        
+                        </ul>
+                    </div>
+
                     <div className='border-t-2 w-full '>
                                     <h4 className='text-base text-center uppercase font-bold'>Trending </h4>
                     <ul className="p-3 w-full space-y-4">
@@ -46,6 +55,9 @@ const SideMenu = () => {
                    
                     </ul>
                     </div>
+
+                    
+
                     <div className='border-t-2 w-full '>
                     <h4 className='text-base text-center uppercase font-bold'>Blogs </h4>
                         <ul className="p-3 w-full space-y-4">
@@ -57,20 +69,7 @@ const SideMenu = () => {
                         </li>
                         </ul>
                     </div>
-                    <div className='border-t-2 w-full '>
-                    <h4 className='text-base text-center uppercase font-bold'>Card order </h4>
-                        <ul className="p-3 w-full space-y-4">
-                        <li className="w-full  border rounded-md text-center">
-                            <Link href="/dashboard/process-order" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/process-order" ? "bg-green-700 text-white": ""}`}><ImSpinner3  className='w-6 h-6'/> <span>Process Order</span></Link>
-                        </li>
-                        <li className="w-full  border rounded-md text-center">
-                            <Link href="/dashboard/received-order" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/received-order" ? "bg-green-700 text-white": ""}`}><CiSquareCheck   className='w-6 h-6'/> <span>Received  Order</span></Link>
-                        </li>
-                        <li className="w-full  border rounded-md text-center">
-                            <Link href="/dashboard/delivery-card" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/delivery-card" ? "bg-green-700 text-white": ""}`}><MdDeliveryDining    className='w-6 h-6'/> <span>Delivery Card</span></Link>
-                        </li>
-                        </ul>
-                    </div>
+                   
                     
                     <div className='w-full border-t-2'>
                     <h4 className='text-base text-center uppercase font-bold'>UI </h4>

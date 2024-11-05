@@ -8,6 +8,8 @@ const TrendingPostPage = () => {
         type:"",
         venue: "",
         details: "",
+        date: "",
+        status:""
       }
     return (
         <div>

@@ -94,7 +94,7 @@ const CheckOutForm = () => {
                         <textarea onChange={(e)=>handel_change_input(e)} value={order.address} name="address" id="address" className="h-20 border rounded-md p-2" required></textarea>
                     </div>
                     <div className="flex flex-col gap-1 relative">
-                        <label className="text-sm" htmlFor="reffer">Referral code (if any)</label>
+                        <label className="text-sm" htmlFor="reffer">Referral / Promo code (if any)</label>
                         <input onChange={(e)=>setRefferCode(e.target.value)} value={refferCode} type="text" name="reffer" id="reffer"  className="border border-green-700 rounded-md p-2"/>
                         <button type="button" onClick={handel_check_reffer} className="absolute right-0 top-[30px] font-bold text-xs uppercase p-2">{refferUpdate?.success ? "OK" :  "check"}</button>
                     </div>

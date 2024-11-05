@@ -1,9 +1,10 @@
 import React from 'react';
+import TrandingList from './_components/TrandingList';
 
 const TrendingListPage = () => {
     return (
         <div>
-            Trending List
+            <TrandingList/>
         </div>
     );
 };

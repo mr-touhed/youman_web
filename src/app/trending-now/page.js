@@ -16,23 +16,11 @@ const TrendingNowPage = async () => {
     
     const now = new Date();
 
-const ongoing = events.filter(event => 
-  event?.time?.some(time => 
-    new Date(time.startDate) <= now && now <= new Date(time.endDate)
-  )
-);
+const ongoing = events.filter(event => event.status === "ongoing");
 
-const upcoming = events.filter(event => 
-  event?.time?.some(time => 
-    new Date(time.startDate) > now
-  )
-);
+const upcoming = events.filter(event => event.status === "upcoming");
 
-const preceding = events.filter(event => 
-  event?.time?.some(time => 
-    new Date(time.endDate) < now
-  )
-);
+const preceding = events.filter(event => event.status === "preceding");
 
 
 

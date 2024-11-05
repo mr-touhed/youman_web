@@ -69,8 +69,10 @@ const PartnerTable = ({partners}) => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{partner.name}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{partner.catagory}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    {partner.offers.discount && <span>Discount: {partner.offers.discount} %</span>}
-                   {partner.offers.flat && <span>Flat: {partner.offers.flat} TK</span>}
+                    <p>{partner?.offers?.offer1}</p>
+                    <p>{partner?.offers?.offer2}</p>
+                    <p>{partner?.offers?.offer3}</p>
+                   
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                   <Link href={`/dashboard/edit-partner/${partner.name}`} className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Edit</Link>
@@ -87,7 +89,7 @@ const PartnerTable = ({partners}) => {
       </div>
     </div>
   </div>
-  <Toaster />
+ 
 </div>
     );
 };

@@ -10,13 +10,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
 const TrendingForm = ({ trending }) => {
-  const [selectDate, setselectDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: null,
-      key: "selection",
-    },
-  ]);
+  
 
   const [trendingPost, setTrendingPost] = useState(trending);
 
@@ -33,14 +27,14 @@ const TrendingForm = ({ trending }) => {
 
   const handel_submit_event = async (e) => {
       e.preventDefault();
-        console.log({trendingPost,selectDate});
+       
       try {
 
           if(image === null) return toast('select your partner image');
           setLoading(true)
           const imageUrl = await uploadImageToImgBB(image.file);
               if (imageUrl){
-                  const events = {...trendingPost, image:imageUrl,time:selectDate }
+                  const events = {...trendingPost, image:imageUrl }
                       const response = await fetch(`${baseURL}/create-events`,{
                           method:"POST",
                           headers:{
@@ -84,8 +78,8 @@ const TrendingForm = ({ trending }) => {
   return (
     <form onSubmit={handel_submit_event}>
       <section className="flex flex-col gap-8 max-w-2xl mx-auto">
-        <div className="grid grid-cols-2 gap-3 items-center">
-          <section className="h-full border grid place-content-center rounded-md">
+        <div className="">
+          <section className="h-full  grid place-content-center rounded-md">
             {image?.img && (
               <Image
                 width={300}
@@ -119,21 +113,7 @@ const TrendingForm = ({ trending }) => {
               />
             </div>
           </section>
-          <section>
-            <div className="flex flex-col w-full gap-1">
-              <label htmlFor="venue" className="text-sm">
-                Time <span className="text-red-400">*</span>
-              </label>
-              <div>
-                <DateRange
-                  editableDateInputs={true}
-                  onChange={(item) => setselectDate([item.selection])}
-                  moveRangeOnFirstSelection={false}
-                  ranges={selectDate}
-                />
-              </div>
-            </div>
-          </section>
+         
         </div>
         <div className="flex flex-col w-full gap-1">
           <label htmlFor="Event name" className="text-sm">
@@ -179,6 +159,40 @@ const TrendingForm = ({ trending }) => {
             placeholder="venue"
           />
         </div>
+        <section className="grid grid-cols-2 gap-6">
+        <div className="flex flex-col w-full gap-1  ">
+          <label htmlFor="venue" className="text-sm">
+            Date <span className="text-red-400">*</span>
+          </label>
+
+          <input
+            type="text"
+            name="date"
+            required
+            value={trendingPost.date}
+            onChange={(e) => change_value(e)}
+            className="border p-2 "
+            placeholder="date"
+          />
+        </div>
+        <div className="flex flex-col w-full gap-1  ">
+          <label htmlFor="venue" className="text-sm">
+            Status <span className="text-red-400">*</span>
+          </label>
+                <select  name="status"
+            required
+            value={trendingPost.status}
+            onChange={(e) => change_value(e)}
+            className="border p-2 "
+            
+            >
+                        <option value="ongoing">Ongoing</option>
+                        <option value="upcoming">Upcoming</option>
+                        <option value="preceding">Preceding</option>
+                </select>
+          
+        </div>
+        </section>
 
         <div className="flex flex-col w-full gap-1">
           <label htmlFor="title" className="text-sm">
@@ -203,7 +217,7 @@ const TrendingForm = ({ trending }) => {
           {loading ? "Loading..." : "Add Events +"}
         </button>
       </section>
-      <Toaster />
+     
     </form>
   );
 };
