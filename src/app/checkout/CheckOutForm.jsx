@@ -4,9 +4,11 @@ import black from "@/images/order_card/card_black.png"
 import white from "@/images/order_card/card_white.png"
 import { baseURL } from "@/utils/baseURL";
 import Image from "next/image";
+
 import { useEffect, useState } from "react";
 
 const CheckOutForm = () => {
+   
     const [cardColor,setCardColor] = useState("white");
     const [refferCode,setRefferCode] = useState('');
     const [refferUpdate,setRefferUpdate] = useState(null);
@@ -22,32 +24,72 @@ const CheckOutForm = () => {
             
     }
 
-    const handel_order = async (e) =>{
-        e.preventDefault()
-        try {
-            const order_card_data = {...order,cardColor};
-            setLoading(true)
-            const response = await fetch(`${baseURL}/create-payment`,{
-                method:"POST",
-                headers:{
-                    "content-type":"application/json"
-                },
-                body:JSON.stringify(order_card_data)
-            })
-            const result = await response.json();
-            if(!result.status.type){
-                alert(result.status.message)
-            }else{
-                const url = result.bkashUrl; // Replace with the URL you want to open
+    // const handel_order = async (e) =>{
+    //     e.preventDefault()
+    //     try {
+    //         const order_card_data = {...order,cardColor};
+    //         setLoading(true)
+    //         const response = await fetch(`${baseURL}/create-payment`,{
+    //             method:"POST",
+    //             headers:{
+    //                 "content-type":"application/json"
+    //             },
+    //             body:JSON.stringify(order_card_data)
+    //         })
+    //         const result = await response.json();
+    //         if(!result.status.type){
+    //             alert(result.status.message)
+    //         }else{
+    //             const url = result.bkashUrl; // Replace with the URL you want to open
 
-                return  window.location.href = url
-            }
+    //             window.location.href = url
+    //         }
             
 
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
+
+    const handel_order = async (e) => {
+        e.preventDefault();
+        try {
+            const order_card_data = { ...order, cardColor };
+            setLoading(true);
+            const response = await fetch(`${baseURL}/create-payment`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(order_card_data),
+            });
+            
+            if (!response.ok) {
+                console.error(`Error: ${response.statusText}`);
+                alert("Failed to fetch response. Please check network or server.");
+                setLoading(false);
+                return;
+            }
+    
+            const result = await response.json();
+            console.log(result);
+            if (!result.status?.type) {
+                alert(result.status?.message || "Unknown error occurred.");
+            } else {
+                const url = result.bkashUrl; // Replace with the URL you want to open
+                if (url) {
+                    window.location.href = url;
+                } else {
+                    alert("URL not provided in response.");
+                }
+            }
         } catch (error) {
-            console.log(error);
+            console.error("Error during order handling:", error);
+        } finally {
+            setLoading(false);
         }
-    }
+    };
+    
 
     const handel_check_reffer =async() =>{
         setTotalAmount(1111)

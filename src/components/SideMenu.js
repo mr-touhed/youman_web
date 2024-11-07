@@ -57,7 +57,7 @@ const SideMenu = () => {
                     </div>
 
                     
-                    <div className='w-full border-t-2'>
+                    {/* <div className='w-full border-t-2'>
                     <h4 className='text-base text-center uppercase font-bold'>UI </h4>
 
 
@@ -68,7 +68,7 @@ const SideMenu = () => {
                     
                     
                     </ul>
-                    </div>
+                    </div> */}
             </aside>
     );
 };
