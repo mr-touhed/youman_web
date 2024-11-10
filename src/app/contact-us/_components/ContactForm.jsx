@@ -5,6 +5,7 @@ import { MdOutlineMailLock,MdPhone  } from "react-icons/md";
 import { LuMessageSquarePlus } from "react-icons/lu";
 import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha'
 import { baseURL } from '@/utils/baseURL';
+import toast from 'react-hot-toast';
 
 const ContactForm = () => {
     const [contactData,setContactData] = useState({name:"",email:"",phone:"",message:""});
@@ -35,11 +36,16 @@ const handel_input = (e) =>{
                     body:JSON.stringify(contactData)
                 })
 
-                const result = await response.json()
-                setLoading(false)
+                const result = await response.json();
+                if(result.status.type){
+                    toast(result.status.message)
+                    setLoading(false)
+                    setContactData({name:"",email:"",phone:"",message:""})
+                }
+                
             }
         } catch (error) {
-            console.log(error);
+            toast(error.message);
         }
     }
 
