@@ -61,7 +61,7 @@ export const get_query_partners = async(catagory) =>{
 export const fetch_order = async (status,tag) =>{
     
     try {
-        const response = await fetch(`${baseURL}/payments?status=${status}`, { cache:"no-store",next:{tags:[tag]}});
+        const response = await fetch(`${baseURL}/payments?status=${status}`, { cache:"no-cache",next:{tags:[tag]}});
         const result = await response.json()
         return result
     } catch (error) {

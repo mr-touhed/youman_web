@@ -6,15 +6,21 @@ import revalidateTag from "@/utils/revalided";
 import { useEffect, useState } from "react";
 
 
-const TableList = () => {
-  const [list,setList ] = useState([])
-   const [query,setQuery] = useState('process')
+const OrderTableList = () => {
+  const [list,setList ] = useState([]);
+  const [update,setUpdate] = useState('')
+   const [query,setQuery] = useState('process');
+
     const change_status = async (id,status) =>{
+
             try {
                 const response = await fetch(`${baseURL}/update-payment-status/${id}?status=${status}`,{method:"PATCH"});
                 const result = await response.json();
+                console.log(result);
                 if(result.status.type){
-                    return revalidateTag(status)
+                        
+                        setUpdate(id)
+                        revalidateTag('order')
                 }else{
                     alert("some problems")
                 }
@@ -26,14 +32,14 @@ const TableList = () => {
 
     useEffect(()=>{
       const getOrderList =  async (item) =>{
-        const data = await fetch_order(item,"query");
+        const data = await fetch_order(item,"order");
         setList(data?.data);
-        revalidateTag('query')
+        revalidateTag('order')
       }
-      console.log(query, "/////////");
+     
       getOrderList(query)
-    },[query])
-
+    },[query,update])
+   
     return (
         <div className="flex flex-col">
   <div className="p-6 overflow-x-auto ">
@@ -94,7 +100,7 @@ const TableList = () => {
                 {order.reffer || "-"}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-end text-sm font-medium ">
-                      <select name="status" value={order.status} id="" onChange={(e)=>change_status(order._id,e.target.value)}>
+                      <select name="status" value={order.card_status} id="" onChange={(e)=>change_status(order._id,e.target.value)}>
                               <option value="process">Process</option>
                               <option value="received">Received</option>
                               <option value="delivery">Delivery</option>
@@ -117,4 +123,4 @@ const TableList = () => {
     );
 };
 
-export default TableList;
+export default OrderTableList;

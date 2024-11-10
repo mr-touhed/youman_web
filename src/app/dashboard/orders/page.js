@@ -1,10 +1,12 @@
-import TableList from '@/components/TableList';
+import OrderTableList from './_components/OrderTableList';
 
 const OrderPage = async () => {
-  
+    
+    
+
     return (
         <div>
-            <TableList />
+            <OrderTableList />
         </div>
     );
 };
