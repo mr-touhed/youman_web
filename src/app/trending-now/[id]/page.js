@@ -18,8 +18,9 @@ const EventsDetails = async ({params}) => {
                             <h2 className='text-4xl font-semibold text-green-700 text-center'>{result.name}</h2>
                         </HeadingAnimation>
                         <div className='text-sm font-thin mt-8'>
-                        <p className='leading-3 italic'><span className='font-semibold text-sm text-green-700'>EVENT:</span> {result.type}</p>
-                        <p className='leading-5 italic'><span className='font-semibold text-sm text-green-700'>VANUE:</span> {result.venue}</p>
+                        <p className='leading-3 italic'><span className='font-semibold text-sm text-green-700'>Event:</span> {result.type}</p>
+                        <p className='leading-5 italic'><span className='font-semibold text-sm text-green-700'>Vanue:</span> {result.venue}</p>
+                        <p className='leading-5 italic'><span className='font-semibold text-sm text-green-700'>Date:</span> {result.date}</p>
                         <p className='mt-8 text-justify leading-7'>{result.details}</p>
                         </div>
 

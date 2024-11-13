@@ -4,7 +4,7 @@ import black from "@/images/order_card/card_black.png"
 import white from "@/images/order_card/card_white.png"
 import { baseURL } from "@/utils/baseURL";
 import Image from "next/image";
-
+import { FcApproval,FcCancel,FcSynchronize   } from "react-icons/fc";
 import { useEffect, useState } from "react";
 
 const CheckOutForm = () => {
@@ -12,6 +12,7 @@ const CheckOutForm = () => {
     const [cardColor,setCardColor] = useState("white");
     const [refferCode,setRefferCode] = useState('');
     const [refferUpdate,setRefferUpdate] = useState(null);
+    const [refferStatus,setRefferStatus] = useState(null)
     const [totalAmount,setTotalAmount] = useState(1111)
     const [order,setOrder] = useState({fullname:"",email:"",mobile:"",address:"",reffer:"",cardColor});
     const [loading,setLoading] = useState(false)
@@ -54,7 +55,7 @@ const CheckOutForm = () => {
     const handel_order = async (e) => {
         e.preventDefault();
         try {
-            const order_card_data = { ...order, cardColor };
+            const order_card_data = { ...order,reffer:refferCode , cardColor };
             setLoading(true);
             const response = await fetch(`${baseURL}/create-payment`, {
                 method: "POST",
@@ -91,29 +92,46 @@ const CheckOutForm = () => {
     };
     
 
-    const handel_check_reffer =async() =>{
-        setTotalAmount(1111)
-        try {
-          const response = await fetch(`${baseURL}/check-reffer`,{
-            method:"POST",
-            headers:{
-                "content-type":"application/json"
-            },
-            body:JSON.stringify({code:refferCode})
-          })
-            const data = await response.json();
-          if(data.status){
-            setRefferUpdate(data.result)
-            setTotalAmount(totalAmount - data.result.amount)
-          }
-
-        } catch (error) {
-            console.log(error);
+    useEffect(()=>{
+        
+        const handel_check_reffer =async(refferCode) =>{
+            
+            setRefferStatus('loading');
+            
+            setTotalAmount(1111)
+            try {
+                const CardAmount = 1111
+              const response = await fetch(`${baseURL}/check-reffer`,{
+                method:"POST",
+                headers:{
+                    "content-type":"application/json"
+                },
+                body:JSON.stringify({code:refferCode})
+              })
+                const data = await response.json();
+              if(data.status.type){
+                setRefferUpdate(data.result)
+                setTotalAmount(CardAmount - data.result.amount)
+                    return setRefferStatus('success')
+              }else{
+                
+                setRefferStatus('failed')
+              }
+    
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }
+        
+        setTimeout(()=>{
+            handel_check_reffer(refferCode);
+            
+        },1580)
+        
+    },[refferCode])
 
     
-
+    
     return (
         <>
         <div className="grid md:grid-cols-2  grid-cols-1 gap-4 items-center  pt-8">
@@ -138,7 +156,18 @@ const CheckOutForm = () => {
                     <div className="flex flex-col gap-1 relative">
                         <label className="text-sm" htmlFor="reffer">Referral / Promo code (if any)</label>
                         <input onChange={(e)=>setRefferCode(e.target.value)} value={refferCode} type="text" name="reffer" id="reffer"  className="border border-green-700 rounded-md p-2"/>
-                        <button type="button" onClick={handel_check_reffer} className="absolute right-0 top-[30px] font-bold text-xs uppercase p-2">{refferUpdate?.success ? "OK" :  "check"}</button>
+                        {
+                            refferStatus && 
+                            <div className="absolute right-0 top-[28px] font-bold text-xs uppercase p-2">
+                           { refferStatus === "loading" ? 
+                            <FcSynchronize className="animate-spin w-5 h-5"/> : 
+                            refferStatus === "success" ? 
+                            <FcApproval className=" w-5 h-5"/> : 
+                            refferStatus === "failed" ? 
+                            <FcCancel className=" w-5 h-5"/> : ''}
+                            </div>
+                        }
+                        {/* <button type="button" onClick={handel_check_reffer} className="absolute right-0 top-[30px] font-bold text-xs uppercase p-2">{refferUpdate?.success ? "OK" :  "check"}</button> */}
                     </div>
                     <button type="submit" disabled={loading} className="bg-green-700 disabled:bg-gray-400 p-2 md:rounded-md text-white uppercase md:relative fixed bottom-2 rounded-md  font-bold md:w-full w-[90.5%] z-10">{loading ? "Loading..":"GET IT !"}</button>
                 </form>

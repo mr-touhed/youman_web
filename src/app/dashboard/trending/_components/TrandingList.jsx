@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 const TrandingList = () => {
     const [trendList,setTrendList] = useState([])
-
+    const [change,setChange] = useState('')
     // const handel_delete = async (id) => {
     //     try {
     //         const response =await fetch(`${baseURL}/single-partner/${id}`, {
@@ -37,7 +37,7 @@ const TrandingList = () => {
         }
 
         fetchList()
-    },[])
+    },[change])
 
     const handelStatusChange = async (id,status) =>{
           try {
@@ -58,6 +58,8 @@ const TrandingList = () => {
               // const updateList = [...filter,update]
               // setTrendList(updateList)
               revalidateTag("tranding")
+              revalidateTag("events")
+              setChange(status)
               return toast(result.status.message);
             }
             

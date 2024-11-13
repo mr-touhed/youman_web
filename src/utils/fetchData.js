@@ -2,7 +2,7 @@ import { baseURL } from "./baseURL";
 
 export const get_singel_product = async (name) =>{
     try {
-        const response =await fetch(`${baseURL}/single-partner/${name}`);
+        const response =await fetch(`${baseURL}/single-partner/${name}`,{cache:"no-store"});
             return  await response.json()
     } catch (error) {
         console.log(error);

@@ -13,8 +13,7 @@ import Preceding from './_components/Preceding';
 const TrendingNowPage = async () => {
 
     const {result:events} = await get_events()
-    
-    const now = new Date();
+   
 
 const ongoing = events.filter(event => event.status === "ongoing");
 

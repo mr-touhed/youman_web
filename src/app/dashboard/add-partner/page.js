@@ -6,7 +6,7 @@ const addproductPage =  () => {
     
     
 
-    const privilege_data = {name:"",location:{address:""}, offers:{offer1:"",offer2:"",offer3:""},catagory:"select"}
+    const privilege_data = {name:"",location:{address:"", city:""}, offers:{offer1:"",offer2:"",offer3:""},catagory:"select"}
 
 
     return (

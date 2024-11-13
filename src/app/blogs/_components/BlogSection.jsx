@@ -50,9 +50,9 @@ export function BlogSection({posts}) {
         {blogItems.slice(0,count).map((feature) => (
           <div
             key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden">
+            className="relative space-y-4 bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden">
               
-            <Grid size={20} />
+            
             <Image src={feature.image} alt="" width={600} height={400} className="h-[150px] object-fill"/>
             <h3
               className="text-base font-bold text-green-700  dark:text-white relative z-20">
@@ -64,11 +64,11 @@ export function BlogSection({posts}) {
             </p>
             <div className="flex justify-between items-center ">
               <p className="text-xs italic">{    format(new Date(feature.published), "dd MMMM yyyy")}</p>
-            <Link href={feature.url} className="text-right block min-w-[50px] text-green-700 text-xs uppercase my-4" >Read more...</Link>
+            <Link href={feature.url} className="text-right block min-w-[50px] text-green-700 text-xs font-bold my-4" >Read more...</Link>
             </div>
-            <div className="flex justify-evenly flex-wrap gap-2  ">
+            {/* <div className="flex justify-evenly flex-wrap gap-2  ">
                {feature.labels.map(label => <span key={label} onClick={()=>setSearch(label)}  className="cursor-pointer text-xs border p-[2px]  bg-gray-100 rounded-md font-bold ">{label}</span>) }
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

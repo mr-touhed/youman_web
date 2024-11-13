@@ -7,10 +7,10 @@ import WhiteCard from "@/images/card_white.png"
 import { baseURL } from '@/utils/baseURL';
 const PaymentSuccess = ({track}) => {
     const [info,setInfo] = useState({})
-    const [card,setCard] = useState(info.cardColor);
     const [loading,setLoading] = useState(true);
-    const [message,setMessage] = useState('')
-    console.log(info);
+    const [message,setMessage] = useState('');
+
+   
     useEffect(()=>{
         const checkPayment = async () =>{
             try {
@@ -33,7 +33,7 @@ const PaymentSuccess = ({track}) => {
 
     },[track])
 
-
+    
     let content;
 
     if(loading){
@@ -41,6 +41,8 @@ const PaymentSuccess = ({track}) => {
     }else if(message){
         content = <h1 className='w-full h-screen flex justify-center items-center'>{message}</h1>
     }else{
+        const subtotal = 1111 - +info?.cashback;
+
         content = <div className='space-y-6 max-w-4xl mx-auto p-4'>
         <section className=''>
         <p className='text-green-700 font-semibold'>Order Successful</p>
@@ -50,7 +52,10 @@ const PaymentSuccess = ({track}) => {
 
         <section>
                 
-
+                <div className='md:hidden block'>
+                <p className='font-bold'>Order number <br/> <span className='font-normal'>#{info?.invoice_number}</span></p>
+                <p className='font-bold'>payment ID <br/> <span className='font-normal'>#{info?.paymentID}</span></p>
+                </div>
 
                 <table className='w-full' cellPadding={6} cellSpacing={12} >
                         <thead>
@@ -63,37 +68,41 @@ const PaymentSuccess = ({track}) => {
                             
                         </thead>
                         <tbody className=''>
-                                <tr className=' border-b'>
-                                    <td className=''>Order number <br/> <span className='font-bold'>#{info?.invoice_number}</span></td>
-                                    <td className=''>PaymentId <br/> <span className='font-bold'>#{info?.paymentID}</span></td>
+                                <tr className=' border-b md:flex md:flex-row flex-col md:justify-between hidden'>
+                                    <td className='font-bold'>Order number <br/> <span className='font-normal'>#{info?.invoice_number}</span></td>
+                                    <td className='font-bold'>payment ID <br/> <span className='font-normal'>#{info?.paymentID}</span></td>
                                     
                                 </tr>
                                 <tr className=' border-b '>
                                     <td className='py-8'>
                                         <div className='flex  items-center gap-2'>
-                                        <Image  src={card == "white" ? WhiteCard : BlackCard} alt="Youman Previlege Card" width={500} height={250} className='md:w-[250px]' />
-                                        <span className='text-xs'>Quentity 1</span>
+                                        <Image  src={info.cardColor === "white" ? WhiteCard : BlackCard} alt="Youman Previlege Card" width={500} height={250} className='md:w-[250px] w-[150px]' />
+                                        
                                         </div>
                                     </td>
-                                    <td>CA${info?.amount}</td>
+                                    <td>BDT৳ {1111}</td>
+                                </tr>
+                                <tr className=''>
+                                    <td className=' p-2'>discount/promo code</td>
+                                    <td>BDT৳ <span className='text-red-600'>{info?.cashback || 0}</span></td>
                                 </tr>
                                 <tr >
                                     <td className=' p-2'>Subtotal</td>
-                                    <td>CA${info?.amount}</td>
+                                    <td>BDT৳ {subtotal}</td>
                                 </tr>
-                                <tr className=' border-b'>
+                                <tr className=' border-b '>
                                     <td className=' p-2'>Shipping</td>
-                                    <td>CA$0</td>
+                                    <td>BDT৳ <span className='text-red-600'>0</span></td>
                                 </tr>
                                 <tr className='text-lg font-bold'>
                                     <td>Total</td>
-                                    <td>CA${info?.amount}</td>
+                                    <td>BDT৳ {info?.amount}</td>
                                 </tr>
                         </tbody>
                 </table>
         </section>
         <section>
-                <p className='font-semibold'>Shipping Address</p>
+                <p className='text-lg font-bold'>Shipping Address</p>
                     <address>
                         <p>{info?.fullname}</p>
                         <p>{info?.mobile}</p>

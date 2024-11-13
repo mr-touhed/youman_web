@@ -5,7 +5,8 @@ import { MdOutlineMailLock,MdPhone  } from "react-icons/md";
 import { LuMessageSquarePlus } from "react-icons/lu";
 import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha'
 import { baseURL } from '@/utils/baseURL';
-import toast from 'react-hot-toast';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const ContactForm = () => {
     const [contactData,setContactData] = useState({name:"",email:"",phone:"",message:""});
@@ -17,7 +18,7 @@ const handel_input = (e) =>{
 }
 
     useEffect(()=>{
-        loadCaptchaEnginge(6, "#0EA32C","white",'Lower_Characters_Only')
+        loadCaptchaEnginge(6, "#747474","black",'Lower_Characters_Only')
     },[])
 
     const handel_submit =async (e) =>{
@@ -37,15 +38,32 @@ const handel_input = (e) =>{
                 })
 
                 const result = await response.json();
+                    console.log(result);
                 if(result.status.type){
-                    toast(result.status.message)
+                    
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        text: result.status.message,
+                        showConfirmButton: false,
+                        timer: 2500
+                      });
                     setLoading(false)
+                    setCapcha('')
                     setContactData({name:"",email:"",phone:"",message:""})
+                   return loadCaptchaEnginge(6, "#747474","black",'Lower_Characters_Only')
                 }
                 
             }
         } catch (error) {
-            toast(error.message);
+            
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                text: error.message,
+                showConfirmButton: false,
+                timer: 2500
+              });
         }
     }
 
@@ -63,21 +81,21 @@ const handel_input = (e) =>{
                         <span><MdOutlineMailLock className='w-4 h-4'/></span>
                         <span>Email</span>
                         </label>
-                    <input onChange={(e)=>handel_input(e)} value={contactData.email} type="email" name="email" id=""  className='w-full border p-2 rounded-md '/>
+                    <input required onChange={(e)=>handel_input(e)} value={contactData.email} type="email" name="email" id=""  className='w-full border p-2 rounded-md '/>
                 </div>
                 <div className='w-full space-y-1'>
                     <label htmlFor="Phone" className='flex text-sm items-center gap-1'>
                         <span><MdPhone className='w-4 h-4'/></span>
                         <span>Phone</span>
                         </label>
-                    <input onChange={(e)=>handel_input(e)} value={contactData.phone} type="tel" name="phone" id=""  className='w-full border p-2 rounded-md '/>
+                    <input required onChange={(e)=>handel_input(e)} value={contactData.phone} type="tel" name="phone" id=""  className='w-full border p-2 rounded-md '/>
                 </div>
                 <div className='w-full space-y-1'>
                     <label htmlFor="message" className='flex text-sm items-center gap-1'>
                         <span><LuMessageSquarePlus className='w-4 h-4'/></span>
                         <span>Message</span>
                         </label>
-                    <textarea onChange={(e)=>handel_input(e)} value={contactData.message} type="tel" name="message" id=""  className='w-full h-44 border p-2 rounded-md '/>
+                    <textarea required onChange={(e)=>handel_input(e)} value={contactData.message} type="tel" name="message" id=""  className='w-full h-44 border p-2 rounded-md '/>
                 </div>
                  <div className='flex items-center gap-6 max-w-sm  '>
                     

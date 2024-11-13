@@ -109,14 +109,19 @@ const EditPartner = ({privilege}) => {
                     </div>
             </div>
         <div className='flex flex-col w-full gap-1'>
-            <label htmlFor="name" className='text-sm'>Company name <span className='text-red-400'>*</span></label>
-            <input onChange={(e) => change_value(e)} type="text" name="name" required value={offer.name} placeholder="Brand Name"  className='border p-2'/>
+            <label htmlFor="name" className='text-sm'>Partner&apos;s name <span className='text-red-400'>*</span></label>
+            <input onChange={(e) => change_value(e)} type="text" name="name" required value={offer.name} placeholder="Partners Name"  className='border p-2'/>
         </div>
         
         <div className='flex flex-col w-full gap-1  my-4'>
-        <label htmlFor="location" className='text-sm'>Location details <span className='text-red-400'>*</span></label>
+        <label htmlFor="location" className='text-sm'>Address <span className='text-red-400'>*</span></label>
                 
                 <input type="text" name="address" required value={offer.location.address} onChange={(e)=> change_address(e)} className='border p-2 ' placeholder='adderss' />
+        </div>
+        <div className='flex flex-col w-full gap-1 '>
+        <label htmlFor="location" className='text-sm'>City <span className='text-red-400'>*</span></label>
+                
+                <input type="text" name="city" required value={offer.location.city} onChange={(e)=> change_address(e)} className='border p-2 ' placeholder='city' />
         </div>
         <div className='w-full'>
         <label htmlFor="offer" className='text-sm'>Offer <span className='text-red-400'>*</span></label>

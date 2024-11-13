@@ -48,22 +48,19 @@ const TrendingForm = ({ trending }) => {
                           setLoading(false)
                           e.target.reset()
                           setImage(null)
-                          setselectDate([
-                            {
-                              startDate: new Date(),
-                              endDate: null,
-                              key: "events duration",
-                            },
-                          ])
+                         
                           setTrendingPost({
                             image: "",
                             name: "",
                             type:"",
                             venue: "",
+                            date:"",
                             details: "",
                           })
                           toast(result.status.message)
-                          revalidateTag("events")
+                          revalidateTag("events");
+                          revalidateTag("tranding");
+                          
                           return
                       }
               }else{
@@ -72,6 +69,7 @@ const TrendingForm = ({ trending }) => {
 
       } catch (error) {
           console.log("upload offer",error);
+          toast(error.message)
       }
   }
 
@@ -117,7 +115,7 @@ const TrendingForm = ({ trending }) => {
         </div>
         <div className="flex flex-col w-full gap-1">
           <label htmlFor="Event name" className="text-sm">
-            Events name <span className="text-red-400">*</span>
+            Events Title <span className="text-red-400">*</span>
           </label>
           <input
             onChange={(e) => change_value(e)}
@@ -125,7 +123,7 @@ const TrendingForm = ({ trending }) => {
             name="name"
             required
             value={trendingPost.name}
-            placeholder="Events name"
+            placeholder="Events Title"
             className="border p-2"
           />
         </div>
