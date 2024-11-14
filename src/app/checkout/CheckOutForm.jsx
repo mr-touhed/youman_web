@@ -114,8 +114,14 @@ const CheckOutForm = () => {
                 setTotalAmount(CardAmount - data.result.amount)
                     return setRefferStatus('success')
               }else{
+                setRefferUpdate(null)
+                if(refferCode.length > 0 ){
+                    setRefferStatus('failed')
+                }else{
+                    setRefferStatus(null)
+                    
+                }
                 
-                setRefferStatus('failed')
               }
     
             } catch (error) {
@@ -188,7 +194,7 @@ const CheckOutForm = () => {
                                 </tr>
                                 <tr>
                                     <td>Discount / Promo</td>
-                                    <td>{refferUpdate?.amount ? refferUpdate.amount : 0}</td>
+                                    <td className="">{refferUpdate?.amount ? <span className="text-red-400">{refferUpdate.amount}</span> : 0}</td>
                                 </tr>
                                 <tr>
                                     <td>Delivery</td>

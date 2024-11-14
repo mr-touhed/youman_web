@@ -43,7 +43,7 @@ const page = async ({params}) => {
                        </div>
                     </div>
                     <div >
-                        <p>For any offer related issues, please contact Phone: <b className="">+880 9611696515</b> ||  Email: hello@youman.com.bd <br/> <span className="text-xs">(11:00 AM - 7:00 PM || Sunday-Thursday)</span></p>
+                        <p>For any offer related issues, please contact Phone: <span className="">+880 9611696515</span>   <br/> <span className="">(11:00 AM - 7:00 PM || Sunday-Thursday)</span> or Email: hello@youman.com.bd</p>
                         
                     </div>
             </div>
