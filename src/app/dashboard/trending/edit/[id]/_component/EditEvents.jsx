@@ -9,7 +9,7 @@ import revalidateTag from "@/utils/revalided";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
-const TrendingForm = ({ trending }) => {
+const EditEvents = ({ trending }) => {
   
 
   const [trendingPost, setTrendingPost] = useState(trending);
@@ -78,11 +78,11 @@ const TrendingForm = ({ trending }) => {
       <section className="flex flex-col gap-8 max-w-2xl mx-auto">
         <div className="">
           <section className="h-full  grid place-content-center rounded-md">
-            {image?.img && (
+            {image?.display_url && (
               <Image
                 width={300}
                 height={250}
-                src={image?.img}
+                src={image?.display_url}
                 alt="product Image"
               />
             )}
@@ -220,4 +220,7 @@ const TrendingForm = ({ trending }) => {
   );
 };
 
-export default TrendingForm;
+
+
+
+export default EditEvents;

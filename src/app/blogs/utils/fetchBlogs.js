@@ -16,7 +16,11 @@ export default async function blogPosts() {
 
          // Function to get the first 30 words from the content
          function extractSnippet(content) {
-            const textOnly = content.replace(/<[^>]+>/g, ''); // Remove HTML tags
+            const textOnly = content
+            .replace(/<[^>]+>/g, '') // Remove HTML tags
+                .replace(/&nbsp;/g, '') // Remove &nbsp;
+                .replace(/&[a-zA-Z]+;/g, ''); // Remove other HTML entities
+            
             const words = textOnly.split(/\s+/); // Split content into words
             return words.slice(0, 30).join(' ') + '...'; // Join the first 30 words and add ellipsis
         }

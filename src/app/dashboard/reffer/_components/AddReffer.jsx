@@ -34,7 +34,7 @@ const AddReffer = () => {
     return (
         <form onSubmit={handel_submit} className='flex justify-between border p-1 items-center mt-4 gap-4'>
                 <div className='flex-1 flex gap-2'>
-                    <input onChange={e => handel_input(e)} value={reffer.name} type="text" placeholder="reffer code" name="name" className='w-full border px-2 ' required/>
+                    <input onChange={e => handel_input(e)} value={reffer.name} type="text" placeholder="Promo code" name="name" className='w-full border px-2 ' required/>
                     <input onChange={e => handel_input(e)} value={reffer.amount} type="text" placeholder="amount" name="amount" className='w-full border px-2 flex-1 min-w-28' required/>
                 </div>
                 <div className='px-2 bg-green-500 text-white rounded-md'>

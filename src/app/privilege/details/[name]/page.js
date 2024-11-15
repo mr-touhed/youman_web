@@ -34,16 +34,13 @@ const page = async ({params}) => {
 
                     <div >
                         
-                       <div>
-                        <p className=" font-semibold ">Category</p>
-                       <div className="flex justify-around gap-16 my-6">
-                       <p className="flex flex-col items-center"><span><AiFillShop className="w-6 h-6 text-gray-500"/></span> <span >{catagory}</span></p>
-                       
-                       </div>
+                       <div className="border-b pb-8">
+                        <p className=" font-semibold ">Category:</p>
+                        <p className=""> <span >{catagory}</span></p>
                        </div>
                     </div>
                     <div >
-                        <p>For any offer related issues, please contact Phone: <span className="">+880 9611696515</span>   <br/> <span className="">(11:00 AM - 7:00 PM || Sunday-Thursday)</span> or Email: hello@youman.com.bd</p>
+                        <p>For any offer related issues, please contact: +880 9611696515 (11:00 AM - 7:00 PM (Sunday-Thursday) or email: hello@youman.com.bd </p>
                         
                     </div>
             </div>

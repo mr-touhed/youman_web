@@ -45,7 +45,7 @@ const handel_input = (e) =>{
                         position: "center",
                         icon: "success",
                         text: result.status.message,
-                        
+                        confirmButtonColor:"black"
                       });
                     setLoading(false)
                     setCapcha('')

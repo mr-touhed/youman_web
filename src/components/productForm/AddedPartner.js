@@ -58,8 +58,8 @@ const AddedPartner = ({privilege}) => {
                             e.target.reset()
                             setImage(null)
                             
-                            setOffer({name:"",details:"",location:{address:""}, offers:{offer1:"",offer2:"",offer3:""},catagory:"select"})
-                            toast(result.status.message)
+                            setOffer({name:"",details:"",location:{address:"", city:""}, offers:{offer1:"",offer2:"",offer3:""},catagory:"select"})
+                            toast('Successfully added new partner!')
                             revalidateTag("partners")
                             return 
                         }

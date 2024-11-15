@@ -19,7 +19,7 @@ const RefferPage = async () => {
 
     return (
         <div className='max-w-lg mx-auto'>
-                <h2 className='text-2xl text-center uppercase'>Referral code List</h2>
+                <h2 className='text-2xl text-center uppercase'>Promo code List</h2>
 
             {
                 refferData?.result.map(reffer => (

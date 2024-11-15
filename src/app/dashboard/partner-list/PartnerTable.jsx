@@ -22,7 +22,7 @@ const PartnerTable = ({partners}) => {
                         setPartnersData(updateData)
                         revalidateTag("partners")
                 }
-           return  toast(result.status.message)
+           return  toast('Successfully deleted partner!')
         } catch (error) {
           console.log(error);
         }
@@ -33,7 +33,7 @@ const PartnerTable = ({partners}) => {
   <div className="p-6 overflow-x-auto ">
   <div className="p-1.5 min-w-full inline-block align-middle">
       <div className="border rounded-lg divide-y divide-gray-200">
-      <div className="py-3 px-4">
+      {/* <div className="py-3 px-4">
           <div className="relative max-w-xs">
             <label htmlFor="hs-table-search" className="sr-only">Search</label>
             <input type="text" name="hs-table-search" id="hs-table-search" className="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Search for items" />
@@ -44,7 +44,7 @@ const PartnerTable = ({partners}) => {
               </svg>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">

@@ -1,4 +1,7 @@
 "use client"
+
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 import { baseURL } from '@/utils/baseURL';
 import revalidateTag from '@/utils/revalided';
 import Image from 'next/image';
@@ -8,25 +11,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const TrandingList = () => {
     const [trendList,setTrendList] = useState([])
     const [change,setChange] = useState('')
-    // const handel_delete = async (id) => {
-    //     try {
-    //         const response =await fetch(`${baseURL}/single-partner/${id}`, {
-    //           method:"DELETE",
-    //           headers: {
-    //             "content-type": "application/json"
-    //           },
-    //         })
-    //         const result = await response.json();
-    //             if(result.status.type){
-    //                     const updateData = partnersData.filter(data => data._id !== id);
-    //                     setPartnersData(updateData)
-    //                     revalidateTag("partners")
-    //             }
-    //        return  toast(result.status.message)
-    //     } catch (error) {
-    //       console.log(error);
-    //     }
-    // }
+   
     
     useEffect(()=>{
         const fetchList = async() =>{
@@ -52,14 +37,10 @@ const TrandingList = () => {
               return toast(response.status.message)
             }else{
               const result =await  response.json();
-              // const update = trendList.find(tread => tread._id === id);
-              // update.status = status;
-              // const filter = trendList.filter(tread => tread._id !== id);
-              // const updateList = [...filter,update]
-              // setTrendList(updateList)
+             
               revalidateTag("tranding")
               revalidateTag("events")
-              setChange(status)
+              setChange(id)
               return toast(result.status.message);
             }
             
@@ -67,6 +48,51 @@ const TrandingList = () => {
             toast(error.message);
           }
     }
+
+    const handel_delete = async (id) =>{
+                try {
+                  
+                  Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                  }).then(async (result) => {
+                    if (result.isConfirmed) {
+
+                        const response = await fetch(`${baseURL}/events/${id}`,{
+                          method:"DELETE",
+                          headers:{
+                            "content-type":"application/json"
+                          }
+                        })
+                        const data = await  response.json();
+
+                        if(data.status.type){
+                          Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                          });
+                          revalidateTag("tranding");
+                          setChange(id)
+                        }else{
+                          toast(data.status.message);
+                        }
+
+                      
+                    }
+                  });
+
+                } catch (error) {
+                  toast(error.message);
+                }
+    }
+
+
     return (
         <div className="flex flex-col">
   <div className="p-6 overflow-x-auto ">
@@ -85,8 +111,9 @@ const TrandingList = () => {
                 <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
                 <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Type</th>
                 <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Venue</th>
-                <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Date</th>
-                <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Details</th>
+                <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Date</th>
+                <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Details</th>
+                <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
@@ -99,8 +126,8 @@ const TrandingList = () => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{event.name}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{event.type}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    {event.vanue}
+                <td className="px-6 py-4  text-sm text-gray-800 max-w-[150px] ">
+                    {event.venue}
                    
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
@@ -124,7 +151,10 @@ const TrandingList = () => {
                         <option value="preceding">Preceding</option>
                 </select>
                   <br/>
-                  {/* <button onClick={()=>handel_delete(partner._id)} type="button" className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button> */}
+                  <div className='mt-4 space-x-4'>
+                  <button onClick={()=>handel_delete(event._id)} type="button" className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                  {/* <Link href={`/dashboard/trending/edit/${event._id}`} type="button" className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Update</Link> */}
+                  </div>
                 </td>
               </tr>
                     ))

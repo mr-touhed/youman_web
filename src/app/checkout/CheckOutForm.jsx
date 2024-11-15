@@ -193,7 +193,7 @@ const CheckOutForm = () => {
                                     <td>1,111</td>
                                 </tr>
                                 <tr>
-                                    <td>Discount / Promo</td>
+                                    <td>Referral / Promo </td>
                                     <td className="">{refferUpdate?.amount ? <span className="text-red-400">{refferUpdate.amount}</span> : 0}</td>
                                 </tr>
                                 <tr>

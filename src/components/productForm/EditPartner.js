@@ -7,8 +7,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { catagorys } from "../../../public/data/data";
+import { useRouter } from "next/navigation";
 
 const EditPartner = ({privilege}) => {
+    const route = useRouter()
     const [offer,setOffer] = useState(privilege);
     const [division,setdivision] = useState([]);
     const [selectDivision,setSelectDivision] = useState('');
@@ -65,10 +67,12 @@ const EditPartner = ({privilege}) => {
            })
            const result = await response.json();
            if(result.status.type){
-                toast(result.status.message)
+                toast('Successfully updated partner!')
                 revalidateTag("partners")
                 setLoading(false)
-               return  
+               setTimeout(()=>{
+                route.push('/dashboard/partner-list')
+               },400)
            }
         } catch (error) {
             console.log("upload offer");

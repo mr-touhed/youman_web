@@ -4,12 +4,12 @@ const PartnerCard = ({data}) => {
   const {name,image,offers,catagory,location} = data;
 
     return (
-        <Link href={`/privilege/details/${name}`} className="md:w-[250px] w-[150px] space-y-4  min-h-[330px] md:h-[400px] mx-auto rounded overflow-hidden shadow-lg relative ">
+        <Link href={`/privilege/details/${name}`} className="md:w-[250px] w-[150px] space-y-4  min-h-[330px] md:h-[430px] mx-auto rounded overflow-hidden shadow-lg relative ">
           
   <Image className="w-full md:h-[200px] h-[135px]" src={image?.display_url} width={250} height={200} alt={name} />
       <div className="md:px-6   md:h-[100px] md:flex items-start ">
   
-    <h4 className="md:font-bold font-semibold  md:text-xl mb-2 text-base text-left">{name}</h4>
+    <h4 className="md:font-bold font-semibold  md:text-xl mb-2 text-base  w-full text-center">{name}</h4>
     
     
   </div>

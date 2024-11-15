@@ -25,7 +25,7 @@ const SideMenu = () => {
                             <Link href="/dashboard/add-partner" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/add-partner" ? "bg-green-700 text-white": ""}`}><IoIosAddCircle className='w-6 h-6'/> <span className='min-w-[100px] block'>Add Partner</span></Link>
                         </li>
                         <li className="w-full  border rounded-md text-center">
-                            <Link href="/dashboard/reffer" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/reffer" ? "bg-green-700 text-white": ""}`}><IoTicket className='w-6 h-6'/> <span>Create Reffer</span></Link>
+                            <Link href="/dashboard/reffer" className={`flex  justify-center items-center gap-4 p-2 rounded-md font-semibold ${pathname === "/dashboard/reffer" ? "bg-green-700 text-white": ""}`}><IoTicket className='w-6 h-6'/> <span>Create promo</span></Link>
                         </li>
                       
                       
