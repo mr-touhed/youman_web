@@ -61,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="md:h-[200vh]  pt-12  overflow-hidden   antialiased relative flex flex-col  [perspective:1000px] [transform-style:preserve-3d]"
+      className="   pt-12  overflow-hidden   antialiased relative flex flex-col  [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
