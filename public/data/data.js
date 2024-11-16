@@ -4,7 +4,7 @@ export const catagorys = [
     'Grooming',
     'Wellbeing',
     'Lifestyle',
-    'Arts & Carafts',
+    'Arts & Crafts',
     'Automobiles',
     'Others'
 

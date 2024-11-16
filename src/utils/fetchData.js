@@ -2,7 +2,7 @@ import { baseURL } from "./baseURL";
 
 export const get_singel_product = async (name) =>{
     try {
-        const response =await fetch(`${baseURL}/single-partner/${name}`,{cache:"no-store"});
+        const response =await fetch(`${baseURL}/single-partner/${name}`,{cache:"no-cache"});
             return  await response.json()
     } catch (error) {
         console.log(error);
@@ -50,7 +50,7 @@ export const get_query_partners = async(catagory) =>{
     console.log(catagory);
    
     try {
-        const response = await fetch(`${baseURL}/query-partners?catagory=${catagory}`,{cache:"no-store"});
+        const response = await fetch(`${baseURL}/query-partners?catagory=${catagory}`,{cache:"no-cache"});
         return await response.json()
     } catch (error) {
         console.log(error);
@@ -73,7 +73,7 @@ export const fetch_order = async (status,tag) =>{
 
 export const get_events =async () =>{
     try {
-        const response =await fetch(`${baseURL}/events`, {cache:"no-store"});
+        const response =await fetch(`${baseURL}/events`, {cache:"no-cache"});
             return  await response.json()
     } catch (error) {
         console.log(error);
