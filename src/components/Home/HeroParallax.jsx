@@ -37,18 +37,18 @@ export const products = [
     thumbnail:
     Blogs,
   },
-  {
-    title: "Partners",
-    link: "/privilege",
-    thumbnail:
-    Partners,
-  },
+ 
   {
     title: "Contact us",
     link: "/contact-us",
     thumbnail:
     Contact,
   },
-  
+  {
+    title: "Partners",
+    link: "/privilege",
+    thumbnail:
+    Partners,
+  }
 
 ];
