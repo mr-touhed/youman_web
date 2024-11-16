@@ -15,7 +15,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         const [partnerList,setPartnerList] = useState(partners);
         const [search,setSearch] = useState('');
         const [showData,setShowData] = useState(partnerList)
-        const [loading,setLoading] = useState(true)
+        const [loading,setLoading] = useState(false)
         const [visibleCount, setVisibleCount] = useState(4);
         const {catagory} = searchParams;
         const showMoreProducts = () => {
