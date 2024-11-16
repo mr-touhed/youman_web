@@ -36,7 +36,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
     },[search])
     useEffect(()=>{
         
-        const get_partner =async () =>{
+        const get_query_partner =async () =>{
             
             try {
                 const result = await get_query_partners(catagory);
@@ -48,7 +48,9 @@ const CatagoryDetails =   ({searchParams,partners}) => {
             }
         }
         if(catagory){
-            get_partner()
+            get_query_partner()
+        }else{
+            get_partners()
         }
         
     }, [catagory])
