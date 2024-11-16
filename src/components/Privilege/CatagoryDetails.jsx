@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import PartnerCard from "./PartnerCard";
-import { get_query_partners } from "@/utils/fetchData";
+import { get_partners, get_query_partners } from "@/utils/fetchData";
 import { IoIosSearch } from "react-icons/io";
 
 
@@ -47,11 +47,18 @@ const CatagoryDetails =   ({searchParams,partners}) => {
                 console.log(error);
             }
         }
-        if(catagory){
-            get_query_partner()
-        }else{
-            get_partners()
+
+        async function getallpartner () {
+            const result = await get_partners();
+            setShowData(result.data);
         }
+       
+            if(catagory === undefined){
+                getallpartner()
+                
+            }
+            get_query_partner()
+        
         
     }, [catagory])
     
