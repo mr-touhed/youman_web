@@ -14,7 +14,7 @@ const TrendingNowPage = async () => {
 
     const {result:events} = await get_events()
    
-console.log(events);
+
 const ongoing = events.filter(event => event.status === "ongoing");
 
 const upcoming = events.filter(event => event.status === "upcoming");

@@ -56,7 +56,7 @@ const EventCard = ({ event, soon,end=false }) => {
         </div>
         <Link  
           href={`/trending-now/${_id}`}  
-          className='w-28 absolute   bottom-5 left-[38%] text-green-700 text-sm font-bold backdrop-blur-sm   z-30' 
+          className='w-28 absolute  text bottom-5 left-[38%] text-green-700 text-sm font-bold backdrop-blur-sm   z-30' 
            // Handle touch events
         >
           Know more...

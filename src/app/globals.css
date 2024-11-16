@@ -175,3 +175,11 @@ img{
 .scrollable {
   -ms-overflow-style: -ms-autohiding-scrollbar; /* Hides scrollbar until hovered */
 }
+
+
+@supports (-webkit-touch-callout: none) {
+  .text {
+    direction: ltr;
+    unicode-bidi: normal;
+  }
+}
