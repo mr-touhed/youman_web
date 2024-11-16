@@ -54,8 +54,9 @@ const TrendingForm = ({ trending }) => {
                             name: "",
                             type:"",
                             venue: "",
-                            date:"",
                             details: "",
+                            date: "",
+                            status:""
                           })
                           toast('Successfully added new event!')
                           revalidateTag("events");
