@@ -50,7 +50,7 @@ export const get_query_partners = async(catagory) =>{
     console.log(catagory);
    
     try {
-        const response = await fetch(`${baseURL}/query-partners?catagory=${catagory}`);
+        const response = await fetch(`${baseURL}/query-partners?catagory=${catagory}`,{cache:"no-store"});
         return await response.json()
     } catch (error) {
         console.log(error);

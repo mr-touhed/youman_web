@@ -15,9 +15,9 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         const [partnerList,setPartnerList] = useState(partners);
         const [search,setSearch] = useState('');
         const [showData,setShowData] = useState(partnerList)
-    
+        const [loading,setLoading] = useState(true)
         const [visibleCount, setVisibleCount] = useState(4);
-
+        const {catagory} = searchParams;
         const showMoreProducts = () => {
           setVisibleCount((prevCount) => prevCount + 4);
         };
@@ -35,22 +35,26 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         },400)
     },[search])
     useEffect(()=>{
-            const {catagory} = searchParams;
+        setLoading(true)
         const get_partner =async () =>{
+            
             try {
-                const result = await get_query_partners(catagory,searchParams.state);
+                const result = await get_query_partners(catagory);
                 setShowData(result.data);
                 setPartnerList(result.data)
+                setLoading(false)
             } catch (error) {
                 console.log(error);
             }
         }
-        if(searchParams.catagory || searchParams.state){
+        if(catagory){
             get_partner()
         }
         
-    }, [searchParams])
+    }, [catagory])
     
+    if(loading) return "Loading...."
+
     return (
         <>
         <div className="py-5 md:w-[500px] md:px-6 px-4 mx-auto relative w-full ">
