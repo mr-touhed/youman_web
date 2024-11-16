@@ -15,7 +15,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         const [partnerList,setPartnerList] = useState(partners);
         const [search,setSearch] = useState('');
         const [showData,setShowData] = useState(partnerList)
-        const [loading,setLoading] = useState(false)
+       
         const [visibleCount, setVisibleCount] = useState(4);
         const {catagory} = searchParams;
         const showMoreProducts = () => {
@@ -35,14 +35,14 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         },400)
     },[search])
     useEffect(()=>{
-        setLoading(true)
+        
         const get_partner =async () =>{
             
             try {
                 const result = await get_query_partners(catagory);
                 setShowData(result.data);
                 setPartnerList(result.data)
-                setLoading(false)
+               
             } catch (error) {
                 console.log(error);
             }
@@ -53,7 +53,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
         
     }, [catagory])
     
-    if(loading) return "Loading...."
+   
 
     return (
         <>
