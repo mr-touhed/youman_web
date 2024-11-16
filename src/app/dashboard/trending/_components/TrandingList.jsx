@@ -40,7 +40,7 @@ const TrandingList = () => {
              
               revalidateTag("tranding")
               revalidateTag("events")
-              setChange(id)
+              setChange(status)
               return toast(result.status.message);
             }
             

@@ -73,7 +73,7 @@ export const fetch_order = async (status,tag) =>{
 
 export const get_events =async () =>{
     try {
-        const response =await fetch(`${baseURL}/events`);
+        const response =await fetch(`${baseURL}/events`, {cache:"no-store"});
             return  await response.json()
     } catch (error) {
         console.log(error);

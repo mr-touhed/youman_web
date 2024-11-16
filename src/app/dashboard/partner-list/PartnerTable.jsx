@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 const PartnerTable = ({partners}) => {
     const [partnersData,setPartnersData] = useState(partners)
-
+    
     const handel_delete = async (id) => {
         try {
             const response =await fetch(`${baseURL}/single-partner/${id}`, {
