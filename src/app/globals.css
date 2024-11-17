@@ -177,9 +177,8 @@ img{
 }
 
 
-@supports (-webkit-touch-callout: none) {
-  .text {
-    direction: ltr;
-    unicode-bidi: normal;
-  }
+
+
+.flip-card {
+  transform-style: preserve-3d;
 }
