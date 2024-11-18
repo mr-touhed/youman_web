@@ -2,8 +2,8 @@ import Head from 'next/head';
 
 export default function SEO({ title, description, url, image }) {
   const siteName = "Youman";
-  const defaultTitle = "Youman is more than just access—it’s a lifestyle. Exclusive privileges, premium experiences, and a community that empowers you to reach new heights.";
-  const defaultDescription = "Default site description for SEO.";
+  const defaultTitle = "Unlock your world with youman";
+  const defaultDescription = "Youman is more than just access—it’s a lifestyle. Exclusive privileges, premium experiences, and a community that empowers you to reach new heights.";
   const defaultImage = "https://youman.one/images/youman_logo.png";
   const defaultUrl = "https://youman.one/";
 
