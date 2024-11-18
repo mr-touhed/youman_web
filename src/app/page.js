@@ -7,10 +7,15 @@ import MembershipMatter from "@/components/Home/MembershipMatter";
 import NfcSection from "@/components/Home/NfcSection";
 import { PartnersSection } from "@/components/Home/PartnersSection";
 import Reviews from "@/components/Home/Reviews";
+import SEO from "@/components/SEO";
 
 
 export default function Home() {
   return (
+    <>
+    <SEO/>
+    
+   
    <main className="space-y-8">
      
       <HeroParallaxDemo/>
@@ -20,5 +25,6 @@ export default function Home() {
         <MembershipMatter/>
        <Reviews/>
    </main>
+   </>
   );
 }
