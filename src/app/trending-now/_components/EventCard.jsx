@@ -39,7 +39,7 @@ const EventCard = ({ event, soon,end=false }) => {
       <section
         onClick={handleFlip}
         // onTouchEnd={handleFlip}
-      className='relative h-[250px] bg-white shadow-lg border  md:min-w-[403px] w-[276px] bg-[url("/images/Card_White_banner.png")] bg-no-repeat bg-cover overflow-hidden rounded-xl p-4 flex flex-col gap-4 text-black'>
+      className=' h-[250px] bg-white shadow-lg border  md:min-w-[403px] w-[276px] bg-[url("/images/Card_White_banner.png")] bg-no-repeat bg-cover overflow-hidden rounded-xl p-4 flex flex-col gap-4 text-black'>
         <div>
               <div>
                   <h3 className='text-xl font-semibold'>Event</h3>
@@ -56,7 +56,7 @@ const EventCard = ({ event, soon,end=false }) => {
         </div>
         <Link  
           href={`/trending-now/${_id}`}  
-          className='w-28 absolute  text bottom-5 left-[38%] text-green-700 text-sm font-bold backdrop-blur-sm   z-30' 
+          className='w-28  text-green-700 text-sm font-bold backdrop-blur-sm block mx-auto mt-10  z-30' 
            // Handle touch events
         >
           Know more...
