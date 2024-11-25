@@ -7,7 +7,7 @@ const Upcoming = ({events}) => {
                         <HeadingAnimation>
                         {events.length > 0 && <h2 className='text-4xl font-semibold text-green-700 text-center'>Upcoming</h2>}
                             </HeadingAnimation>
-                <section className={`grid ${events.length < 3 ? "md:flex flex-row grid justify-center" : "md:grid-cols-3 place-items-center"} gap-4`}>
+                <section className={`grid ${events.length < 3 ? "md:flex flex-row grid justify-center" : "md:grid-cols-2 lg:grid-cols-3 place-items-center"} gap-4`}>
                 {
                     events.map((event,i) => <EventCard key={i} event={event} soon={true}/>)
                 }
