@@ -15,7 +15,7 @@ const EventCard = ({ event, soon,end=false }) => {
   };
 
   return (
-    <div className='md:w-[403px] w-[290px] '>
+    <div className='md:w-[350px] w-[290px] '>
          <div className='border border-green-700 rounded-md p-2 mb-4 '>
           <h2 className='text-center text-thin  text-black '> {name}</h2>
       </div>
@@ -39,7 +39,7 @@ const EventCard = ({ event, soon,end=false }) => {
       <section
         onClick={handleFlip}
         // onTouchEnd={handleFlip}
-      className=' h-[250px] bg-white shadow-lg border  md:min-w-[403px] w-[289px] bg-[url("/images/Card_White_banner.png")] bg-no-repeat bg-cover overflow-hidden rounded-xl p-4 flex flex-col gap-4 text-black'>
+      className=' h-[250px] bg-white shadow-lg border  md:min-w-[350px] w-[289px] bg-[url("/images/Card_White_banner.png")] bg-no-repeat bg-cover overflow-hidden rounded-xl p-4 flex flex-col gap-4 text-black'>
         <div>
               <div>
                   <h3 className='text-xl font-semibold'>Event</h3>
@@ -54,13 +54,13 @@ const EventCard = ({ event, soon,end=false }) => {
                   <h6 className='text-xs font-thin'> {venue}</h6>
               </div>
         </div>
-        <Link  
+        {<Link  
           href={`/trending-now/${_id}`}  
           className='w-28  text-green-700 text-sm font-bold backdrop-blur-sm block mx-auto mt-10  z-30' 
            // Handle touch events
         >
-          Know more...
-        </Link>
+        {flipped ?  "Know more..." : ''}
+        </Link>}
       </section>
     </ReactCardFlip>
 

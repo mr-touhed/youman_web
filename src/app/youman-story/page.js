@@ -12,12 +12,12 @@ const OurStoryPage = () => {
                     The beginning
             </h1>
                     </HeadingAnimation>
-            <Image src="/images/icons/banner-01.png" alt="" width={1200} height={600} className=' md:hidden block'/>
+            <Image src="/images/icons/banner-01.png" alt="" width={500} height={250} className=' md:hidden block'/>
                         <p className='text-justify text-base font-thin md:-ml-3'>Youman began with a vision - a true community have the power to transform the way we live, grow, and thrive. We saw a world where people seek more than just networking; they yearn for experiences, a sense of belonging, and opportunities to unlock their potential. We imagined a community built on ambition, where every member finds value beyond expectations.</p>
 
 
                     </div>
-                    <Image src="/images/icons/banner-01.png" alt="" width={1200} height={600} className='md:w-[700px] w-[300px] md:block hidden'/>
+                    <Image src="/images/icons/banner-01.png" alt="" width={500} height={250} className='md:w-[700px] w-[300px] md:block hidden'/>
 
             </section>
             <section className=' mb-16'>
