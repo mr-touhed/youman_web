@@ -31,7 +31,7 @@ const OurStoryPage = () => {
                         <div className='grid md:grid-cols-3  gap-16 place-content-center place-items-center'>
                                 <div className='flex flex-col items-center md:justify-start md:h-[500px] justify-center p-2 '>
                                 <HeadingAnimation>
-                                        <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-3xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
+                                        <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-3xl h-[95px]  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
                        Power, Purpose, Potential</h2>
                        </HeadingAnimation>
                        <Image src="/images/icons/1.png" alt="" width={200} height={250} className=''/> 
@@ -40,7 +40,7 @@ const OurStoryPage = () => {
                                 </div>    
                                 <div className='flex flex-col items-center md:justify-start md:h-[500px] justify-center p-2'>
                                         <HeadingAnimation>
-                                       <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-3xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
+                                       <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-3xl h-[95px] bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
                                         Step beyond </h2>
                                         </HeadingAnimation>
                                         <Image src="/images/icons/2.png" alt="" width={200} height={250} className=''/>
@@ -49,7 +49,7 @@ const OurStoryPage = () => {
                                 </div>    
                                 <div className='flex flex-col items-center md:h-[500px]  md:justify-start justify-center p-2'>
                                         <HeadingAnimation>
-                                        <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl md:text-3xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
+                                        <h2 style={{lineHeight:"1.3"}} className="relative z-10 text-4xl h-[95px] md:text-3xl  bg-clip-text text-transparent bg-green-700 text-center font-sans font-bold">
                                         Empowering you</h2>
                                         </HeadingAnimation>
                                         <Image src="/images/icons/3.png" alt="" width={200} height={250} className='mt-3 md:mt-0'/>

@@ -52,10 +52,13 @@ const Menubar = () => {
             <li>
             <Link href="/privilege" className={`${path === "/privilege" ? "text-green-700 font-bold" : "" }`}>Partners</Link>
             </li>
+            
            <li>
            <Link href="/contact-us" className={`${path === "/contact-us" ? "text-green-700 font-bold" : "" }`}>Contact us</Link>
            </li>
-            
+           <li>
+           <Link href="https://catalyst.youman.com.bd/" target="_blank" className={``}>My Youman</Link>
+           </li>
             </ul>
             <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu} path={path}/>
         </div>
@@ -97,9 +100,13 @@ function MobileMenu({showMenu,setShowMenu,path}){
     <li onClick={clickTohiddenMEnu}>
     <Link href="/privilege" className={`${path === "/privilege" ? "text-green-700 font-bold" : "" }`}>Partners</Link>
     </li>
+    
    <li onClick={clickTohiddenMEnu}>
    <Link href="/contact-us" className={`${path === "/contact-us" ? "text-green-700 font-bold" : "" }`}>Contact us</Link>
    </li>
+   <li>
+           <Link href="https://catalyst.youman.com.bd/" target="_blank" className={``}>My Youman</Link>
+    </li>
     
     </ul>)
 } 

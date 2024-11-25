@@ -10,7 +10,7 @@ const DahsboardPage = async() => {
     
     return (
         <div>
-            dashboard
+            
         </div>
     );
 };
