@@ -8,6 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import revalidateTag from "@/utils/revalided";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import TextEditor from "@/components/TextEditor";
 
 const TrendingForm = ({ trending }) => {
   
@@ -21,7 +22,9 @@ const TrendingForm = ({ trending }) => {
     setTrendingPost((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   
-  
+  const setDetails = (text) => {
+    setTrendingPost((prev) => ({ ...prev, details: text }));
+  }
 
  
 
@@ -198,7 +201,7 @@ const TrendingForm = ({ trending }) => {
             {" "}
             Details <span className="text-red-400">*</span>
           </label>
-          <textarea
+          {/* <textarea
             required
             onChange={(e) => change_value(e)}
             type="text"
@@ -206,7 +209,9 @@ const TrendingForm = ({ trending }) => {
             value={trendingPost.details}
             placeholder="Details"
             className="border p-2 h-28"
-          />
+          /> */}
+
+          <TextEditor details={trendingPost.details}  setDetails={setDetails}/>
         </div>
 
         <button

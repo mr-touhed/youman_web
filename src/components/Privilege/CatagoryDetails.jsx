@@ -53,7 +53,7 @@ const CatagoryDetails =   ({searchParams,partners}) => {
             setShowData(result.data);
         }
        
-            if(catagory === undefined){
+            if(catagory === undefined || null ){
                 getallpartner()
                 
             }

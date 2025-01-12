@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import revalidateTag from "@/utils/revalided";
 import { catagorys } from "../../../public/data/data";
+import TextEditor from "../TextEditor";
 const AddedPartner = ({privilege}) => {
     const [offer,setOffer] = useState(privilege);
     // const [division,setdivision] = useState([]);
@@ -21,6 +22,10 @@ const AddedPartner = ({privilege}) => {
         ))
 
     }
+    const AddDetails = (details) =>{
+        setOffer(prev => ({...prev, details}))
+    }
+
     const change_address = (e) => {
         setOffer(prev => ({
             ...prev, location:{... prev.location,[e.target.name]: e.target.value}
@@ -141,7 +146,8 @@ const AddedPartner = ({privilege}) => {
         
         <div className='flex flex-col w-full gap-1'>
             <label htmlFor="title" className='text-sm'> Offer Details <span className='text-red-400'>*</span></label>
-            <textarea required onChange={(e) =>   change_value(e)} type="text" name="details" value={offer.details} placeholder="Offer Details"  className='border p-2 h-28' />
+            {/* <textarea required onChange={(e) =>   change_value(e)} type="text" name="details" value={offer.details} placeholder="Offer Details"  className='border p-2 h-28' /> */}
+                <TextEditor  details={offer.details} setDetails={ AddDetails} />
         </div>
 
                     <button type="submit" className="bg-green-700 p-2 text-white rounded-lg uppercase" >{loading ? "Loading...":"Add Partner +"}</button>

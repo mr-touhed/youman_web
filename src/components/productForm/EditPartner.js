@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { catagorys } from "../../../public/data/data";
 import { useRouter } from "next/navigation";
+import TextEditor from "../TextEditor";
 
 const EditPartner = ({privilege}) => {
     const route = useRouter()
@@ -24,6 +25,11 @@ const EditPartner = ({privilege}) => {
         ))
 
     }
+
+    const AddDetails = (text) =>{
+        setOffer(prev => ({...prev, details:text}))
+    }
+
     const change_address = (e) => {
         setOffer(prev => ({
             ...prev, location:{... prev.location,[e.target.name]: e.target.value}
@@ -152,7 +158,8 @@ const EditPartner = ({privilege}) => {
         
         <div className='flex flex-col w-full gap-1'>
             <label htmlFor="title" className='text-sm'> Details <span className='text-red-400'>*</span></label>
-            <textarea required onChange={(e) =>   change_value(e)} type="text" name="details" value={offer.details} placeholder="Details"  className='border p-2 h-28' />
+            {/* <textarea required onChange={(e) =>   change_value(e)} type="text" name="details" value={offer.details} placeholder="Details"  className='border p-2 h-28' /> */}
+            <TextEditor  details={offer.details} setDetails={ AddDetails} />
         </div>
 
                     <button type="submit" className="bg-green-700 p-2 text-white rounded-lg uppercase" >{loading ? "Loading...":"Update"}</button>

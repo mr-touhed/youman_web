@@ -3,12 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { AiFillShop } from "react-icons/ai";
+import ShowDetails from "@/components/ShowDetails";
 const page = async ({params}) => {
        const {name} = params; 
     const {partner} =await get_singel_product(name);
    
     const {name:partner_name,location,offers,catagory,details,image} = partner;
  
+   
+
+    
     return (
         <div className="max-w-7xl mx-auto grid md:grid-cols-2">
             <div className="space-y-6">
@@ -29,7 +33,11 @@ const page = async ({params}) => {
                         <p><span className="font-semibold">City: <br/></span> {location.city}</p>
                     </div>
                     <div>
-                        <p className="text-justify"><span className="font-semibold">Offer Details: <br/></span>{details}</p>
+                        {/* <p className="text-justify"><span className="font-semibold">Offer Details: <br/></span></p> */}
+                        <>
+                        
+                        <ShowDetails details={details}/>
+                        </>
                     </div>
 
                     <div >
