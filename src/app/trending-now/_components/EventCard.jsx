@@ -1,4 +1,5 @@
 "use client";
+import ImageLoader from '@/components/ImageLoader';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -27,7 +28,9 @@ const EventCard = ({ event, soon,end=false }) => {
           onClick={handleFlip}
           onTouchEnd={handleFlip}
       className={`bg-white ${end ? "opacity-50" : "opacity-100"} text-black border shadow-md relative w-full  h-[250px]  bg-no-repeat bg-cover grid place-content-center  overflow-hidden rounded-xl md:p-8 p-3  gap-4 z-10`}>
-        <Image src={image?.display_url} alt="" width={250} height={150} className='w-[100%] absolute  h-[100%]'/>
+        <ImageLoader src={image?.display_url} alt="" width={250} height={150} className='w-[100%] absolute  h-[100%]' priority // Marks this as a key image for Largest Contentful Paint
+      placeholder="blur" // Optional blur-up while loading 
+       />
         {soon && (
           <div className='absolute w-full left-0 right-0 top-0 h-full z-20 bg-[#131313bc] grid place-content-center'>
             <h4 className='md:text-4xl text-2xl font-bold text-white'>Coming soon...</h4>

@@ -9,7 +9,7 @@ const Ongoing = ({events}) => {
                             </HeadingAnimation>
                 <section className={`grid ${events.length < 3 ? "md:flex flex-row grid justify-center" : "md:grid-cols-2 lg:grid-cols-3 place-items-center"} gap-4`}>
                 {
-                    events.map((event,i) => <EventCard key={i} event={event} soon={false}/>)
+                    events?.reverse()?.map((event,i) => <EventCard key={i} event={event} soon={false}/>)
                 }
                         </section>
                 </section>
